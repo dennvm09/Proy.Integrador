@@ -1,0 +1,14 @@
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.csprojAssemblyReference.cache
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.Form1.resources
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.Properties.Resources.resources
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.csproj.GenerateResource.cache
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.csproj.CoreCompileInputs.cache
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\Proy_In.exe.config
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\Proy_In.exe
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\Proy_In.pdb
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\model.exe
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\model.pdb
+C:\Users\vardo\source\repos\Proy_In\Proy_In\bin\Debug\model.exe.config
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.exe
+C:\Users\vardo\source\repos\Proy_In\Proy_In\obj\Debug\Proy_In.pdb
