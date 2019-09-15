@@ -38,7 +38,7 @@
   <ItemGroup>
     <Compile Include="Principal.cs" />
     <Compile Include="Bus.cs" />
-    <Compile Include="Arco.cs" />
+    <Compile Include="Arc.cs" />
     <Compile Include="Stop.cs" />
     <Compile Include="Trip.cs" />
     <Compile Include="Task.cs" />
