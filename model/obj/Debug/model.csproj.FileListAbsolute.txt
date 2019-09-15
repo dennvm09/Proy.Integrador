@@ -5,3 +5,7 @@ C:\Users\vardo\source\repos\Proy_In\model\bin\Debug\model.exe
 C:\Users\vardo\source\repos\Proy_In\model\bin\Debug\model.pdb
 C:\Users\vardo\source\repos\Proy_In\model\obj\Debug\model.exe
 C:\Users\vardo\source\repos\Proy_In\model\obj\Debug\model.pdb
+D:\Archivos\Visual Studio\Proy.-Int\Proy.-Int\model\obj\Debug\model.csprojAssemblyReference.cache
+D:\Archivos\Visual Studio\Proy.-Int\Proy.-Int\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+D:\Archivos\Visual Studio\Proy.-Int\Proy.-Int\model\obj\Debug\model.exe
+D:\Archivos\Visual Studio\Proy.-Int\Proy.-Int\model\obj\Debug\model.pdb
