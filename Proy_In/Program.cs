@@ -17,7 +17,7 @@ namespace Proy_In
         {
 
 
-            Class1.methodTest1();
+            Principal.methodTest1();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

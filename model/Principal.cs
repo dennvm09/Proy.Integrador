@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace model
 {
-   public static class Class1
+
+   public static class Principal
     {
         public static void methodTest1()
         {
