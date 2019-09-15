@@ -20,8 +20,8 @@ namespace model
         public List<Stop> Stops { get => stops; set => stops = value; }
 
         public void addStops() {
-            //StreamReader leer = new StreamReader(Path.GetFullPath("stops.txt"));
-            StreamReader leer = new StreamReader(Path.GetFullPath("StopPratice.txt"));
+            StreamReader leer = new StreamReader(Path.GetFullPath("stops.txt"));
+            //StreamReader leer = new StreamReader(Path.GetFullPath("StopPratice.txt"));
             String line = leer.ReadLine();
             Stop newS = null;
 
