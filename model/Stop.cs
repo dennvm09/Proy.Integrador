@@ -12,12 +12,12 @@ namespace model
         private int planVersionId;
         private String shortName;
         private String longName;
-        private double gpsX;
-        private double gpsY;
+        private int gpsX;
+        private int gpsY;
         private double longit;
         private double latit;
 
-        public Stop(String stopId, int planVersionId, String shortName, String longName, double gpsX, double gpsY, double longit, double latit)
+        public Stop(String stopId, int planVersionId, String shortName, String longName, int gpsX, int gpsY, double longit, double latit)
         {
             this.stopId = stopId;
             this.planVersionId = planVersionId;
