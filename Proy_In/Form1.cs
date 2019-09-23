@@ -76,7 +76,8 @@ namespace Proy_In
         {
             foreach (var aux in ppal.Stops)
             {
-                
+                map.Position = new GMap.NET.PointLatLng(aux.Latit, aux.Longit);
+
                 GMapOverlay markOv = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.red);
                 markOv.Markers.Add(mark);
@@ -85,8 +86,6 @@ namespace Proy_In
                 mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
                 map.Overlays.Add(markOv);
-                //Console.WriteLine(aux.Latit);
-                // Console.WriteLine(aux.Name + " ");
             }
         }
     }
