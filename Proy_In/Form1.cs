@@ -66,18 +66,20 @@ namespace Proy_In
              * GENERAR RUTA ABSOLUTA
              */
 
-            string p2 = System.IO.Directory.GetCurrentDirectory();
+            //**********************
+            //string p2 = System.IO.Directory.GetCurrentDirectory();
             string p3 = @"..\..\..\Data\stops.txt";
 
-            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
-            string exeDir = Path.GetDirectoryName(path1);
+            //string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            //string exeDir = Path.GetDirectoryName(path1);
 
-            Console.WriteLine("this would be the full path {0}",Path.GetFullPath(p3)+"\t"+Path.Combine(p2,p3));
+            Console.WriteLine("this would be the full path {0}",Path.GetFullPath(p3));
 
-            
             StreamReader leer = new StreamReader(Path.GetFullPath(p3));
             String line=leer.ReadLine();
             Console.WriteLine(line);
+
+            //**********************
 
             route.Stroke = new Pen(Color.Red, 3);
             routes.Routes.Add(route);
