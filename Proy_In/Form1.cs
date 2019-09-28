@@ -43,6 +43,10 @@ namespace Proy_In
             overlayRoute.Routes.Add(route);
             map.Overlays.Add(overlayRoute);*/
 
+            /**
+             * Makes routes
+             */
+
             GMapOverlay routes = new GMapOverlay("routes");
             List<GMap.NET.PointLatLng> points = new List<GMap.NET.PointLatLng>();
             points.Add(new GMap.NET.PointLatLng(3.43686833, -76.54497667));
@@ -119,7 +123,7 @@ namespace Proy_In
                 markOv.Markers.Add(mark);
 
               //  map.Overlays.ElementAt<GMapOverlay>(1).Markers.ElementAt<GMapMarker>(1).Position
-             
+         
 
                 mark.ToolTipMode = MarkerTooltipMode.Always;
                 mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);

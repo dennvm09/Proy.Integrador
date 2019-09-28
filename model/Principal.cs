@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,7 @@ namespace model
                     //Console.WriteLine(line);
 
                     if (lineS.Length == 8) {
-                        newS = new Stop(lineS[0], Int32.Parse(lineS[1]), lineS[2], lineS[3], Convert.ToInt32(lineS[4]), Convert.ToInt32(lineS[5]), Convert.ToDouble(lineS[6]), Convert.ToDouble(lineS[7]));
+                        newS = new Stop(lineS[0], Int32.Parse(lineS[1]), lineS[2], lineS[3], Convert.ToInt32(lineS[4]), Convert.ToInt32(lineS[5]), double.Parse(lineS[6], CultureInfo.InvariantCulture), double.Parse(lineS[7], CultureInfo.InvariantCulture));
                         stops.Add(newS);
                         //Console.WriteLine(newS.StopId);
                     }
