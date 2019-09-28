@@ -58,6 +58,10 @@ namespace Proy_In
 
             string path1 =@"Data\stops.txt";
 
+            /**
+             * GENERAR RUTA ABSOLUTA
+             */
+
             string p2 = System.IO.Directory.GetCurrentDirectory();
             string p3 = @"..\..\..\Data\stops.txt";
 
