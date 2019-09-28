@@ -36,6 +36,7 @@
             this.loadDataBt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.locateBt = new System.Windows.Forms.Button();
+            this.testMotion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map
@@ -62,7 +63,7 @@
             this.map.ShowTileGridLines = false;
             this.map.Size = new System.Drawing.Size(725, 669);
             this.map.TabIndex = 0;
-            this.map.Zoom = 7D;
+            this.map.Zoom = 1D;
             this.map.Load += new System.EventHandler(this.Map_Load);
             // 
             // zoomIn
@@ -133,11 +134,22 @@
             this.locateBt.UseVisualStyleBackColor = true;
             this.locateBt.Click += new System.EventHandler(this.LocateBt_Click);
             // 
+            // testMotion
+            // 
+            this.testMotion.Location = new System.Drawing.Point(764, 325);
+            this.testMotion.Name = "testMotion";
+            this.testMotion.Size = new System.Drawing.Size(119, 23);
+            this.testMotion.TabIndex = 8;
+            this.testMotion.Text = "test animation";
+            this.testMotion.UseVisualStyleBackColor = true;
+            this.testMotion.Click += new System.EventHandler(this.TestMotion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 693);
+            this.Controls.Add(this.testMotion);
             this.Controls.Add(this.locateBt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.loadDataBt);
@@ -164,6 +176,7 @@
         private System.Windows.Forms.Button loadDataBt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button locateBt;
+        private System.Windows.Forms.Button testMotion;
     }
 }
 

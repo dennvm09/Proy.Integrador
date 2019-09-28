@@ -16,24 +16,58 @@ namespace Proy_In
     public partial class Form1 : Form
     {
 
+        private GMapOverlay markOv;
         private Principal ppal;
         public Form1()
         {
+            
             InitializeComponent();
             ppal = new Principal();
+            markOv = new GMapOverlay("marker");
         }
 
         private void Map_Load(object sender, EventArgs e)
         {
             map.SetPositionByKeywords("Colombia,Cali");
             actualZoom.Text=map.Zoom.ToString()+" %";
+
+            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333 ,- 76.54844800), GMarkerGoogleType.red);
+            markOv.Markers.Add(mark);
+
+            /*
+            GMap.NET.WindowsForms.Markers.GMarkerGoogle curPos = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(new GMap.NET.PointLatLng(3.43686833, -76.54497667), GMap.NET.WindowsForms.Markers.GMarkerGoogleType.blue_pushpin);
+            GMap.NET.MapRoute path = GMap.NET.MapProviders.GoogleMapProvider.Instance.GetRoute(new GMap.NET.PointLatLng(3.43686833, -76.54497667), new GMap.NET.PointLatLng(3.447155, -76.55863833), false, false, 15);
+            GMapRoute route = new GMapRoute(path.Points, "My route");
+            GMapOverlay overlayRoute = new GMapOverlay("dsf");
+            overlayRoute.Routes.Clear();
+            overlayRoute.Routes.Add(route);
+            map.Overlays.Add(overlayRoute);*/
+
+            GMapOverlay routes = new GMapOverlay("routes");
+            List<GMap.NET.PointLatLng> points = new List<GMap.NET.PointLatLng>();
+            points.Add(new GMap.NET.PointLatLng(3.43686833, -76.54497667));
+            points.Add(new GMap.NET.PointLatLng(3.447155, -76.55863833));
+           // points.Add(new PointLatLng(48.861017, 2.330030));
+            GMapRoute route = new GMapRoute(points, "A walk in the park");
+            route.Stroke = new Pen(Color.Red, 3);
+            routes.Routes.Add(route);
+            map.Overlays.Add(routes);
+
+            map.Overlays.Add(markOv);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+
+
+            
+            
+
+
         }
 
 
@@ -46,11 +80,13 @@ namespace Proy_In
         {
             map.Zoom -= 3;
             actualZoom.Text = map.Zoom.ToString() + " %";
+
         }
 
         private void ZoomIn_Click(object sender, EventArgs e)
         {
             map.Zoom += 3;
+         
             actualZoom.Text = map.Zoom.ToString()+" %";
         }
 
@@ -72,6 +108,7 @@ namespace Proy_In
             ppal.test();
         }
 
+
         private void LocateBt_Click(object sender, EventArgs e)
         {
             foreach (var aux in ppal.Stops)
@@ -81,6 +118,9 @@ namespace Proy_In
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.red);
                 markOv.Markers.Add(mark);
 
+              //  map.Overlays.ElementAt<GMapOverlay>(1).Markers.ElementAt<GMapMarker>(1).Position
+             
+
                 mark.ToolTipMode = MarkerTooltipMode.Always;
                 mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
@@ -88,6 +128,17 @@ namespace Proy_In
                 //Console.WriteLine(aux.Latit);
                 // Console.WriteLine(aux.Name + " ");
             }
+        }
+
+        private void TestMotion_Click(object sender, EventArgs e)
+        {
+
+            //markOv.Markers.ElementAt(0).Position= new GMap.NET.PointLatLng(3.440465, -76.54748);
+
+            
+           // label10.Text = (path.Distance * 1000).ToString();
+            map.Refresh();
+
         }
     }
 }
