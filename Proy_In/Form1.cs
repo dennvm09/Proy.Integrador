@@ -18,12 +18,16 @@ namespace Proy_In
 
         private GMapOverlay markOv;
         private Principal ppal;
+
+      
+
         public Form1()
         {
             
             InitializeComponent();
             ppal = new Principal();
             markOv = new GMapOverlay("marker");
+            paneZonas.Visible = false;
         }
 
         private void Map_Load(object sender, EventArgs e)
@@ -62,16 +66,9 @@ namespace Proy_In
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
-
-
-            
-            
-
-
         }
 
 
@@ -173,5 +170,27 @@ namespace Proy_In
         {
 
         }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBZonas_CheckedChanged(object sender, EventArgs e)
+        {
+
+            bool estado = checkBZonas.Checked;
+
+            if (estado)
+            {
+                paneZonas.Visible = true;
+            }
+            else
+            {
+                paneZonas.Visible = false;
+            }
+        }
+
+        
     }
 }
