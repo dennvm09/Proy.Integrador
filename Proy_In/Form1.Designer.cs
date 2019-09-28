@@ -151,7 +151,7 @@
             // 
             // testMotion
             // 
-            this.testMotion.Location = new System.Drawing.Point(1143, 879);
+            this.testMotion.Location = new System.Drawing.Point(1134, 902);
             this.testMotion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testMotion.Name = "testMotion";
             this.testMotion.Size = new System.Drawing.Size(159, 28);

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -51,8 +53,24 @@ namespace Proy_In
             List<GMap.NET.PointLatLng> points = new List<GMap.NET.PointLatLng>();
             points.Add(new GMap.NET.PointLatLng(3.43686833, -76.54497667));
             points.Add(new GMap.NET.PointLatLng(3.447155, -76.55863833));
-           // points.Add(new PointLatLng(48.861017, 2.330030));
+            // points.Add(new PointLatLng(48.861017, 2.330030));
             GMapRoute route = new GMapRoute(points, "A walk in the park");
+
+            string path1 =@"Data\stops.txt";
+
+            string p2 = System.IO.Directory.GetCurrentDirectory();
+            string p3 = @"..\..\..\Data\stops.txt";
+
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(path1);
+
+            Console.WriteLine("this would be the full path {0}",Path.GetFullPath(p3)+"\t"+Path.Combine(p2,p3));
+
+            
+            StreamReader leer = new StreamReader(Path.GetFullPath(p3));
+            String line=leer.ReadLine();
+            Console.WriteLine(line);
+
             route.Stroke = new Pen(Color.Red, 3);
             routes.Routes.Add(route);
             map.Overlays.Add(routes);
@@ -117,9 +135,11 @@ namespace Proy_In
         {
             foreach (var aux in ppal.Stops)
             {
-                
+
                 GMapOverlay markOv = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.red);
+
+
                 markOv.Markers.Add(mark);
 
               //  map.Overlays.ElementAt<GMapOverlay>(1).Markers.ElementAt<GMapMarker>(1).Position
