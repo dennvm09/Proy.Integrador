@@ -30,6 +30,7 @@ namespace model
         }
 
         public String StopId { get => stopId; set => stopId = value; }
+        public String ShortName { get => shortName; set => shortName = value; }
         public double Longit { get => longit; set => Longit = value; }
         public double Latit { get => latit; set => latit = value; }
 
