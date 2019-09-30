@@ -21,7 +21,9 @@ namespace Proy_In
         private GMapOverlay markOv;
         private Principal ppal;
 
-      
+        private int preEstaciones = 0;
+        private int preCalle = 0;
+        private int preZona = 0;
 
         public Form1()
         {
@@ -30,6 +32,8 @@ namespace Proy_In
             ppal = new Principal();
             markOv = new GMapOverlay("marker");
             paneZonas.Visible = false;
+            paneOp1.Visible = false;
+            paneOp2.Visible = false;
         }
 
         private void Map_Load(object sender, EventArgs e)
@@ -199,7 +203,16 @@ namespace Proy_In
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
+            bool estado = checkBEstaciones.Checked;
 
+            if (estado)
+            {
+                preEstaciones = 1;
+            }
+            else
+            {
+                preEstaciones = 0;
+            }
         }
 
         private void CheckBZonas_CheckedChanged(object sender, EventArgs e)
@@ -217,6 +230,136 @@ namespace Proy_In
             }
         }
 
-        
+        private void CheckBCalle_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+            bool estado = checkBCalle.Checked;
+
+            if (estado)
+            {
+                preCalle = 1;
+            }
+            else
+            {
+                preCalle = 0;
+            }
+        }
+
+
+
+        private void filtroCalle()
+        {
+            foreach(var aux in ppal.StreetStops)
+            {
+                GMapOverlay markOv = new GMapOverlay("marker");
+                GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.yellow_small);
+                markOv.Markers.Add(mark);
+
+                mark.ToolTipMode = MarkerTooltipMode.Always;
+                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+
+                map.Overlays.Add(markOv);
+            }
+        }
+
+        private void filtroTerminal()
+        {
+
+            foreach (var aux in ppal.TerminalStops)
+            {
+                GMapOverlay markOv = new GMapOverlay("marker");
+                GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.blue);
+                markOv.Markers.Add(mark);
+
+                mark.ToolTipMode = MarkerTooltipMode.Always;
+                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+
+                map.Overlays.Add(markOv);
+            }
+        }
+
+        private void sinFiltroParadas()
+        {
+
+            foreach (var aux in ppal.Stops)
+            {
+
+                GMapOverlay markOv = new GMapOverlay("marker");
+                GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.red);
+
+
+                markOv.Markers.Add(mark);
+
+                //  map.Overlays.ElementAt<GMapOverlay>(1).Markers.ElementAt<GMapMarker>(1).Position
+
+
+                mark.ToolTipMode = MarkerTooltipMode.Always;
+                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+
+                map.Overlays.Add(markOv);
+                //Console.WriteLine(aux.Latit);
+                // Console.WriteLine(aux.Name + " ");
+            }
+
+
+        }
+
+        private void BtFiltrar_Click(object sender, EventArgs e)
+        {
+
+            if (preCalle == 1)
+            {
+                filtroCalle();
+            }
+            if (preEstaciones == 1)
+            {
+                filtroTerminal();
+            }
+            if (preCalle != 1 && preEstaciones != 1)
+            {
+                MessageBox.Show("No se ha seleccionado el filtro");
+            }
+
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            paneOp1.Visible = true;
+            paneOp2.Visible = false;
+        }
+
+        private void BtAnimacion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Aquí va lo de brayan");
+        }
+
+        private void RbtOpcion2_CheckedChanged(object sender, EventArgs e)
+        {
+            paneOp2.Visible = true;
+            paneOp1.Visible = false;
+        }
+
+        private void CheckBTodas_CheckedChanged(object sender, EventArgs e)
+        {
+            bool estado = checkBTodas.Checked;
+
+            if (estado)
+            {
+                checkBZonas.Enabled = false;
+                checkBCalle.Enabled = false;
+                checkBEstaciones.Enabled = false;
+                btFiltrar.Enabled = false;
+                sinFiltroParadas();
+
+            }
+            else
+            {
+                checkBZonas.Enabled = true;
+                checkBCalle.Enabled = true;
+                checkBEstaciones.Enabled = true;
+                btFiltrar.Enabled = true;
+            }
+        }
     }
 }

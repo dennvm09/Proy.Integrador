@@ -39,19 +39,34 @@
             this.testMotion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.paneZonas = new System.Windows.Forms.Panel();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBEstaciones = new System.Windows.Forms.CheckBox();
             this.checkBCalle = new System.Windows.Forms.CheckBox();
             this.checkBZonas = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.btFiltrar = new System.Windows.Forms.Button();
+            this.rbtOpcion1 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbtOpcion2 = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.paneOp1 = new System.Windows.Forms.Panel();
+            this.paneOp2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btAnimacion = new System.Windows.Forms.Button();
+            this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.paneZonas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.paneOp1.SuspendLayout();
+            this.paneOp2.SuspendLayout();
             this.SuspendLayout();
             // 
             // map
@@ -77,17 +92,17 @@
             this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.map.ShowTileGridLines = false;
-            this.map.Size = new System.Drawing.Size(703, 692);
+            this.map.Size = new System.Drawing.Size(701, 727);
             this.map.TabIndex = 0;
             this.map.Zoom = 1D;
             this.map.Load += new System.EventHandler(this.Map_Load);
             // 
             // zoomIn
             // 
-            this.zoomIn.Location = new System.Drawing.Point(938, 559);
+            this.zoomIn.Location = new System.Drawing.Point(113, 22);
             this.zoomIn.Margin = new System.Windows.Forms.Padding(2);
             this.zoomIn.Name = "zoomIn";
-            this.zoomIn.Size = new System.Drawing.Size(58, 32);
+            this.zoomIn.Size = new System.Drawing.Size(37, 32);
             this.zoomIn.TabIndex = 1;
             this.zoomIn.Text = "+";
             this.zoomIn.UseVisualStyleBackColor = true;
@@ -105,20 +120,23 @@
             // actualZoom
             // 
             this.actualZoom.AutoSize = true;
-            this.actualZoom.Location = new System.Drawing.Point(899, 569);
+            this.actualZoom.BackColor = System.Drawing.Color.Transparent;
+            this.actualZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actualZoom.Location = new System.Drawing.Point(65, 30);
             this.actualZoom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.actualZoom.Name = "actualZoom";
-            this.actualZoom.Size = new System.Drawing.Size(35, 13);
+            this.actualZoom.Size = new System.Drawing.Size(13, 16);
             this.actualZoom.TabIndex = 3;
-            this.actualZoom.Text = "label1";
+            this.actualZoom.Text = "-";
+            this.actualZoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.actualZoom.Click += new System.EventHandler(this.ActualZoom_Click);
             // 
             // zoomOut
             // 
-            this.zoomOut.Location = new System.Drawing.Point(833, 559);
+            this.zoomOut.Location = new System.Drawing.Point(23, 22);
             this.zoomOut.Margin = new System.Windows.Forms.Padding(2);
             this.zoomOut.Name = "zoomOut";
-            this.zoomOut.Size = new System.Drawing.Size(62, 32);
+            this.zoomOut.Size = new System.Drawing.Size(37, 32);
             this.zoomOut.TabIndex = 4;
             this.zoomOut.Text = "-";
             this.zoomOut.UseVisualStyleBackColor = true;
@@ -126,7 +144,7 @@
             // 
             // loadDataBt
             // 
-            this.loadDataBt.Location = new System.Drawing.Point(857, 623);
+            this.loadDataBt.Location = new System.Drawing.Point(840, 628);
             this.loadDataBt.Margin = new System.Windows.Forms.Padding(2);
             this.loadDataBt.Name = "loadDataBt";
             this.loadDataBt.Size = new System.Drawing.Size(188, 27);
@@ -137,7 +155,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(899, 503);
+            this.button1.Location = new System.Drawing.Point(743, 651);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
@@ -148,7 +166,7 @@
             // 
             // locateBt
             // 
-            this.locateBt.Location = new System.Drawing.Point(857, 666);
+            this.locateBt.Location = new System.Drawing.Point(840, 663);
             this.locateBt.Margin = new System.Windows.Forms.Padding(2);
             this.locateBt.Name = "locateBt";
             this.locateBt.Size = new System.Drawing.Size(188, 27);
@@ -159,12 +177,8 @@
             // 
             // testMotion
             // 
-<<<<<<< HEAD
             this.testMotion.Location = new System.Drawing.Point(1134, 902);
-            this.testMotion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
-            this.testMotion.Location = new System.Drawing.Point(723, 607);
->>>>>>> db9a275f56581affc9713ff0c975e99082abbaeb
+            this.testMotion.Margin = new System.Windows.Forms.Padding(4);
             this.testMotion.Name = "testMotion";
             this.testMotion.Size = new System.Drawing.Size(119, 23);
             this.testMotion.TabIndex = 8;
@@ -175,10 +189,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(719, 63);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 8;
             this.label1.Text = "Filtrar por...";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -194,82 +208,40 @@
             this.paneZonas.Controls.Add(this.checkBox4);
             this.paneZonas.Controls.Add(this.checkBox2);
             this.paneZonas.Controls.Add(this.checkBox1);
-            this.paneZonas.Location = new System.Drawing.Point(736, 170);
+            this.paneZonas.Location = new System.Drawing.Point(22, 172);
             this.paneZonas.Name = "paneZonas";
-            this.paneZonas.Size = new System.Drawing.Size(304, 168);
+            this.paneZonas.Size = new System.Drawing.Size(242, 161);
             this.paneZonas.TabIndex = 13;
             // 
-            // checkBEstaciones
+            // checkBox9
             // 
-            this.checkBEstaciones.AutoSize = true;
-            this.checkBEstaciones.Location = new System.Drawing.Point(736, 101);
-            this.checkBEstaciones.Name = "checkBEstaciones";
-            this.checkBEstaciones.Size = new System.Drawing.Size(78, 17);
-            this.checkBEstaciones.TabIndex = 14;
-            this.checkBEstaciones.Text = "Estaciones";
-            this.checkBEstaciones.UseVisualStyleBackColor = true;
-            this.checkBEstaciones.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(13, 136);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(103, 17);
+            this.checkBox9.TabIndex = 24;
+            this.checkBox9.Text = "Zona 8 (Calipso)";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // checkBCalle
+            // checkBox7
             // 
-            this.checkBCalle.AutoSize = true;
-            this.checkBCalle.Location = new System.Drawing.Point(736, 124);
-            this.checkBCalle.Name = "checkBCalle";
-            this.checkBCalle.Size = new System.Drawing.Size(116, 17);
-            this.checkBCalle.TabIndex = 15;
-            this.checkBCalle.Text = "Paradas en la calle";
-            this.checkBCalle.UseVisualStyleBackColor = true;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(13, 120);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(131, 17);
+            this.checkBox7.TabIndex = 23;
+            this.checkBox7.Text = "Zona 7 (Cañaveralejo)";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // checkBZonas
+            // checkBox8
             // 
-            this.checkBZonas.AutoSize = true;
-            this.checkBZonas.Location = new System.Drawing.Point(736, 147);
-            this.checkBZonas.Name = "checkBZonas";
-            this.checkBZonas.Size = new System.Drawing.Size(56, 17);
-            this.checkBZonas.TabIndex = 16;
-            this.checkBZonas.Text = "Zonas";
-            this.checkBZonas.UseVisualStyleBackColor = true;
-            this.checkBZonas.CheckedChanged += new System.EventHandler(this.CheckBZonas_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(13, 7);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Zona 0 (Centro)";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(13, 23);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(136, 17);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.Text = "Zona 1 (Universidades)";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(13, 55);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(157, 17);
-            this.checkBox3.TabIndex = 19;
-            this.checkBox3.Text = "Zona 3 (Paso del Comercio)";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(13, 39);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(102, 17);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.Text = "Zona 2 (Menga)";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(13, 104);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(121, 17);
+            this.checkBox8.TabIndex = 22;
+            this.checkBox8.Text = "Zona 6 (Guadalupe)";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
@@ -292,35 +264,207 @@
             this.checkBox6.Text = "Zona 4 (Andrés Sanín)";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // checkBox3
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(13, 120);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(131, 17);
-            this.checkBox7.TabIndex = 23;
-            this.checkBox7.Text = "Zona 7 (Cañaveralejo)";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(13, 55);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(157, 17);
+            this.checkBox3.TabIndex = 19;
+            this.checkBox3.Text = "Zona 3 (Paso del Comercio)";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // checkBox4
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(13, 104);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(121, 17);
-            this.checkBox8.TabIndex = 22;
-            this.checkBox8.Text = "Zona 6 (Guadalupe)";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(13, 39);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(102, 17);
+            this.checkBox4.TabIndex = 18;
+            this.checkBox4.Text = "Zona 2 (Menga)";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // checkBox2
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(13, 136);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(103, 17);
-            this.checkBox9.TabIndex = 24;
-            this.checkBox9.Text = "Zona 8 (Calipso)";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(13, 23);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(136, 17);
+            this.checkBox2.TabIndex = 17;
+            this.checkBox2.Text = "Zona 1 (Universidades)";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(13, 7);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(100, 17);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Zona 0 (Centro)";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBEstaciones
+            // 
+            this.checkBEstaciones.AutoSize = true;
+            this.checkBEstaciones.Location = new System.Drawing.Point(22, 103);
+            this.checkBEstaciones.Name = "checkBEstaciones";
+            this.checkBEstaciones.Size = new System.Drawing.Size(78, 17);
+            this.checkBEstaciones.TabIndex = 14;
+            this.checkBEstaciones.Text = "Estaciones";
+            this.checkBEstaciones.UseVisualStyleBackColor = true;
+            this.checkBEstaciones.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
+            // checkBCalle
+            // 
+            this.checkBCalle.AutoSize = true;
+            this.checkBCalle.Location = new System.Drawing.Point(22, 126);
+            this.checkBCalle.Name = "checkBCalle";
+            this.checkBCalle.Size = new System.Drawing.Size(116, 17);
+            this.checkBCalle.TabIndex = 15;
+            this.checkBCalle.Text = "Paradas en la calle";
+            this.checkBCalle.UseVisualStyleBackColor = true;
+            this.checkBCalle.CheckedChanged += new System.EventHandler(this.CheckBCalle_CheckedChanged);
+            // 
+            // checkBZonas
+            // 
+            this.checkBZonas.AutoSize = true;
+            this.checkBZonas.Location = new System.Drawing.Point(22, 149);
+            this.checkBZonas.Name = "checkBZonas";
+            this.checkBZonas.Size = new System.Drawing.Size(56, 17);
+            this.checkBZonas.TabIndex = 16;
+            this.checkBZonas.Text = "Zonas";
+            this.checkBZonas.UseVisualStyleBackColor = true;
+            this.checkBZonas.CheckedChanged += new System.EventHandler(this.CheckBZonas_CheckedChanged);
+            // 
+            // btFiltrar
+            // 
+            this.btFiltrar.Location = new System.Drawing.Point(209, 103);
+            this.btFiltrar.Name = "btFiltrar";
+            this.btFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btFiltrar.TabIndex = 17;
+            this.btFiltrar.Text = "Filtrar";
+            this.btFiltrar.UseVisualStyleBackColor = true;
+            this.btFiltrar.Click += new System.EventHandler(this.BtFiltrar_Click);
+            // 
+            // rbtOpcion1
+            // 
+            this.rbtOpcion1.AutoSize = true;
+            this.rbtOpcion1.Location = new System.Drawing.Point(746, 118);
+            this.rbtOpcion1.Name = "rbtOpcion1";
+            this.rbtOpcion1.Size = new System.Drawing.Size(122, 17);
+            this.rbtOpcion1.TabIndex = 18;
+            this.rbtOpcion1.TabStop = true;
+            this.rbtOpcion1.Text = "Conocer las paradas";
+            this.rbtOpcion1.UseVisualStyleBackColor = true;
+            this.rbtOpcion1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(731, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 21);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Desea...";
+            // 
+            // rbtOpcion2
+            // 
+            this.rbtOpcion2.AutoSize = true;
+            this.rbtOpcion2.Location = new System.Drawing.Point(746, 141);
+            this.rbtOpcion2.Name = "rbtOpcion2";
+            this.rbtOpcion2.Size = new System.Drawing.Size(117, 17);
+            this.rbtOpcion2.TabIndex = 20;
+            this.rbtOpcion2.TabStop = true;
+            this.rbtOpcion2.Text = "Ver rutas en acción";
+            this.rbtOpcion2.UseVisualStyleBackColor = true;
+            this.rbtOpcion2.CheckedChanged += new System.EventHandler(this.RbtOpcion2_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proy_In.Properties.Resources.logo_mio1;
+            this.pictureBox1.Location = new System.Drawing.Point(848, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 67);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // paneOp1
+            // 
+            this.paneOp1.Controls.Add(this.checkBTodas);
+            this.paneOp1.Controls.Add(this.label4);
+            this.paneOp1.Controls.Add(this.btFiltrar);
+            this.paneOp1.Controls.Add(this.label1);
+            this.paneOp1.Controls.Add(this.paneZonas);
+            this.paneOp1.Controls.Add(this.checkBEstaciones);
+            this.paneOp1.Controls.Add(this.checkBCalle);
+            this.paneOp1.Controls.Add(this.checkBZonas);
+            this.paneOp1.Location = new System.Drawing.Point(735, 176);
+            this.paneOp1.Name = "paneOp1";
+            this.paneOp1.Size = new System.Drawing.Size(293, 347);
+            this.paneOp1.TabIndex = 22;
+            // 
+            // paneOp2
+            // 
+            this.paneOp2.Controls.Add(this.btAnimacion);
+            this.paneOp2.Controls.Add(this.label5);
+            this.paneOp2.Controls.Add(this.label3);
+            this.paneOp2.Location = new System.Drawing.Point(735, 529);
+            this.paneOp2.Name = "paneOp2";
+            this.paneOp2.Size = new System.Drawing.Size(293, 100);
+            this.paneOp2.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Brayitaaaaan(:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(101, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 23);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "PARADAS";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(58, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 23);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "RUTAS EN ACCIÓN";
+            // 
+            // btAnimacion
+            // 
+            this.btAnimacion.Location = new System.Drawing.Point(189, 48);
+            this.btAnimacion.Name = "btAnimacion";
+            this.btAnimacion.Size = new System.Drawing.Size(75, 23);
+            this.btAnimacion.TabIndex = 20;
+            this.btAnimacion.Text = "Mostrar";
+            this.btAnimacion.UseVisualStyleBackColor = true;
+            this.btAnimacion.Click += new System.EventHandler(this.BtAnimacion_Click);
+            // 
+            // checkBTodas
+            // 
+            this.checkBTodas.AutoSize = true;
+            this.checkBTodas.Location = new System.Drawing.Point(22, 44);
+            this.checkBTodas.Name = "checkBTodas";
+            this.checkBTodas.Size = new System.Drawing.Size(113, 17);
+            this.checkBTodas.TabIndex = 19;
+            this.checkBTodas.Text = "Todas las paradas";
+            this.checkBTodas.UseVisualStyleBackColor = true;
+            this.checkBTodas.CheckedChanged += new System.EventHandler(this.CheckBTodas_CheckedChanged);
             // 
             // Form1
             // 
@@ -328,12 +472,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1052, 749);
-            this.Controls.Add(this.checkBZonas);
-            this.Controls.Add(this.checkBCalle);
-            this.Controls.Add(this.checkBEstaciones);
+            this.Controls.Add(this.paneOp2);
+            this.Controls.Add(this.paneOp1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.rbtOpcion2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rbtOpcion1);
             this.Controls.Add(this.testMotion);
-            this.Controls.Add(this.paneZonas);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.locateBt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.loadDataBt);
@@ -348,6 +493,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.paneZonas.ResumeLayout(false);
             this.paneZonas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.paneOp1.ResumeLayout(false);
+            this.paneOp1.PerformLayout();
+            this.paneOp2.ResumeLayout(false);
+            this.paneOp2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +530,18 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btFiltrar;
+        private System.Windows.Forms.RadioButton rbtOpcion1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbtOpcion2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel paneOp1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel paneOp2;
+        private System.Windows.Forms.Button btAnimacion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBTodas;
     }
 }
 
