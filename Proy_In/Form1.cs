@@ -138,6 +138,14 @@ namespace Proy_In
         }
 
 
+
+
+
+        /**
+         * este metodo era utilizado por el boton ubicar que se habia creado inicialmente.
+         * no es necesario, pero no lo elimino porque me da miedo jeje
+  
+         
         private void LocateBt_Click(object sender, EventArgs e)
         {
             foreach (var aux in ppal.Stops)
@@ -161,6 +169,7 @@ namespace Proy_In
             }
         }
 
+        */
         private void TestMotion_Click(object sender, EventArgs e)
         {
 
