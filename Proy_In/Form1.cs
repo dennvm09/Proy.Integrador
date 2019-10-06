@@ -137,18 +137,7 @@ namespace Proy_In
             actualZoom.Text = map.Zoom.ToString()+" %";
         }
 
-        private void LoadDataBt_Click(object sender, EventArgs e)
-        {
-            String path;
-            OpenFileDialog openFile = new OpenFileDialog();
-
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                path = openFile.FileName;
-                Console.WriteLine(path);
-                //ppal.addStops(path);
-            }
-        }
+        
 
         private void Button1_Click(object sender, EventArgs e)
         {

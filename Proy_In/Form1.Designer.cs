@@ -33,7 +33,6 @@
             this.zoomInfo = new System.Windows.Forms.Label();
             this.actualZoom = new System.Windows.Forms.Label();
             this.zoomOut = new System.Windows.Forms.Button();
-            this.loadDataBt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.testMotion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -141,17 +140,6 @@
             this.zoomOut.Text = "-";
             this.zoomOut.UseVisualStyleBackColor = true;
             this.zoomOut.Click += new System.EventHandler(this.ZoomOut_Click);
-            // 
-            // loadDataBt
-            // 
-            this.loadDataBt.Location = new System.Drawing.Point(876, 581);
-            this.loadDataBt.Margin = new System.Windows.Forms.Padding(2);
-            this.loadDataBt.Name = "loadDataBt";
-            this.loadDataBt.Size = new System.Drawing.Size(110, 27);
-            this.loadDataBt.TabIndex = 5;
-            this.loadDataBt.Text = "Cargar archivo";
-            this.loadDataBt.UseVisualStyleBackColor = true;
-            this.loadDataBt.Click += new System.EventHandler(this.LoadDataBt_Click);
             // 
             // button1
             // 
@@ -489,7 +477,6 @@
             this.Controls.Add(this.rbtOpcion1);
             this.Controls.Add(this.testMotion);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.loadDataBt);
             this.Controls.Add(this.zoomOut);
             this.Controls.Add(this.actualZoom);
             this.Controls.Add(this.zoomInfo);
@@ -518,7 +505,6 @@
         private System.Windows.Forms.Label zoomInfo;
         private System.Windows.Forms.Label actualZoom;
         private System.Windows.Forms.Button zoomOut;
-        private System.Windows.Forms.Button loadDataBt;
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Button testMotion;
