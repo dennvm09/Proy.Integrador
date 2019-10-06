@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using model;
@@ -19,6 +20,22 @@ namespace Proy_In
     {
 
         private GMapOverlay markOv;
+
+        private GMapOverlay gmapStreet;
+        private GMapOverlay gmapStations;
+
+
+        private GMapOverlay GZ0;
+        private GMapOverlay GZ1;
+        private GMapOverlay GZ2;
+        private GMapOverlay GZ3;
+        private GMapOverlay GZ4;
+        private GMapOverlay GZ5;
+        private GMapOverlay GZ6;
+        private GMapOverlay GZ7;
+        private GMapOverlay GZ8;
+
+
         private Principal ppal;
 
         private int preEstaciones = 0;
@@ -30,6 +47,7 @@ namespace Proy_In
             
             InitializeComponent();
             ppal = new Principal();
+            ppal.addStops();
             markOv = new GMapOverlay("marker");
             paneZonas.Visible = false;
             paneOp1.Visible = false;
@@ -128,7 +146,7 @@ namespace Proy_In
             {
                 path = openFile.FileName;
                 Console.WriteLine(path);
-                ppal.addStops(path);
+                //ppal.addStops(path);
             }
         }
 
@@ -217,10 +235,13 @@ namespace Proy_In
             if (estado)
             {
                 preEstaciones = 1;
+                filtroTerminal();
             }
             else
             {
                 preEstaciones = 0;
+                //gmapStations.Clear();
+                
             }
         }
 
@@ -242,16 +263,16 @@ namespace Proy_In
         private void CheckBCalle_CheckedChanged(object sender, EventArgs e)
         {
 
-
             bool estado = checkBCalle.Checked;
 
             if (estado)
             {
                 preCalle = 1;
+                filtroCalle();
             }
             else
             {
-                preCalle = 0;
+                preCalle = 0; 
             }
         }
 
@@ -259,56 +280,49 @@ namespace Proy_In
 
         private void filtroCalle()
         {
-            foreach(var aux in ppal.StreetStops)
+            
+            foreach (var aux in ppal.StreetStops)
             {
-                GMapOverlay markOv = new GMapOverlay("marker");
+                gmapStreet = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.yellow_small);
-                markOv.Markers.Add(mark);
+                gmapStreet.Markers.Add(mark);
 
-                mark.ToolTipMode = MarkerTooltipMode.Always;
-                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+                //mark.ToolTipMode = MarkerTooltipMode.Always;
+                //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
-                map.Overlays.Add(markOv);
+                map.Overlays.Add(gmapStreet);
             }
         }
 
         private void filtroTerminal()
         {
-
             foreach (var aux in ppal.TerminalStops)
             {
-                GMapOverlay markOv = new GMapOverlay("marker");
+                gmapStations = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.blue);
-                markOv.Markers.Add(mark);
+                gmapStations.Markers.Add(mark);
 
-                mark.ToolTipMode = MarkerTooltipMode.Always;
-                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+                //mark.ToolTipMode = MarkerTooltipMode.Always;
+                //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
-                map.Overlays.Add(markOv);
+                map.Overlays.Add(gmapStations);
             }
         }
 
         private void sinFiltroParadas()
         {
-
             foreach (var aux in ppal.Stops)
             {
 
                 GMapOverlay markOv = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.red);
 
-
                 markOv.Markers.Add(mark);
 
-                //  map.Overlays.ElementAt<GMapOverlay>(1).Markers.ElementAt<GMapMarker>(1).Position
-
-
-                mark.ToolTipMode = MarkerTooltipMode.Always;
-                mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+                //mark.ToolTipMode = MarkerTooltipMode.Always;
+                //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
                 map.Overlays.Add(markOv);
-                //Console.WriteLine(aux.Latit);
-                // Console.WriteLine(aux.Name + " ");
             }
 
 
@@ -375,5 +389,60 @@ namespace Proy_In
         {
             map.Overlays.Clear();
         }
+
+        private void polyZ0()
+        {
+            GZ0 = new GMapOverlay("Zona 0");
+            List<PointLatLng> pZ0 = new List<PointLatLng>();
+            
+            pZ0.Add(new PointLatLng(3.458952, -76.513447));
+            pZ0.Add(new PointLatLng(3.463029, -76.521014));
+            pZ0.Add(new PointLatLng(3.460478, -76.527052));
+            pZ0.Add(new PointLatLng(3.450851, -76.537823));
+            pZ0.Add(new PointLatLng(3.451531, -76.541646));
+            pZ0.Add(new PointLatLng(3.455851, -76.542208));
+            pZ0.Add(new PointLatLng(3.458972, -76.553556));
+            pZ0.Add(new PointLatLng(3.458552, -76.582726));
+            pZ0.Add(new PointLatLng(3.448433, -76.562660));
+            pZ0.Add(new PointLatLng(3.452630, -76.549432));
+            pZ0.Add(new PointLatLng(3.441510, -76.536748));
+            pZ0.Add(new PointLatLng(3.428423, -76.533186));
+            pZ0.Add(new PointLatLng(3.434846, -76.523287));
+            pZ0.Add(new PointLatLng(3.443270, -76.518067));
+
+
+            GMapPolygon polygonZ0 = new GMapPolygon(pZ0, "ZONA 0");
+
+            GZ0.Polygons.Add(polygonZ0);
+            map.Overlays.Add(GZ0);
+            map.Zoom = map.Zoom + 1;
+            map.Zoom = map.Zoom - 1;
+
+        }
+
+        private void CheckBZ0_CheckedChanged(object sender, EventArgs e)
+        {
+            bool estado = checkBZ0.Checked;
+            if (estado)
+            {
+                polyZ0();
+            }
+            else
+            {
+                GZ0.Clear();
+            }
+        }
+
+        private void polyZ1()
+        {
+
+        }
+
+
+
+
+
+
+
     }
 }

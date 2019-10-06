@@ -26,12 +26,12 @@ namespace model
         public List<Stop> StreetStops { get => streetStops; set => streetStops = value;}
         public List<Stop> TerminalStops { get => terminalStops; set => terminalStops = value; }
 
-        public void addStops(String path) {
+        public void addStops() {
             //StreamReader leer = new StreamReader(Path.GetFullPath("stops.txt"));
             //StreamReader leer = new StreamReader(Path.GetFullPath("StopPratice.txt"));
 
            // Console.WriteLine(path);
-            StreamReader leer = new StreamReader(@path);
+            StreamReader leer = new StreamReader("Data/StopPractice.txt");
            
             try
             {
