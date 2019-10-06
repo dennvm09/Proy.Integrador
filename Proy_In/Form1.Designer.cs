@@ -42,7 +42,7 @@
             this.checkBZ7 = new System.Windows.Forms.CheckBox();
             this.checkBZ6 = new System.Windows.Forms.CheckBox();
             this.checkBZ5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBZ4 = new System.Windows.Forms.CheckBox();
             this.checkBZ3 = new System.Windows.Forms.CheckBox();
             this.checkBZ2 = new System.Windows.Forms.CheckBox();
             this.checkBZ1 = new System.Windows.Forms.CheckBox();
@@ -192,7 +192,7 @@
             this.paneZonas.Controls.Add(this.checkBZ7);
             this.paneZonas.Controls.Add(this.checkBZ6);
             this.paneZonas.Controls.Add(this.checkBZ5);
-            this.paneZonas.Controls.Add(this.checkBox6);
+            this.paneZonas.Controls.Add(this.checkBZ4);
             this.paneZonas.Controls.Add(this.checkBZ3);
             this.paneZonas.Controls.Add(this.checkBZ2);
             this.paneZonas.Controls.Add(this.checkBZ1);
@@ -211,6 +211,7 @@
             this.checkBZ8.TabIndex = 24;
             this.checkBZ8.Text = "Zona 8 (Calipso)";
             this.checkBZ8.UseVisualStyleBackColor = true;
+            this.checkBZ8.CheckedChanged += new System.EventHandler(this.CheckBZ8_CheckedChanged);
             // 
             // checkBZ7
             // 
@@ -221,6 +222,7 @@
             this.checkBZ7.TabIndex = 23;
             this.checkBZ7.Text = "Zona 7 (Cañaveralejo)";
             this.checkBZ7.UseVisualStyleBackColor = true;
+            this.checkBZ7.CheckedChanged += new System.EventHandler(this.CheckBZ7_CheckedChanged);
             // 
             // checkBZ6
             // 
@@ -231,6 +233,7 @@
             this.checkBZ6.TabIndex = 22;
             this.checkBZ6.Text = "Zona 6 (Guadalupe)";
             this.checkBZ6.UseVisualStyleBackColor = true;
+            this.checkBZ6.CheckedChanged += new System.EventHandler(this.CheckBZ6_CheckedChanged);
             // 
             // checkBZ5
             // 
@@ -242,16 +245,18 @@
             this.checkBZ5.Text = "Zona 5 (Nuevo Latir)";
             this.checkBZ5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBZ5.UseVisualStyleBackColor = true;
+            this.checkBZ5.CheckedChanged += new System.EventHandler(this.CheckBZ5_CheckedChanged);
             // 
-            // checkBox6
+            // checkBZ4
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(13, 72);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(134, 17);
-            this.checkBox6.TabIndex = 20;
-            this.checkBox6.Text = "Zona 4 (Andrés Sanín)";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBZ4.AutoSize = true;
+            this.checkBZ4.Location = new System.Drawing.Point(13, 72);
+            this.checkBZ4.Name = "checkBZ4";
+            this.checkBZ4.Size = new System.Drawing.Size(134, 17);
+            this.checkBZ4.TabIndex = 20;
+            this.checkBZ4.Text = "Zona 4 (Andrés Sanín)";
+            this.checkBZ4.UseVisualStyleBackColor = true;
+            this.checkBZ4.CheckedChanged += new System.EventHandler(this.CheckBox6_CheckedChanged);
             // 
             // checkBZ3
             // 
@@ -262,6 +267,7 @@
             this.checkBZ3.TabIndex = 19;
             this.checkBZ3.Text = "Zona 3 (Paso del Comercio)";
             this.checkBZ3.UseVisualStyleBackColor = true;
+            this.checkBZ3.CheckedChanged += new System.EventHandler(this.CheckBZ3_CheckedChanged);
             // 
             // checkBZ2
             // 
@@ -272,6 +278,7 @@
             this.checkBZ2.TabIndex = 18;
             this.checkBZ2.Text = "Zona 2 (Menga)";
             this.checkBZ2.UseVisualStyleBackColor = true;
+            this.checkBZ2.CheckedChanged += new System.EventHandler(this.CheckBZ2_CheckedChanged);
             // 
             // checkBZ1
             // 
@@ -282,6 +289,7 @@
             this.checkBZ1.TabIndex = 17;
             this.checkBZ1.Text = "Zona 1 (Universidades)";
             this.checkBZ1.UseVisualStyleBackColor = true;
+            this.checkBZ1.CheckedChanged += new System.EventHandler(this.CheckBZ1_CheckedChanged);
             // 
             // checkBZ0
             // 
@@ -524,7 +532,7 @@
         private System.Windows.Forms.CheckBox checkBZ7;
         private System.Windows.Forms.CheckBox checkBZ6;
         private System.Windows.Forms.CheckBox checkBZ5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBZ4;
         private System.Windows.Forms.CheckBox checkBZ3;
         private System.Windows.Forms.CheckBox checkBZ2;
         private System.Windows.Forms.CheckBox checkBZ1;
