@@ -370,5 +370,10 @@ namespace Proy_In
                 btFiltrar.Enabled = true;
             }
         }
+
+        private void BtLimpiar_Click(object sender, EventArgs e)
+        {
+            map.Overlays.Clear();
+        }
     }
 }

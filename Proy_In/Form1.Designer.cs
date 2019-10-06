@@ -56,12 +56,13 @@
             this.rbtOpcion2 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneOp1 = new System.Windows.Forms.Panel();
-            this.paneOp2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btAnimacion = new System.Windows.Forms.Button();
             this.checkBTodas = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.paneOp2 = new System.Windows.Forms.Panel();
+            this.btAnimacion = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btLimpiar = new System.Windows.Forms.Button();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -380,6 +381,7 @@
             // 
             // paneOp1
             // 
+            this.paneOp1.Controls.Add(this.btLimpiar);
             this.paneOp1.Controls.Add(this.checkBTodas);
             this.paneOp1.Controls.Add(this.label4);
             this.paneOp1.Controls.Add(this.btFiltrar);
@@ -393,25 +395,16 @@
             this.paneOp1.Size = new System.Drawing.Size(293, 347);
             this.paneOp1.TabIndex = 22;
             // 
-            // paneOp2
+            // checkBTodas
             // 
-            this.paneOp2.Controls.Add(this.btAnimacion);
-            this.paneOp2.Controls.Add(this.label5);
-            this.paneOp2.Controls.Add(this.label3);
-            this.paneOp2.Location = new System.Drawing.Point(735, 176);
-            this.paneOp2.Name = "paneOp2";
-            this.paneOp2.Size = new System.Drawing.Size(293, 100);
-            this.paneOp2.TabIndex = 23;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Brayitaaaaan(:";
+            this.checkBTodas.AutoSize = true;
+            this.checkBTodas.Location = new System.Drawing.Point(22, 44);
+            this.checkBTodas.Name = "checkBTodas";
+            this.checkBTodas.Size = new System.Drawing.Size(113, 17);
+            this.checkBTodas.TabIndex = 19;
+            this.checkBTodas.Text = "Todas las paradas";
+            this.checkBTodas.UseVisualStyleBackColor = true;
+            this.checkBTodas.CheckedChanged += new System.EventHandler(this.CheckBTodas_CheckedChanged);
             // 
             // label4
             // 
@@ -423,15 +416,15 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "PARADAS";
             // 
-            // label5
+            // paneOp2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(58, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 23);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "RUTAS EN ACCIÓN";
+            this.paneOp2.Controls.Add(this.btAnimacion);
+            this.paneOp2.Controls.Add(this.label5);
+            this.paneOp2.Controls.Add(this.label3);
+            this.paneOp2.Location = new System.Drawing.Point(735, 176);
+            this.paneOp2.Name = "paneOp2";
+            this.paneOp2.Size = new System.Drawing.Size(293, 100);
+            this.paneOp2.TabIndex = 23;
             // 
             // btAnimacion
             // 
@@ -443,16 +436,35 @@
             this.btAnimacion.UseVisualStyleBackColor = true;
             this.btAnimacion.Click += new System.EventHandler(this.BtAnimacion_Click);
             // 
-            // checkBTodas
+            // label5
             // 
-            this.checkBTodas.AutoSize = true;
-            this.checkBTodas.Location = new System.Drawing.Point(22, 44);
-            this.checkBTodas.Name = "checkBTodas";
-            this.checkBTodas.Size = new System.Drawing.Size(113, 17);
-            this.checkBTodas.TabIndex = 19;
-            this.checkBTodas.Text = "Todas las paradas";
-            this.checkBTodas.UseVisualStyleBackColor = true;
-            this.checkBTodas.CheckedChanged += new System.EventHandler(this.CheckBTodas_CheckedChanged);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(58, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 23);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "RUTAS EN ACCIÓN";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Brayitaaaaan(:";
+            // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Location = new System.Drawing.Point(209, 133);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpiar.TabIndex = 20;
+            this.btLimpiar.Text = "Limpiar";
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Click += new System.EventHandler(this.BtLimpiar_Click);
             // 
             // Form1
             // 
@@ -528,6 +540,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBTodas;
+        private System.Windows.Forms.Button btLimpiar;
     }
 }
 
