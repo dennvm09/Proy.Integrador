@@ -15,6 +15,8 @@ namespace model
         private List<Stop> streetStops;
         private List<Stop> terminalStops;
 
+       
+
         public Principal()
         {
             stops = new List<Stop>();
@@ -130,6 +132,8 @@ namespace model
           //  Console.WriteLine("methodTest1 is running");
        // }
 
+      
+       
         static void Main()
         {
         }

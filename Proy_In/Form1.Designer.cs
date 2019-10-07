@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.map = new GMap.NET.WindowsForms.GMapControl();
             this.zoomIn = new System.Windows.Forms.Button();
             this.zoomInfo = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             this.btAnimacion = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -482,6 +485,7 @@
             this.Controls.Add(this.zoomInfo);
             this.Controls.Add(this.zoomIn);
             this.Controls.Add(this.map);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "MIO SITM";
@@ -536,6 +540,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBTodas;
         private System.Windows.Forms.Button btLimpiar;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

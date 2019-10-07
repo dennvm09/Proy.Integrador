@@ -19,6 +19,8 @@ namespace Proy_In
     public partial class Form1 : Form
     {
 
+        //VALENTINAAAAA, NO OLVIDES HACER LO DE ELIMINAR LOS OVERLAYS, YA SABES CÓMO (: -DENNYS
+
         private GMapOverlay markOv;
 
         private GMapOverlay gmapStreet;
@@ -54,6 +56,10 @@ namespace Proy_In
             paneOp2.Visible = false;
         }
 
+
+
+
+
         private void Map_Load(object sender, EventArgs e)
         {
             map.SetPositionByKeywords("Colombia,Cali");
@@ -82,7 +88,7 @@ namespace Proy_In
             // points.Add(new PointLatLng(48.861017, 2.330030));
             GMapRoute route = new GMapRoute(points, "A walk in the park");
 
-            string path1 =@"Data\stops.txt";
+            
 
             /**
              * GENERAR RUTA ABSOLUTA
@@ -264,8 +270,6 @@ namespace Proy_In
                 preCalle = 0; 
             }
         }
-
-
 
         private void filtroCalle()
         {
