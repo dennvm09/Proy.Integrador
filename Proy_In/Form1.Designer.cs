@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.map = new GMap.NET.WindowsForms.GMapControl();
             this.zoomIn = new System.Windows.Forms.Button();
             this.zoomInfo = new System.Windows.Forms.Label();
             this.actualZoom = new System.Windows.Forms.Label();
             this.zoomOut = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.testMotion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.paneZonas = new System.Windows.Forms.Panel();
@@ -61,10 +59,10 @@
             this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.paneOp2 = new System.Windows.Forms.Panel();
+            this.txtBusId = new System.Windows.Forms.TextBox();
             this.btAnimacion = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -143,17 +141,6 @@
             this.zoomOut.Text = "-";
             this.zoomOut.UseVisualStyleBackColor = true;
             this.zoomOut.Click += new System.EventHandler(this.ZoomOut_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(782, 581);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 27);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // testMotion
             // 
@@ -428,17 +415,25 @@
             // 
             // paneOp2
             // 
+            this.paneOp2.Controls.Add(this.txtBusId);
             this.paneOp2.Controls.Add(this.btAnimacion);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Controls.Add(this.label3);
             this.paneOp2.Location = new System.Drawing.Point(735, 176);
             this.paneOp2.Name = "paneOp2";
-            this.paneOp2.Size = new System.Drawing.Size(293, 100);
+            this.paneOp2.Size = new System.Drawing.Size(293, 126);
             this.paneOp2.TabIndex = 23;
+            // 
+            // txtBusId
+            // 
+            this.txtBusId.Location = new System.Drawing.Point(20, 69);
+            this.txtBusId.Name = "txtBusId";
+            this.txtBusId.Size = new System.Drawing.Size(134, 20);
+            this.txtBusId.TabIndex = 21;
             // 
             // btAnimacion
             // 
-            this.btAnimacion.Location = new System.Drawing.Point(189, 48);
+            this.btAnimacion.Location = new System.Drawing.Point(189, 69);
             this.btAnimacion.Name = "btAnimacion";
             this.btAnimacion.Size = new System.Drawing.Size(75, 23);
             this.btAnimacion.TabIndex = 20;
@@ -459,12 +454,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 48);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 18);
+            this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Brayitaaaaan(:";
+            this.label3.Text = "Código bus:";
             // 
             // Form1
             // 
@@ -479,7 +474,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rbtOpcion1);
             this.Controls.Add(this.testMotion);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.zoomOut);
             this.Controls.Add(this.actualZoom);
             this.Controls.Add(this.zoomInfo);
@@ -509,7 +503,6 @@
         private System.Windows.Forms.Label zoomInfo;
         private System.Windows.Forms.Label actualZoom;
         private System.Windows.Forms.Button zoomOut;
-        private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Button testMotion;
 
@@ -540,7 +533,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBTodas;
         private System.Windows.Forms.Button btLimpiar;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtBusId;
     }
 }
 

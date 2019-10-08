@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using System.Threading;
 using model;
 
 namespace Proy_In
@@ -348,7 +349,30 @@ namespace Proy_In
         private void BtAnimacion_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Aquí va lo de brayan");
+
+            Thread t = new Thread(animacion);
+            t.Start();
         }
+
+        private void animacion()
+        {
+            List<Bus> bus = ppal.getBusElementAt(txtBusId.Text);
+            ppal.sortBusesByDateTime(bus);
+            Console.WriteLine(bus.Count);
+            GMarkerGoogle mark1 = new GMarkerGoogle(new GMap.NET.PointLatLng(bus.ElementAt(0).Latitude, bus.ElementAt(0).Longitude), GMarkerGoogleType.red);
+            markOv.Markers.Add(mark1);
+
+            map.Overlays.Add(markOv);
+
+            for (int i = 1; i < bus.Count / 10; i++)
+            {
+
+                mark1.Position = new GMap.NET.PointLatLng(bus.ElementAt(i).Latitude, bus.ElementAt(i).Longitude);
+                Thread.Sleep(200);
+            }
+        }
+
+
 
         private void RbtOpcion2_CheckedChanged(object sender, EventArgs e)
         {
