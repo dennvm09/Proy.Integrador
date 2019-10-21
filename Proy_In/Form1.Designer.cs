@@ -63,6 +63,8 @@
             this.btAnimacion = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -326,7 +328,7 @@
             // rbtOpcion1
             // 
             this.rbtOpcion1.AutoSize = true;
-            this.rbtOpcion1.Location = new System.Drawing.Point(746, 118);
+            this.rbtOpcion1.Location = new System.Drawing.Point(746, 166);
             this.rbtOpcion1.Name = "rbtOpcion1";
             this.rbtOpcion1.Size = new System.Drawing.Size(122, 17);
             this.rbtOpcion1.TabIndex = 18;
@@ -339,7 +341,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(731, 94);
+            this.label2.Location = new System.Drawing.Point(731, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 19;
@@ -348,7 +350,7 @@
             // rbtOpcion2
             // 
             this.rbtOpcion2.AutoSize = true;
-            this.rbtOpcion2.Location = new System.Drawing.Point(746, 141);
+            this.rbtOpcion2.Location = new System.Drawing.Point(746, 189);
             this.rbtOpcion2.Name = "rbtOpcion2";
             this.rbtOpcion2.Size = new System.Drawing.Size(117, 17);
             this.rbtOpcion2.TabIndex = 20;
@@ -360,7 +362,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proy_In.Properties.Resources.logo_mio1;
-            this.pictureBox1.Location = new System.Drawing.Point(848, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(848, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 67);
             this.pictureBox1.TabIndex = 21;
@@ -377,7 +379,7 @@
             this.paneOp1.Controls.Add(this.checkBEstaciones);
             this.paneOp1.Controls.Add(this.checkBCalle);
             this.paneOp1.Controls.Add(this.checkBZonas);
-            this.paneOp1.Location = new System.Drawing.Point(735, 176);
+            this.paneOp1.Location = new System.Drawing.Point(735, 224);
             this.paneOp1.Name = "paneOp1";
             this.paneOp1.Size = new System.Drawing.Size(293, 347);
             this.paneOp1.TabIndex = 22;
@@ -419,21 +421,21 @@
             this.paneOp2.Controls.Add(this.btAnimacion);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Controls.Add(this.label3);
-            this.paneOp2.Location = new System.Drawing.Point(735, 176);
+            this.paneOp2.Location = new System.Drawing.Point(735, 224);
             this.paneOp2.Name = "paneOp2";
-            this.paneOp2.Size = new System.Drawing.Size(293, 126);
+            this.paneOp2.Size = new System.Drawing.Size(293, 173);
             this.paneOp2.TabIndex = 23;
             // 
             // txtBusId
             // 
-            this.txtBusId.Location = new System.Drawing.Point(20, 69);
+            this.txtBusId.Location = new System.Drawing.Point(20, 132);
             this.txtBusId.Name = "txtBusId";
             this.txtBusId.Size = new System.Drawing.Size(134, 20);
             this.txtBusId.TabIndex = 21;
             // 
             // btAnimacion
             // 
-            this.btAnimacion.Location = new System.Drawing.Point(189, 69);
+            this.btAnimacion.Location = new System.Drawing.Point(189, 132);
             this.btAnimacion.Name = "btAnimacion";
             this.btAnimacion.Size = new System.Drawing.Size(75, 23);
             this.btAnimacion.TabIndex = 20;
@@ -455,11 +457,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 50);
+            this.label3.Location = new System.Drawing.Point(19, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Código bus:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(826, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Hora actual:";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(909, 96);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(90, 21);
+            this.lblHora.TabIndex = 25;
+            this.lblHora.Text = "HH:MM:SS";
+            this.lblHora.Click += new System.EventHandler(this.Label7_Click);
             // 
             // Form1
             // 
@@ -467,6 +489,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1052, 749);
+            this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.paneOp2);
             this.Controls.Add(this.paneOp1);
             this.Controls.Add(this.pictureBox1);
@@ -534,6 +558,8 @@
         private System.Windows.Forms.CheckBox checkBTodas;
         private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.TextBox txtBusId;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblHora;
     }
 }
 

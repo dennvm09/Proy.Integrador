@@ -23,3 +23,10 @@ C:\Users\usuario\Desktop\Proy.-Int\model\obj\Debug\model.csprojAssemblyReference
 C:\Users\usuario\Desktop\Proy.-Int\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 C:\Users\usuario\Desktop\Proy.-Int\model\obj\Debug\model.exe
 C:\Users\usuario\Desktop\Proy.-Int\model\obj\Debug\model.pdb
+C:\Users\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.exe.config
+C:\Users\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.exe
+C:\Users\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.pdb
+C:\Users\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.exe
+C:\Users\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.pdb

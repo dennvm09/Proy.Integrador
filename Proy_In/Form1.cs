@@ -58,7 +58,7 @@ namespace Proy_In
         }
 
 
-
+      
 
 
         private void Map_Load(object sender, EventArgs e)
@@ -807,6 +807,11 @@ namespace Proy_In
             {
                 GZ8.Clear();
             }
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
