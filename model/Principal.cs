@@ -80,10 +80,11 @@ namespace model
         }
 
 
-        public void loadOwnDataGramData(String path)
+
+        public void loadOwnDataGramData(String path1)
         {
 
-            path = @"..\..\..\Data\DATAGRAMS.txt";
+            String path = path1;
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);

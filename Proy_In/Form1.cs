@@ -55,11 +55,8 @@ namespace Proy_In
             paneZonas.Visible = false;
             paneOp1.Visible = false;
             paneOp2.Visible = false;
+            timer1.Start();
         }
-
-
-      
-
 
         private void Map_Load(object sender, EventArgs e)
         {
@@ -280,6 +277,14 @@ namespace Proy_In
                 gmapStreet = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.yellow_small);
                 gmapStreet.Markers.Add(mark);
+
+                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                mark.ToolTipText = String.Format("Parada: " + aux.ShortName + "\n" + "ID: " + aux.StopId + "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
+                mark.ToolTip.TextPadding = new Size(10, 10);
+                mark.ToolTip.Fill = Brushes.FloralWhite;
+
+
+
 
                 //mark.ToolTipMode = MarkerTooltipMode.Always;
                 //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
@@ -790,6 +795,11 @@ namespace Proy_In
             pZ8.Add(new PointLatLng(3.443270, -76.518067));
             pZ8.Add(new PointLatLng(3.443159, -76.493519));
             GMapPolygon poligonoZ8 = new GMapPolygon(pZ8, "PRADO");
+
+            //poligonoZ8.Fill = new SolidBrush(Color.FromName("blue"));
+            //poligonoZ8.Fill = Brushes.LightSeaGreen;
+               // System.Windows.Media.Brushes.LightSeaGreen;
+            //FromArgb(255, 220, 213)
             GZ8.Polygons.Add(poligonoZ8);
             map.Overlays.Add(GZ8);
             map.Zoom = map.Zoom + 1;
@@ -812,6 +822,13 @@ namespace Proy_In
         private void Label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            timer1.Enabled = true;
+            timer1.Interval = 500;
         }
     }
 }
