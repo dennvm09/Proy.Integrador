@@ -422,10 +422,18 @@ namespace model
 
 
 
-                if(longName.Contains("Av ") || longName.Contains("Cl ") || longName.Contains("Kr ") || longName.Contains("Puente ") || longName.Contains("Via") || longName.Contains("Urb"))
+                if(longName.Contains("Av ") || longName.Contains("Cl ") || longName.Contains("Kr ") || longName.Contains("Puente ") || longName.Contains("Via") || longName.Contains("Urb") || longName.Contains("La ") || longName.Contains("Altos "))
                 {
                     streetStops.Add(sortOut);
-                }else if (shortName != null && shortName.Length > 2) {
+                }
+                else
+                {
+                    terminalStops.Add(sortOut);
+                }
+
+
+
+               /** if (shortName != null && shortName.Length > 2) {
                     Boolean isNumber = char.IsLetter(shortName[2]);
                     if (isNumber == false)
                     {
@@ -438,12 +446,11 @@ namespace model
                         {
                             streetStops.Add(sortOut);
                         }
-                    }   
-                }
-                else
-                {
-                    terminalStops.Add(sortOut);
-                }
+                    }
+                    else {
+                        terminalStops.Add(sortOut);
+                    }
+                }*/
             }
         }
 
