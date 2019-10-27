@@ -418,7 +418,14 @@ namespace model
         public void classificationStops(Stop sortOut) {
             if (sortOut != null) {
                 String shortName = sortOut.ShortName;
-                if (shortName != null && shortName.Length > 2) {
+                String longName = sortOut.LongName;
+
+
+
+                if(longName.Contains("Av ") || longName.Contains("Cl ") || longName.Contains("Kr ") || longName.Contains("Puente ") || longName.Contains("Via") || longName.Contains("Urb"))
+                {
+                    streetStops.Add(sortOut);
+                }else if (shortName != null && shortName.Length > 2) {
                     Boolean isNumber = char.IsLetter(shortName[2]);
                     if (isNumber == false)
                     {
@@ -431,10 +438,11 @@ namespace model
                         {
                             streetStops.Add(sortOut);
                         }
-                    }
-                    else {
-                        terminalStops.Add(sortOut);
-                    }
+                    }   
+                }
+                else
+                {
+                    terminalStops.Add(sortOut);
                 }
             }
         }
