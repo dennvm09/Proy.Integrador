@@ -148,7 +148,7 @@ namespace Proy_In
             ppal.test();
         }
 
-
+        
 
 
 
@@ -192,6 +192,110 @@ namespace Proy_In
 
         }
 
+
+
+        /////////////////////aqui van los metodos para el poligono por estaciones
+        ///hacer la opcion de que a determinado zoom, mostrar el poligono, sino mostrar un marcador normal
+        
+            public int cross(Stop a, Stop b, Stop c)
+            {
+            double val = (b.Latit - a.Latit) * (c.Longit - b.Longit) - (b.Longit - a.Longit) * (c.Latit - b.Latit);
+
+            if(val == 0)
+            {
+                return 0;
+            }else if(val > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
+        
+
+        public List<Stop> convexHullMethod(List<Stop> list, int p)
+        {
+            List<Stop> hull = new List<Stop>();
+            int l = 0;
+
+            for(int i = 1; i < p; i++)
+            {
+                if(list[i].Longit < list[l].Longit)
+                {
+                    l = i;
+                }
+            }
+
+            int a = l, b;
+
+            do
+            {
+                hull.Add(list[a]);
+                b = (a + 1) % p;
+
+                for (int i = 0; i < p; i++)
+                {
+                    if (cross(list[a], list[i], list[b]) == 2)
+                    {
+                        b = i;
+                    }
+                }
+
+                a = b;
+            } while (a != l);
+
+            return hull;
+        }
+
+        
+        public void wagonsStations()
+        {
+
+            List<Stop> auxList = new List<Stop>();
+
+            List<Stop> stationsStops = ppal.TerminalStops;
+
+            String shortName = stationsStops[0].ShortName;
+
+
+            for(int i = 0; i < stationsStops.Count; i++)
+            {
+                if(stationsStops[i].ShortName.Substring(0, stationsStops[i].ShortName.Length-2).Equals(shortName.Substring(0, shortName.Length - 2)))
+                {
+                    auxList.Add(stationsStops[i]);
+                }
+                else
+                {
+                    stationsPolygon(convexHullMethod(auxList, auxList.Count));
+                    shortName = stationsStops[i].ShortName;
+                    auxList.Clear();
+                    auxList.Add(stationsStops[i]);
+                }
+            }
+
+
+        }
+
+        public void stationsPolygon(List<Stop> a)
+        {
+            GMapOverlay polygon = new GMapOverlay("Polygon");
+            List<PointLatLng> points = new List<PointLatLng>();
+
+            for(int i = 0; i < a.Count; i++)
+            {
+                points.Add(new PointLatLng(a[i].Latit, a[i].Longit));
+            }
+
+            GMapPolygon pointsPolygon = new GMapPolygon(points, "Polygon");
+            polygon.Polygons.Add(pointsPolygon);
+
+            map.Overlays.Add(polygon);
+        }
+         
+        /////////////////////////////////////7
+           
         private void Label5_Click(object sender, EventArgs e)
         {
 
@@ -276,6 +380,7 @@ namespace Proy_In
             {
                 gmapStreet = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.yellow_small);
+
                 gmapStreet.Markers.Add(mark);
 
                 mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
@@ -303,6 +408,11 @@ namespace Proy_In
 
                 //mark.ToolTipMode = MarkerTooltipMode.Always;
                 //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
+
+                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                mark.ToolTipText = String.Format(aux.LongName+ "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
+                mark.ToolTip.TextPadding = new Size(10, 10);
+                mark.ToolTip.Fill = Brushes.FloralWhite;
 
                 map.Overlays.Add(gmapStations);
             }
