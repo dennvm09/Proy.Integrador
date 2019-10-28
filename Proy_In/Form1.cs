@@ -39,6 +39,8 @@ namespace Proy_In
         private GMapOverlay GZ7;
         private GMapOverlay GZ8;
 
+        private GMapOverlay polygon;
+
 
         private Principal ppal;
 
@@ -142,9 +144,14 @@ namespace Proy_In
             actualZoom.Text = map.Zoom.ToString() + " %";
             zoom = map.Zoom;
 
-            if (zoom > 13 && preEstaciones == 1)
+            if (zoom >= 17 && preEstaciones == 1)
             {
                 wagonsStations();
+            }
+            else if (polygon != null && zoom <= 15)
+            {
+
+                polygon.Clear();
             }
 
         }
@@ -155,9 +162,14 @@ namespace Proy_In
             actualZoom.Text = map.Zoom.ToString()+" %";
             zoom = map.Zoom;
 
-            if(zoom > 13 && preEstaciones == 1)
+            if(zoom >= 17 && preEstaciones == 1)
             {
                 wagonsStations();
+            }
+            else if(polygon != null && zoom <= 15)
+            {
+
+                polygon.Clear();
             }
         }
 
@@ -300,7 +312,7 @@ namespace Proy_In
 
         public void stationsPolygon(List<Stop> a)
         {
-            GMapOverlay polygon = new GMapOverlay("Polygon");
+            polygon = new GMapOverlay("Polygon");
             List<PointLatLng> points = new List<PointLatLng>();
 
             for(int i = 0; i < a.Count; i++)

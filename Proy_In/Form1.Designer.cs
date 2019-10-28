@@ -56,6 +56,7 @@
             this.rbtOpcion2 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneOp1 = new System.Windows.Forms.Panel();
+            this.checkBReservas = new System.Windows.Forms.CheckBox();
             this.btLimpiar = new System.Windows.Forms.Button();
             this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.checkBReservas = new System.Windows.Forms.CheckBox();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -388,6 +388,17 @@
             this.paneOp1.Size = new System.Drawing.Size(293, 415);
             this.paneOp1.TabIndex = 22;
             // 
+            // checkBReservas
+            // 
+            this.checkBReservas.AutoSize = true;
+            this.checkBReservas.Location = new System.Drawing.Point(22, 149);
+            this.checkBReservas.Name = "checkBReservas";
+            this.checkBReservas.Size = new System.Drawing.Size(71, 17);
+            this.checkBReservas.TabIndex = 21;
+            this.checkBReservas.Text = "Reservas";
+            this.checkBReservas.UseVisualStyleBackColor = true;
+            this.checkBReservas.CheckedChanged += new System.EventHandler(this.CheckBReservas_CheckedChanged);
+            // 
             // btLimpiar
             // 
             this.btLimpiar.Location = new System.Drawing.Point(209, 133);
@@ -425,7 +436,7 @@
             this.paneOp2.Controls.Add(this.btAnimacion);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Controls.Add(this.label3);
-            this.paneOp2.Location = new System.Drawing.Point(735, 112);
+            this.paneOp2.Location = new System.Drawing.Point(735, 224);
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(293, 173);
             this.paneOp2.TabIndex = 23;
@@ -490,17 +501,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // checkBReservas
-            // 
-            this.checkBReservas.AutoSize = true;
-            this.checkBReservas.Location = new System.Drawing.Point(22, 149);
-            this.checkBReservas.Name = "checkBReservas";
-            this.checkBReservas.Size = new System.Drawing.Size(71, 17);
-            this.checkBReservas.TabIndex = 21;
-            this.checkBReservas.Text = "Reservas";
-            this.checkBReservas.UseVisualStyleBackColor = true;
-            this.checkBReservas.CheckedChanged += new System.EventHandler(this.CheckBReservas_CheckedChanged);
             // 
             // Form1
             // 
