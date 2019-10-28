@@ -26,6 +26,7 @@ namespace Proy_In
 
         private GMapOverlay gmapStreet;
         private GMapOverlay gmapStations;
+        private GMapOverlay gmapReserves;
 
 
         private GMapOverlay GZ0;
@@ -44,12 +45,17 @@ namespace Proy_In
         private int preEstaciones = 0;
         private int preCalle = 0;
         private int preZona = 0;
+        private int preReservas = 0;
 
+        private double zoom = 0;
+
+        
         public Form1()
         {
             
             InitializeComponent();
             ppal = new Principal();
+            //ppal.addStopsAsync();
             ppal.addStops();
             markOv = new GMapOverlay("marker");
             paneZonas.Visible = false;
@@ -112,6 +118,9 @@ namespace Proy_In
             map.Overlays.Add(routes);
 
             map.Overlays.Add(markOv);
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -129,16 +138,27 @@ namespace Proy_In
 
         private void ZoomOut_Click(object sender, EventArgs e)
         {
-            map.Zoom -= 3;
+            map.Zoom -= 2;
             actualZoom.Text = map.Zoom.ToString() + " %";
+            zoom = map.Zoom;
+
+            if (zoom > 13 && preEstaciones == 1)
+            {
+                wagonsStations();
+            }
 
         }
 
         private void ZoomIn_Click(object sender, EventArgs e)
         {
-            map.Zoom += 3;
-         
+            map.Zoom += 2;
             actualZoom.Text = map.Zoom.ToString()+" %";
+            zoom = map.Zoom;
+
+            if(zoom > 13 && preEstaciones == 1)
+            {
+                wagonsStations();
+            }
         }
 
         
@@ -400,6 +420,12 @@ namespace Proy_In
 
         private void filtroTerminal()
         {
+
+            //zoom = map.Zoom;
+
+                
+           
+            
             foreach (var aux in ppal.TerminalStops)
             {
                 gmapStations = new GMapOverlay("marker");
@@ -414,8 +440,30 @@ namespace Proy_In
                 mark.ToolTip.TextPadding = new Size(10, 10);
                 mark.ToolTip.Fill = Brushes.FloralWhite;
 
+
                 map.Overlays.Add(gmapStations);
             }
+            map.Refresh();
+        }
+
+        private void filtroReserva()
+        {
+
+            foreach (var aux in ppal.ReserveStops)
+            {
+                gmapReserves = new GMapOverlay("marker");
+                GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.green_small);
+
+                gmapReserves.Markers.Add(mark);
+
+                mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                mark.ToolTipText = String.Format(aux.LongName +  "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
+                mark.ToolTip.TextPadding = new Size(10, 10);
+                mark.ToolTip.Fill = Brushes.FloralWhite;
+
+                map.Overlays.Add(gmapReserves);
+            }
+            map.Refresh();
         }
 
         private void sinFiltroParadas()
@@ -432,8 +480,9 @@ namespace Proy_In
                 //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
                 map.Overlays.Add(markOv);
+                
             }
-
+            map.Refresh();
 
         }
 
@@ -520,6 +569,11 @@ namespace Proy_In
         private void BtLimpiar_Click(object sender, EventArgs e)
         {
             map.Overlays.Clear();
+            map.Refresh();
+
+            checkBCalle.Checked = false;
+            checkBReservas.Checked = false;
+            checkBEstaciones.Checked = false;
         }
 
         private void polyZ0()
@@ -940,5 +994,30 @@ namespace Proy_In
             timer1.Enabled = true;
             timer1.Interval = 500;
         }
+
+        private void CheckBReservas_CheckedChanged(object sender, EventArgs e)
+        {
+            bool estado = checkBReservas.Checked;
+
+            if (estado)
+            {
+                preReservas = 1;
+                               
+            }
+            else
+            {
+                preReservas = 0;
+                eliminar();
+               
+            } 
+        }
+
+        private void eliminar()
+        {
+            map.Overlays.Remove(gmapReserves);
+            map.Refresh();
+        }
+
+       
     }
 }

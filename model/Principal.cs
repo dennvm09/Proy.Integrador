@@ -17,6 +17,7 @@ namespace model
         private List<Stop> stops;
         private List<Stop> streetStops;
         private List<Stop> terminalStops;
+        private List<Stop> reserveStops;
 
         private List<DataGram> datagrams;
         private Hashtable buses;
@@ -31,6 +32,7 @@ namespace model
             datagrams = new List<DataGram>();
             streetStops = new List<Stop>();
             terminalStops = new List<Stop>();
+            reserveStops = new List<Stop>();
             Thread t = new Thread(new ThreadStart(initilizeData));
             t.Start();
 
@@ -50,6 +52,7 @@ namespace model
         public List<Stop> Stops { get => stops; set => stops = value; }
         public List<Stop> StreetStops { get => streetStops; set => streetStops = value; }
         public List<Stop> TerminalStops { get => terminalStops; set => terminalStops = value; }
+        public List<Stop> ReserveStops { get => reserveStops; set => reserveStops = value; }
 
         public void initilizeData()
         {
@@ -378,7 +381,61 @@ namespace model
         }
 
 
+      /*  public Task<List<Stop>> addStopsAsync()
+        {
+            //StreamReader leer = new StreamReader(Path.GetFullPath("stops.txt"));
+            //StreamReader leer = new StreamReader(Path.GetFullPath("StopPratice.txt"));
 
+            // Console.WriteLine(path);
+
+
+            return Task.Run(() =>
+            {
+
+                StreamReader leer = new StreamReader("Data/stops.txt");
+
+                List<Stop> auxi = new List<Stop>();
+
+                try
+                {
+                    leer.ReadLine();
+                    String line = leer.ReadLine();
+
+                    Stop newS = null;
+                    while (line != null)
+                    {
+
+                        line = line.TrimEnd('"');
+                        String[] lineS = line.TrimStart('"').Split(',');
+
+                        //Console.WriteLine(line);
+
+                        if (lineS.Length == 8)
+                        {
+                            newS = new Stop(lineS[0], Int32.Parse(lineS[1]), lineS[2], lineS[3], Convert.ToInt32(lineS[4]), Convert.ToInt32(lineS[5]), double.Parse(lineS[6], CultureInfo.InvariantCulture), double.Parse(lineS[7], CultureInfo.InvariantCulture));
+                            stops.Add(newS);
+                            auxi.Add(newS);
+                            classificationStops(newS);
+                            //Console.WriteLine(newS.StopId);
+                        }
+                        line = leer.ReadLine();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                return auxi;
+
+
+
+            });
+
+
+            
+
+        }*/
 
         public void addStops() {
             //StreamReader leer = new StreamReader(Path.GetFullPath("stops.txt"));
@@ -420,16 +477,24 @@ namespace model
                 String shortName = sortOut.ShortName;
                 String longName = sortOut.LongName;
 
-
-
-                if(longName.Contains("Av ") || longName.Contains("Cl ") || longName.Contains("Kr ") || longName.Contains("Puente ") || longName.Contains("Via") || longName.Contains("Urb") || longName.Contains("La ") || longName.Contains("Altos "))
+        
+                if(sortOut.Latit != 0 && sortOut.Longit != 0)
                 {
-                    streetStops.Add(sortOut);
+                    if (longName.Contains("Av ") || longName.Contains("Cl ") || longName.Contains("Kr ") || longName.Contains("Puente ") || longName.Contains("Via") || longName.Contains("Urb") || longName.Contains("La ") || longName.Contains("Altos ") || longName.Contains("entre"))
+                    {
+                        streetStops.Add(sortOut);
+                    }
+                    else if (longName.Contains("Reserva"))
+                    {
+                        reserveStops.Add(sortOut);
+                    }
+                    else
+                    {
+                        terminalStops.Add(sortOut);
+                    }
                 }
-                else
-                {
-                    terminalStops.Add(sortOut);
-                }
+
+                
 
 
 

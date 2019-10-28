@@ -67,6 +67,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.checkBReservas = new System.Windows.Forms.CheckBox();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -179,7 +180,7 @@
             this.paneZonas.Controls.Add(this.checkBZ2);
             this.paneZonas.Controls.Add(this.checkBZ1);
             this.paneZonas.Controls.Add(this.checkBZ0);
-            this.paneZonas.Location = new System.Drawing.Point(22, 172);
+            this.paneZonas.Location = new System.Drawing.Point(22, 195);
             this.paneZonas.Name = "paneZonas";
             this.paneZonas.Size = new System.Drawing.Size(242, 161);
             this.paneZonas.TabIndex = 13;
@@ -309,7 +310,7 @@
             // checkBZonas
             // 
             this.checkBZonas.AutoSize = true;
-            this.checkBZonas.Location = new System.Drawing.Point(22, 149);
+            this.checkBZonas.Location = new System.Drawing.Point(22, 172);
             this.checkBZonas.Name = "checkBZonas";
             this.checkBZonas.Size = new System.Drawing.Size(56, 17);
             this.checkBZonas.TabIndex = 16;
@@ -372,6 +373,7 @@
             // 
             // paneOp1
             // 
+            this.paneOp1.Controls.Add(this.checkBReservas);
             this.paneOp1.Controls.Add(this.btLimpiar);
             this.paneOp1.Controls.Add(this.checkBTodas);
             this.paneOp1.Controls.Add(this.label4);
@@ -383,7 +385,7 @@
             this.paneOp1.Controls.Add(this.checkBZonas);
             this.paneOp1.Location = new System.Drawing.Point(735, 224);
             this.paneOp1.Name = "paneOp1";
-            this.paneOp1.Size = new System.Drawing.Size(293, 347);
+            this.paneOp1.Size = new System.Drawing.Size(293, 415);
             this.paneOp1.TabIndex = 22;
             // 
             // btLimpiar
@@ -423,7 +425,7 @@
             this.paneOp2.Controls.Add(this.btAnimacion);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Controls.Add(this.label3);
-            this.paneOp2.Location = new System.Drawing.Point(735, 224);
+            this.paneOp2.Location = new System.Drawing.Point(735, 112);
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(293, 173);
             this.paneOp2.TabIndex = 23;
@@ -488,6 +490,17 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // checkBReservas
+            // 
+            this.checkBReservas.AutoSize = true;
+            this.checkBReservas.Location = new System.Drawing.Point(22, 149);
+            this.checkBReservas.Name = "checkBReservas";
+            this.checkBReservas.Size = new System.Drawing.Size(71, 17);
+            this.checkBReservas.TabIndex = 21;
+            this.checkBReservas.Text = "Reservas";
+            this.checkBReservas.UseVisualStyleBackColor = true;
+            this.checkBReservas.CheckedChanged += new System.EventHandler(this.CheckBReservas_CheckedChanged);
             // 
             // Form1
             // 
@@ -567,6 +580,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.CheckBox checkBReservas;
     }
 }
 

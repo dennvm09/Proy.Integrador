@@ -8,5 +8,9 @@ namespace model
 {
     class Task
     {
+        internal static Task<List<Stop>> Run(Func<object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
