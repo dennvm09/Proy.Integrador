@@ -33,8 +33,11 @@ namespace model
             streetStops = new List<Stop>();
             terminalStops = new List<Stop>();
             reserveStops = new List<Stop>();
-            Thread t = new Thread(new ThreadStart(initilizeData));
-            t.Start();
+
+            //Thread t = new Thread(new ThreadStart(initilizeData));
+            // t.Start();
+
+            initilizeData();
 
 
             //List<DataGram> aux = getListOfBussDatagrams(1051);
@@ -57,7 +60,12 @@ namespace model
         public void initilizeData()
         {
             loadData();
-            makeSetOfBuses();
+            makeSetOfBusesByDate();
+        }
+
+        public Hashtable getBuses()
+        {
+            return buses;
         }
 
 
@@ -220,6 +228,46 @@ namespace model
             {
                 num = 6;
             }
+            else if (month.Equals("JUL"))
+            {
+                num = 7;
+            }
+            else if (month.Equals("JAN"))
+            {
+                num = 1;
+            }
+            else if (month.Equals("FEB"))
+            {
+                num = 2;
+            }
+            else if (month.Equals("MAR"))
+            {
+                num = 3;
+            }
+            else if (month.Equals("APR"))
+            {
+                num = 4;
+            }
+            else if (month.Equals("MAY"))
+            {
+                num = 5;
+            }
+            else if (month.Equals("AUG"))
+            {
+                num = 8;
+            }
+            else if (month.Equals("SEP"))
+            {
+                num = 9;
+            }
+            else if (month.Equals("OCT"))
+            {
+                num = 10;
+            }
+            else if (month.Equals("DEC"))
+            {
+                num = 12;
+            }
             return num;
         }
 
@@ -229,6 +277,90 @@ namespace model
             List<Bus> aux = (List<Bus>)buses[id];
 
             return aux;
+        }
+
+        public void getElementInBusesHash(int cod)
+        {
+            if (buses.ContainsKey(cod))
+            {
+                List<Bus> busAux = (List<Bus>)buses[cod];
+                foreach (Bus a in busAux)
+                {
+                    Console.WriteLine(a.BusId);
+                }
+
+            }
+            else
+            {
+                Console.WriteLine(cod + " no existe en la hash");
+            }
+
+        }
+
+        public void makeSetOfBusesByDate2(DataGram g)
+        {
+            string i = g.DataGramDate.Hour + "." + g.DataGramDate.Minute + "." + g.DataGramDate.Second;
+
+
+            if (buses != null)
+            {
+                if (buses.ContainsKey(i))
+                {
+                    Bus b = new Bus(g.BusId, g.Longitude, g.Latitude, g.DataGramDate);
+                    List<Bus> aux = (List<Bus>)buses[i];
+                    aux.Add(b);
+                }
+                else
+                {
+                    List<Bus> setBus = new List<Bus>();
+                    Bus b = new Bus(g.BusId, g.Longitude, g.Latitude, g.DataGramDate);
+                    setBus.Add(b);
+                    buses.Add(i, setBus);
+                }
+            }
+            else
+            {
+                List<Bus> setBus = new List<Bus>();
+                Bus b = new Bus(g.BusId, g.Longitude, g.Latitude, g.DataGramDate);
+                setBus.Add(b);
+                buses.Add(i, setBus);
+            }
+        }
+
+        public void makeSetOfBusesByDate()
+        {
+            List<Bus> setBus = new List<Bus>();
+            List<DataGram> copy = datagrams;
+            sortDatagramsByDateTime(copy);
+            int cont = 0;
+            int id = 0;
+            string i = "";
+            string j = "";
+
+            while (cont < copy.Count)
+            {
+                i = copy[id].DataGramDate.Hour + "." + copy[id].DataGramDate.Minute + "." + copy[id].DataGramDate.Second;
+
+                //  Console.WriteLine("I= " + i);
+                j = copy[cont].DataGramDate.Hour + "." + copy[cont].DataGramDate.Minute + "." + copy[cont].DataGramDate.Second;
+                if (j.Equals(i))
+                {
+                    //  Console.WriteLine("cont= " + copy[cont].BusId);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate);
+                    setBus.Add(b);
+                }
+                else if (!buses.ContainsKey(i))
+                {
+                    buses.Add(i, setBus);
+                    setBus = new List<Bus>();
+                    id = cont;
+                    //Console.WriteLine(i);
+                    //Console.WriteLine("count: "+buses.Count);
+
+                }
+                cont++;
+            }
+
         }
 
         public void makeSetOfBuses()

@@ -1030,6 +1030,19 @@ namespace Proy_In
             map.Refresh();
         }
 
-       
+        private void TxtBusId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            panelCustomSimulation.Visible = (cbCustom.Checked) ? true : false;
+        }
     }
 }
