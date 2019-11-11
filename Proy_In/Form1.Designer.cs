@@ -61,24 +61,24 @@
             this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.paneOp2 = new System.Windows.Forms.Panel();
+            this.cbCustom = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelCustomSimulation = new System.Windows.Forms.Panel();
+            this.btCustomSimulationt = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btSimulacionCompleta = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panelCustomSimulation = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbCustom = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btCustomSimulation = new System.Windows.Forms.Button();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -160,7 +160,7 @@
             // testMotion
             // 
             this.testMotion.Location = new System.Drawing.Point(1512, 1110);
-            this.testMotion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.testMotion.Margin = new System.Windows.Forms.Padding(5);
             this.testMotion.Name = "testMotion";
             this.testMotion.Size = new System.Drawing.Size(159, 28);
             this.testMotion.TabIndex = 8;
@@ -192,7 +192,7 @@
             this.paneZonas.Controls.Add(this.checkBZ1);
             this.paneZonas.Controls.Add(this.checkBZ0);
             this.paneZonas.Location = new System.Drawing.Point(29, 240);
-            this.paneZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneZonas.Margin = new System.Windows.Forms.Padding(4);
             this.paneZonas.Name = "paneZonas";
             this.paneZonas.Size = new System.Drawing.Size(323, 198);
             this.paneZonas.TabIndex = 13;
@@ -201,7 +201,7 @@
             // 
             this.checkBZ8.AutoSize = true;
             this.checkBZ8.Location = new System.Drawing.Point(17, 167);
-            this.checkBZ8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ8.Name = "checkBZ8";
             this.checkBZ8.Size = new System.Drawing.Size(135, 21);
             this.checkBZ8.TabIndex = 24;
@@ -213,7 +213,7 @@
             // 
             this.checkBZ7.AutoSize = true;
             this.checkBZ7.Location = new System.Drawing.Point(17, 148);
-            this.checkBZ7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ7.Name = "checkBZ7";
             this.checkBZ7.Size = new System.Drawing.Size(172, 21);
             this.checkBZ7.TabIndex = 23;
@@ -225,7 +225,7 @@
             // 
             this.checkBZ6.AutoSize = true;
             this.checkBZ6.Location = new System.Drawing.Point(17, 128);
-            this.checkBZ6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ6.Name = "checkBZ6";
             this.checkBZ6.Size = new System.Drawing.Size(159, 21);
             this.checkBZ6.TabIndex = 22;
@@ -237,7 +237,7 @@
             // 
             this.checkBZ5.AutoSize = true;
             this.checkBZ5.Location = new System.Drawing.Point(17, 108);
-            this.checkBZ5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ5.Name = "checkBZ5";
             this.checkBZ5.Size = new System.Drawing.Size(162, 21);
             this.checkBZ5.TabIndex = 21;
@@ -250,7 +250,7 @@
             // 
             this.checkBZ4.AutoSize = true;
             this.checkBZ4.Location = new System.Drawing.Point(17, 89);
-            this.checkBZ4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ4.Name = "checkBZ4";
             this.checkBZ4.Size = new System.Drawing.Size(174, 21);
             this.checkBZ4.TabIndex = 20;
@@ -262,7 +262,7 @@
             // 
             this.checkBZ3.AutoSize = true;
             this.checkBZ3.Location = new System.Drawing.Point(17, 68);
-            this.checkBZ3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ3.Name = "checkBZ3";
             this.checkBZ3.Size = new System.Drawing.Size(207, 21);
             this.checkBZ3.TabIndex = 19;
@@ -274,7 +274,7 @@
             // 
             this.checkBZ2.AutoSize = true;
             this.checkBZ2.Location = new System.Drawing.Point(17, 48);
-            this.checkBZ2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ2.Name = "checkBZ2";
             this.checkBZ2.Size = new System.Drawing.Size(132, 21);
             this.checkBZ2.TabIndex = 18;
@@ -286,7 +286,7 @@
             // 
             this.checkBZ1.AutoSize = true;
             this.checkBZ1.Location = new System.Drawing.Point(17, 28);
-            this.checkBZ1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ1.Name = "checkBZ1";
             this.checkBZ1.Size = new System.Drawing.Size(179, 21);
             this.checkBZ1.TabIndex = 17;
@@ -298,7 +298,7 @@
             // 
             this.checkBZ0.AutoSize = true;
             this.checkBZ0.Location = new System.Drawing.Point(17, 9);
-            this.checkBZ0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ0.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ0.Name = "checkBZ0";
             this.checkBZ0.Size = new System.Drawing.Size(131, 21);
             this.checkBZ0.TabIndex = 16;
@@ -310,7 +310,7 @@
             // 
             this.checkBEstaciones.AutoSize = true;
             this.checkBEstaciones.Location = new System.Drawing.Point(29, 127);
-            this.checkBEstaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBEstaciones.Margin = new System.Windows.Forms.Padding(4);
             this.checkBEstaciones.Name = "checkBEstaciones";
             this.checkBEstaciones.Size = new System.Drawing.Size(99, 21);
             this.checkBEstaciones.TabIndex = 14;
@@ -322,7 +322,7 @@
             // 
             this.checkBCalle.AutoSize = true;
             this.checkBCalle.Location = new System.Drawing.Point(29, 155);
-            this.checkBCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBCalle.Margin = new System.Windows.Forms.Padding(4);
             this.checkBCalle.Name = "checkBCalle";
             this.checkBCalle.Size = new System.Drawing.Size(151, 21);
             this.checkBCalle.TabIndex = 15;
@@ -334,7 +334,7 @@
             // 
             this.checkBZonas.AutoSize = true;
             this.checkBZonas.Location = new System.Drawing.Point(29, 212);
-            this.checkBZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZonas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZonas.Name = "checkBZonas";
             this.checkBZonas.Size = new System.Drawing.Size(70, 21);
             this.checkBZonas.TabIndex = 16;
@@ -345,7 +345,7 @@
             // btFiltrar
             // 
             this.btFiltrar.Location = new System.Drawing.Point(279, 127);
-            this.btFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btFiltrar.Name = "btFiltrar";
             this.btFiltrar.Size = new System.Drawing.Size(100, 28);
             this.btFiltrar.TabIndex = 17;
@@ -357,7 +357,7 @@
             // 
             this.rbtOpcion1.AutoSize = true;
             this.rbtOpcion1.Location = new System.Drawing.Point(995, 204);
-            this.rbtOpcion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtOpcion1.Margin = new System.Windows.Forms.Padding(4);
             this.rbtOpcion1.Name = "rbtOpcion1";
             this.rbtOpcion1.Size = new System.Drawing.Size(160, 21);
             this.rbtOpcion1.TabIndex = 18;
@@ -381,7 +381,7 @@
             // 
             this.rbtOpcion2.AutoSize = true;
             this.rbtOpcion2.Location = new System.Drawing.Point(995, 233);
-            this.rbtOpcion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtOpcion2.Margin = new System.Windows.Forms.Padding(4);
             this.rbtOpcion2.Name = "rbtOpcion2";
             this.rbtOpcion2.Size = new System.Drawing.Size(152, 21);
             this.rbtOpcion2.TabIndex = 20;
@@ -393,10 +393,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proy_In.Properties.Resources.logo_mio1;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1160, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 82);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
@@ -413,16 +413,16 @@
             this.paneOp1.Controls.Add(this.checkBCalle);
             this.paneOp1.Controls.Add(this.checkBZonas);
             this.paneOp1.Location = new System.Drawing.Point(980, 276);
-            this.paneOp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneOp1.Margin = new System.Windows.Forms.Padding(4);
             this.paneOp1.Name = "paneOp1";
-            this.paneOp1.Size = new System.Drawing.Size(391, 511);
+            this.paneOp1.Size = new System.Drawing.Size(380, 511);
             this.paneOp1.TabIndex = 22;
             // 
             // checkBReservas
             // 
             this.checkBReservas.AutoSize = true;
             this.checkBReservas.Location = new System.Drawing.Point(29, 183);
-            this.checkBReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBReservas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBReservas.Name = "checkBReservas";
             this.checkBReservas.Size = new System.Drawing.Size(90, 21);
             this.checkBReservas.TabIndex = 21;
@@ -433,7 +433,7 @@
             // btLimpiar
             // 
             this.btLimpiar.Location = new System.Drawing.Point(279, 164);
-            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btLimpiar.TabIndex = 20;
@@ -445,7 +445,7 @@
             // 
             this.checkBTodas.AutoSize = true;
             this.checkBTodas.Location = new System.Drawing.Point(29, 54);
-            this.checkBTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBTodas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBTodas.Name = "checkBTodas";
             this.checkBTodas.Size = new System.Drawing.Size(148, 21);
             this.checkBTodas.TabIndex = 19;
@@ -471,24 +471,142 @@
             this.paneOp2.Controls.Add(this.label7);
             this.paneOp2.Controls.Add(this.label3);
             this.paneOp2.Controls.Add(this.panelCustomSimulation);
-            this.paneOp2.Controls.Add(this.btSimulacionCompleta);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Location = new System.Drawing.Point(980, 276);
-            this.paneOp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneOp2.Margin = new System.Windows.Forms.Padding(4);
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(422, 213);
             this.paneOp2.TabIndex = 23;
             // 
+            // cbCustom
+            // 
+            this.cbCustom.AutoSize = true;
+            this.cbCustom.Location = new System.Drawing.Point(15, 118);
+            this.cbCustom.Name = "cbCustom";
+            this.cbCustom.Size = new System.Drawing.Size(120, 21);
+            this.cbCustom.TabIndex = 25;
+            this.cbCustom.Text = "Personalizado";
+            this.cbCustom.UseVisualStyleBackColor = true;
+            this.cbCustom.CheckedChanged += new System.EventHandler(this.CbCustom_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "tiempo encotrado";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(216, 17);
+            this.label7.TabIndex = 23;
+            this.label7.Text = " todos los datos desde el menorx";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 17);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Esta opción iniciará una simulación de";
+            this.label3.Click += new System.EventHandler(this.Label3_Click_1);
+            // 
+            // panelCustomSimulation
+            // 
+            this.panelCustomSimulation.Controls.Add(this.btCustomSimulationt);
+            this.panelCustomSimulation.Controls.Add(this.label11);
+            this.panelCustomSimulation.Controls.Add(this.label10);
+            this.panelCustomSimulation.Controls.Add(this.label9);
+            this.panelCustomSimulation.Controls.Add(this.textBox4);
+            this.panelCustomSimulation.Controls.Add(this.textBox3);
+            this.panelCustomSimulation.Controls.Add(this.textBox2);
+            this.panelCustomSimulation.Controls.Add(this.textBox1);
+            this.panelCustomSimulation.Location = new System.Drawing.Point(3, 141);
+            this.panelCustomSimulation.Name = "panelCustomSimulation";
+            this.panelCustomSimulation.Size = new System.Drawing.Size(416, 69);
+            this.panelCustomSimulation.TabIndex = 21;
+            // 
+            // btCustomSimulationt
+            // 
+            this.btCustomSimulationt.Location = new System.Drawing.Point(333, 40);
+            this.btCustomSimulationt.Name = "btCustomSimulationt";
+            this.btCustomSimulationt.Size = new System.Drawing.Size(75, 23);
+            this.btCustomSimulationt.TabIndex = 7;
+            this.btCustomSimulationt.Text = "Iniciar";
+            this.btCustomSimulationt.UseVisualStyleBackColor = true;
+            this.btCustomSimulationt.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(222, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 17);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "desde";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(161, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 17);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "hrs";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(-3, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 17);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Simular durante";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(365, 8);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(39, 22);
+            this.textBox4.TabIndex = 3;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(319, 8);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(40, 22);
+            this.textBox3.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(276, 8);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(37, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(106, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(49, 22);
+            this.textBox1.TabIndex = 0;
+            // 
             // btSimulacionCompleta
             // 
-            this.btSimulacionCompleta.Location = new System.Drawing.Point(252, 81);
-            this.btSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSimulacionCompleta.Location = new System.Drawing.Point(1245, 233);
+            this.btSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4);
             this.btSimulacionCompleta.Name = "btSimulacionCompleta";
             this.btSimulacionCompleta.Size = new System.Drawing.Size(154, 28);
             this.btSimulacionCompleta.TabIndex = 20;
             this.btSimulacionCompleta.Text = "Simulacion completa";
             this.btSimulacionCompleta.UseVisualStyleBackColor = true;
-            this.btSimulacionCompleta.Click += new System.EventHandler(this.BtAnimacion_Click);
+            this.btSimulacionCompleta.Visible = false;
             // 
             // label5
             // 
@@ -527,124 +645,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // panelCustomSimulation
-            // 
-            this.panelCustomSimulation.Controls.Add(this.btCustomSimulation);
-            this.panelCustomSimulation.Controls.Add(this.label11);
-            this.panelCustomSimulation.Controls.Add(this.label10);
-            this.panelCustomSimulation.Controls.Add(this.label9);
-            this.panelCustomSimulation.Controls.Add(this.textBox4);
-            this.panelCustomSimulation.Controls.Add(this.textBox3);
-            this.panelCustomSimulation.Controls.Add(this.textBox2);
-            this.panelCustomSimulation.Controls.Add(this.textBox1);
-            this.panelCustomSimulation.Location = new System.Drawing.Point(3, 141);
-            this.panelCustomSimulation.Name = "panelCustomSimulation";
-            this.panelCustomSimulation.Size = new System.Drawing.Size(416, 69);
-            this.panelCustomSimulation.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(249, 17);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Esta opción iniciará una simulación de";
-            this.label3.Click += new System.EventHandler(this.Label3_Click_1);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 81);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 17);
-            this.label7.TabIndex = 23;
-            this.label7.Text = " todos los datos desde el menorx";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 98);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 17);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "tiempo encotrado";
-            // 
-            // cbCustom
-            // 
-            this.cbCustom.AutoSize = true;
-            this.cbCustom.Location = new System.Drawing.Point(15, 118);
-            this.cbCustom.Name = "cbCustom";
-            this.cbCustom.Size = new System.Drawing.Size(120, 21);
-            this.cbCustom.TabIndex = 25;
-            this.cbCustom.Text = "Personalizado";
-            this.cbCustom.UseVisualStyleBackColor = true;
-            this.cbCustom.CheckedChanged += new System.EventHandler(this.CbCustom_CheckedChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(106, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(276, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(37, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(319, 8);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(40, 22);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(365, 8);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(39, 22);
-            this.textBox4.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-3, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 17);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Simular durante";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "hrs";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(222, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 17);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "desde";
-            // 
-            // btCustomSimulation
-            // 
-            this.btCustomSimulation.Location = new System.Drawing.Point(319, 43);
-            this.btCustomSimulation.Name = "btCustomSimulation";
-            this.btCustomSimulation.Size = new System.Drawing.Size(75, 23);
-            this.btCustomSimulation.TabIndex = 7;
-            this.btCustomSimulation.Text = "Iniciar";
-            this.btCustomSimulation.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -656,6 +656,7 @@
             this.Controls.Add(this.paneOp2);
             this.Controls.Add(this.paneOp1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btSimulacionCompleta);
             this.Controls.Add(this.rbtOpcion2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rbtOpcion1);

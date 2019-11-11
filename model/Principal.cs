@@ -37,7 +37,7 @@ namespace model
             //Thread t = new Thread(new ThreadStart(initilizeData));
             // t.Start();
 
-            initilizeData();
+           // initilizeData();
 
 
             //List<DataGram> aux = getListOfBussDatagrams(1051);
@@ -153,7 +153,7 @@ namespace model
 
         public void loadDataGramData()
         {
-            string path = @"..\..\..\Data\DATAGRAMS.txt";
+            string path = @"..\..\..\Data\DATAGRAMS.csv";
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);

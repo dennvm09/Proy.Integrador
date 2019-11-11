@@ -14,6 +14,8 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System.Threading;
 using model;
+using System.Collections;
+using System.Diagnostics;
 
 namespace Proy_In
 {
@@ -51,11 +53,65 @@ namespace Proy_In
 
         private double zoom = 0;
 
-        
+        private delegate void SafeCallDelegate(int h);
+        private Button btCompleteSimulation,btCustomSimulationt;
+        private Label lbH, lbM, lbS;
+        private Thread simulationThread;
+        private Hashtable marks;
+
+
         public Form1()
         {
+          
+            btCompleteSimulation = new Button
+            {
+                Location = new Point(1245, 350),
+                Size = new Size(154, 28),
+                Text = "Simulacion completa",
+                Visible=false,
+            };
+            btCompleteSimulation.Click += new EventHandler(BtCompleteSimulation_Click);
+            btCustomSimulation = new Button
+            {
+                Location = new Point(1265, 460),
+                Size = new Size(75, 23),
+                Text = "Iniciar",
+                Visible = false,
+            };
+            btCustomSimulation.Click+= new EventHandler(BtCompleteSimulation_Click);
+
             
+            lbH = new Label
+            {
+                Location = new Point(963, 37),
+                Size = new Size(30, 24),
+                Text = "00",
+            };
+            lbM = new Label
+            {
+                Location = new Point(1006, 37),
+                Size = new Size(30, 24),
+                Text = "00",
+            };
+            lbS = new Label
+            {
+                Location = new Point(1056, 37),
+                Size = new Size(30, 24),
+                Text = "00",
+            };
+            Controls.Add(btCustomSimulation);
+            Controls.Add(btCompleteSimulation);
+            Controls.Add(lbH);
+            Controls.Add(lbM);
+            Controls.Add(lbS);
+
+            
+
             InitializeComponent();
+
+
+
+            marks =new Hashtable();
             ppal = new Principal();
             //ppal.addStopsAsync();
             ppal.addStops();
@@ -125,6 +181,66 @@ namespace Proy_In
 
         }
 
+        public void BtCompleteSimulation_Click(object sender, EventArgs e)
+        {
+
+            ThreadStart delegated = new ThreadStart(startCompleteSimulation);
+            simulationThread = new Thread(delegated);
+            simulationThread.Start();
+
+        }
+
+        public void BtCustomSimulation_Click(object sender, EventArgs e)
+        {
+            /*
+            ThreadStart delegated = new ThreadStart(startCustomSimulation);
+            simulationThread = new Thread(delegated);
+            simulationThread.Start();*/
+
+        }
+
+        private void SetTimeLabelHSafe(int hour)
+        {
+            if (lbH.InvokeRequired)
+            {
+                var d = new SafeCallDelegate(SetTimeLabelHSafe);
+                lbH.Invoke(d, new object[] { hour });
+
+            }
+            else
+            {
+                lbH.Text = Convert.ToString(hour);
+
+            }
+        }
+        private void SetTimeLabelMSafe(int min)
+        {
+            if (lbM.InvokeRequired)
+            {
+                var d = new SafeCallDelegate(SetTimeLabelMSafe);
+
+                lbM.Invoke(d, new object[] { min });
+            }
+            else
+            {
+                lbM.Text = Convert.ToString(min);
+
+            }
+        }
+        private void SetTimeLabelSSafe(int sec)
+        {
+            if (lbS.InvokeRequired)
+            {
+                var d = new SafeCallDelegate(SetTimeLabelSSafe);
+
+                lbS.Invoke(d, new object[] { sec });
+            }
+            else
+            {
+                lbS.Text = Convert.ToString(sec);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             map.DragButton = MouseButtons.Left;
@@ -173,7 +289,119 @@ namespace Proy_In
             }
         }
 
-        
+
+        private void startCompleteSimulation()
+        {
+            int h = 1;
+            int m = 0;
+            int s = 0;
+            int t = 1;
+
+            Console.WriteLine("here");
+
+            int count = h + t;
+
+            while (h < count)
+            {
+                Thread.Sleep(500);
+                if (s > 60)
+                {
+                    s = 0;
+                    m++;
+                    if (m > 60)
+                    {
+                        m = 0;
+                        h++;
+                    }
+                }
+
+                SetTimeLabelHSafe(h);
+                SetTimeLabelMSafe(m);
+                SetTimeLabelSSafe(s);
+                locateBusesAccordingToTime(h, m, s);
+
+                s++;
+            }
+
+        }
+        /*
+        private void startCustomSimulation()
+        {
+
+            int h = Convert.ToInt32(tbHour.Text);
+            int m = Convert.ToInt32(tbMin.Text);
+            int s = Convert.ToInt32(tbSec.Text);
+            int t = Convert.ToInt32(tbTime.Text);
+
+            int count = h + t;
+
+            while (h < count)
+            {             
+                if (s > 60)
+                {
+                    s = 0;
+                    m++;
+                    if (m > 60)
+                    {
+                        m = 0;
+                        h++;
+                    }
+                }
+                SetTimeLabelHSafe(h);
+                SetTimeLabelMSafe(m);
+                SetTimeLabelSSafe(s);
+                locateBusesAccordingToTime(h, m, s);
+
+                s++;
+            }
+        }*/
+
+        private void locateBusesAccordingToTime(int hour, int min, int sec)
+        {
+            String id = hour + "." + min + "." + sec;
+
+            if (ppal.getBuses().ContainsKey(id))
+            {
+
+                List<Bus> buses = (List<Bus>)ppal.getBuses()[id];
+
+                for (int j = 0; j < 3; j++)
+                {
+                    if (marks != null)
+                    {
+                        if (marks.ContainsKey(buses[j].BusId))
+                        {
+                            GMarkerGoogle markAux = (GMarkerGoogle)marks[buses[j].BusId];
+                            markAux.Position = new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude);
+                            Thread.Sleep(1000);
+                        }
+                        else
+                        {
+                            GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), GMarkerGoogleType.red);
+                            marks.Add(buses[j].BusId, markAux1);
+
+                            markOv.Markers.Add(markAux1);
+                            Console.WriteLine("efectily");
+                            //Thread.Sleep(300);
+                        }
+                    }
+                    else
+                    {
+                        GMarkerGoogle mark1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), GMarkerGoogleType.red);
+
+                        marks.Add(buses[j].BusId, mark1);
+
+                        markOv.Markers.Add(mark1);
+                        // Thread.Sleep(300);
+
+                    }
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Key " + id + "Not found in Hashtable buses");
+            }
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -520,16 +748,18 @@ namespace Proy_In
         {
             paneOp1.Visible = true;
             paneOp2.Visible = false;
+            btCompleteSimulation.Visible = false;
+            btCustomSimulation.Visible = false;
         }
-
+        /*
         private void BtAnimacion_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Aquí va lo de brayan");
 
             Thread t = new Thread(animacion);
             t.Start();
-        }
-
+        }*/
+        /*
         private void animacion()
         {
             List<Bus> bus = ppal.getBusElementAt(txtBusId.Text);
@@ -546,7 +776,7 @@ namespace Proy_In
                 mark1.Position = new GMap.NET.PointLatLng(bus.ElementAt(i).Latitude, bus.ElementAt(i).Longitude);
                 Thread.Sleep(200);
             }
-        }
+        }*/
 
 
 
@@ -554,6 +784,7 @@ namespace Proy_In
         {
             paneOp2.Visible = true;
             paneOp1.Visible = false;
+            btCompleteSimulation.Visible = true;
         }
 
         private void CheckBTodas_CheckedChanged(object sender, EventArgs e)
@@ -1042,7 +1273,17 @@ namespace Proy_In
 
         private void CbCustom_CheckedChanged(object sender, EventArgs e)
         {
-            panelCustomSimulation.Visible = (cbCustom.Checked) ? true : false;
+            if (cbCustom.Checked)
+            {
+                panelCustomSimulation.Visible = true;
+                btCustomSimulation.Visible = true;
+            }
+            else
+            {
+                panelCustomSimulation.Visible = false;
+                btCustomSimulation.Visible = false;
+            }
+           
         }
     }
 }
