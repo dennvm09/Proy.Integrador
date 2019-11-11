@@ -214,7 +214,6 @@ namespace model
         /**
         * this method give the number corresponding to the month entered
         * 
-        * INCOMPLETED METHOD. IT WORKS JUST IN SOME CASES
         */
         public int giveMonthByNumber(string month)
         {
@@ -296,7 +295,7 @@ namespace model
             }
 
         }
-
+        /*
         public void makeSetOfBusesByDate2(DataGram g)
         {
             string i = g.DataGramDate.Hour + "." + g.DataGramDate.Minute + "." + g.DataGramDate.Second;
@@ -325,7 +324,7 @@ namespace model
                 setBus.Add(b);
                 buses.Add(i, setBus);
             }
-        }
+        }*/
 
         public void makeSetOfBusesByDate()
         {
