@@ -154,7 +154,8 @@ namespace model
 
         public void loadDataGramData()
         {
-            string path = @"..\..\..\Data\DATAGRAMS.csv";
+            //string path = @"..\..\..\Data\DATAGRAMS.csv";
+            string path = @"..\..\..\Data\DATAGRAMS.txt";
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);
