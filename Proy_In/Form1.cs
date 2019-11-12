@@ -115,7 +115,7 @@ namespace Proy_In
                 Text = "Iniciar",
                 Visible = false,
             };
-            btCustomSimulation.Click+= new EventHandler(BtCompleteSimulation_Click);
+            btCustomSimulation.Click+= new EventHandler(BtCustomSimulation_Click);
 
             
             lbH = new Label
@@ -250,12 +250,10 @@ namespace Proy_In
         }
 
         public void BtCustomSimulation_Click(object sender, EventArgs e)
-        {
-            /*
+        {            
             ThreadStart delegated = new ThreadStart(startCustomSimulation);
             simulationThread = new Thread(delegated);
-            simulationThread.Start();*/
-
+            simulationThread.Start();
         }
 
         private void SetTimeLabelHSafe(int hour)
@@ -346,6 +344,41 @@ namespace Proy_In
 
                 polygon.Clear();
             }
+        }
+
+        private void startCustomSimulation()
+        {
+            int h = Convert.ToInt32(tbHour.Text);
+            int m = Convert.ToInt32(tbMin.Text);
+            int s = Convert.ToInt32(tbSec.Text);
+            int t = Convert.ToInt32(tbTimeHours.Text);
+
+            Console.WriteLine("here");
+
+            int count = h + t;
+
+            while (h < count)
+            {
+                Thread.Sleep(500);
+                if (s > 60)
+                {
+                    s = 0;
+                    m++;
+                    if (m > 60)
+                    {
+                        m = 0;
+                        h++;
+                    }
+                }
+
+                SetTimeLabelHSafe(h);
+                SetTimeLabelMSafe(m);
+                SetTimeLabelSSafe(s);
+                locateBusesAccordingToTime(h, m, s);
+
+                s++;
+            }
+
         }
 
 

@@ -37,7 +37,7 @@ namespace model
             //Thread t = new Thread(new ThreadStart(initilizeData));
             // t.Start();
 
-           // initilizeData();
+            initilizeData();
 
 
             //List<DataGram> aux = getListOfBussDatagrams(1051);
