@@ -74,8 +74,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btSimulacionCompleta = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btSimulacionCompleta = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -531,6 +531,7 @@
             this.panelCustomSimulation.Name = "panelCustomSimulation";
             this.panelCustomSimulation.Size = new System.Drawing.Size(416, 69);
             this.panelCustomSimulation.TabIndex = 21;
+            this.panelCustomSimulation.Visible = false;
             // 
             // btCustomSimulationt
             // 
@@ -575,6 +576,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(39, 22);
             this.textBox4.TabIndex = 3;
+            this.textBox4.Visible = false;
             // 
             // textBox3
             // 
@@ -582,6 +584,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(40, 22);
             this.textBox3.TabIndex = 2;
+            this.textBox3.Visible = false;
             // 
             // textBox2
             // 
@@ -589,6 +592,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(37, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Visible = false;
             // 
             // textBox1
             // 
@@ -596,17 +600,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(49, 22);
             this.textBox1.TabIndex = 0;
-            // 
-            // btSimulacionCompleta
-            // 
-            this.btSimulacionCompleta.Location = new System.Drawing.Point(1245, 233);
-            this.btSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4);
-            this.btSimulacionCompleta.Name = "btSimulacionCompleta";
-            this.btSimulacionCompleta.Size = new System.Drawing.Size(154, 28);
-            this.btSimulacionCompleta.TabIndex = 20;
-            this.btSimulacionCompleta.Text = "Simulacion completa";
-            this.btSimulacionCompleta.UseVisualStyleBackColor = true;
-            this.btSimulacionCompleta.Visible = false;
+            this.textBox1.Visible = false;
             // 
             // label5
             // 
@@ -618,6 +612,17 @@
             this.label5.Size = new System.Drawing.Size(229, 31);
             this.label5.TabIndex = 19;
             this.label5.Text = "RUTAS EN ACCIÓN";
+            // 
+            // btSimulacionCompleta
+            // 
+            this.btSimulacionCompleta.Location = new System.Drawing.Point(1063, 240);
+            this.btSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4);
+            this.btSimulacionCompleta.Name = "btSimulacionCompleta";
+            this.btSimulacionCompleta.Size = new System.Drawing.Size(154, 28);
+            this.btSimulacionCompleta.TabIndex = 20;
+            this.btSimulacionCompleta.Text = "Simulacion completa";
+            this.btSimulacionCompleta.UseVisualStyleBackColor = true;
+            this.btSimulacionCompleta.Visible = false;
             // 
             // label6
             // 

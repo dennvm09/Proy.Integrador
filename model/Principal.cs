@@ -99,6 +99,7 @@ namespace model
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);
+           
 
             try
             {

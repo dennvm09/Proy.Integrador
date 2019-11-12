@@ -56,13 +56,50 @@ namespace Proy_In
         private delegate void SafeCallDelegate(int h);
         private Button btCompleteSimulation,btCustomSimulationt;
         private Label lbH, lbM, lbS;
+        private TextBox tbTimeHours, tbHour, tbMin, tbSec;
         private Thread simulationThread;
         private Hashtable marks;
 
 
         public Form1()
         {
-          
+            tbTimeHours=new TextBox
+            {
+                Location = new Point(1088, 425),
+                Size = new Size(49, 22),
+                Text = "HRS",
+                Visible = false,
+
+            };
+            tbTimeHours.Click+= new EventHandler(TbTimeHours_Click);
+
+            tbHour = new TextBox
+            {
+                Location = new Point(1258, 425),
+                Size = new Size(37, 22),
+                Text = "HH",
+                Visible = false,
+            };
+            tbHour.Click += new EventHandler(TbHour_Click);
+
+            tbMin = new TextBox
+            {
+                Location = new Point(1310, 425),
+                Size = new Size(37, 22),
+                Text = "MM",
+                Visible = false,
+            };
+            tbMin.Click += new EventHandler(TbMin_Click);
+
+            tbSec = new TextBox
+            {
+                Location = new Point(1360, 425),
+                Size = new Size(37, 22),
+                Text = "SS",
+                Visible = false,
+            };
+            tbSec.Click += new EventHandler(TbSec_Click);
+
             btCompleteSimulation = new Button
             {
                 Location = new Point(1245, 350),
@@ -99,6 +136,10 @@ namespace Proy_In
                 Size = new Size(30, 24),
                 Text = "00",
             };
+            Controls.Add(tbTimeHours);
+            Controls.Add(tbHour);
+            Controls.Add(tbMin);
+            Controls.Add(tbSec);
             Controls.Add(btCustomSimulation);
             Controls.Add(btCompleteSimulation);
             Controls.Add(lbH);
@@ -179,6 +220,24 @@ namespace Proy_In
 
 
 
+        }
+
+        public void TbTimeHours_Click(object sender, EventArgs e)
+        {
+            tbTimeHours.Text = "";
+        }
+
+        public void TbHour_Click(object sender, EventArgs e)
+        {
+            tbHour.Text = "";
+        }
+        public void TbMin_Click(object sender, EventArgs e)
+        {
+            tbMin.Text = "";
+        }
+        public void TbSec_Click(object sender, EventArgs e)
+        {
+            tbSec.Text = "";
         }
 
         public void BtCompleteSimulation_Click(object sender, EventArgs e)
@@ -1277,11 +1336,19 @@ namespace Proy_In
             {
                 panelCustomSimulation.Visible = true;
                 btCustomSimulation.Visible = true;
+                tbTimeHours.Visible = true;
+                tbHour.Visible = true;
+                tbMin.Visible = true;
+                tbSec.Visible=true;
             }
             else
             {
                 panelCustomSimulation.Visible = false;
                 btCustomSimulation.Visible = false;
+                tbTimeHours.Visible = false;
+                tbHour.Visible = false;
+                tbMin.Visible =false;
+                tbSec.Visible = false;
             }
            
         }
