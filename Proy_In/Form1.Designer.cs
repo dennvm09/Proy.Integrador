@@ -77,6 +77,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.checkBParadas = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -181,7 +183,9 @@
             // 
             // paneZonas
             // 
+            this.paneZonas.Controls.Add(this.checkBParadas);
             this.paneZonas.Controls.Add(this.checkBZ8);
+            this.paneZonas.Controls.Add(this.label7);
             this.paneZonas.Controls.Add(this.checkBZ7);
             this.paneZonas.Controls.Add(this.checkBZ6);
             this.paneZonas.Controls.Add(this.checkBZ5);
@@ -192,7 +196,7 @@
             this.paneZonas.Controls.Add(this.checkBZ0);
             this.paneZonas.Location = new System.Drawing.Point(22, 195);
             this.paneZonas.Name = "paneZonas";
-            this.paneZonas.Size = new System.Drawing.Size(242, 161);
+            this.paneZonas.Size = new System.Drawing.Size(242, 239);
             this.paneZonas.TabIndex = 13;
             // 
             // checkBZ8
@@ -395,7 +399,7 @@
             this.paneOp1.Controls.Add(this.checkBZonas);
             this.paneOp1.Location = new System.Drawing.Point(735, 224);
             this.paneOp1.Name = "paneOp1";
-            this.paneOp1.Size = new System.Drawing.Size(285, 415);
+            this.paneOp1.Size = new System.Drawing.Size(285, 437);
             this.paneOp1.TabIndex = 22;
             // 
             // checkBReservas
@@ -617,12 +621,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // checkBParadas
+            // 
+            this.checkBParadas.AutoSize = true;
+            this.checkBParadas.Location = new System.Drawing.Point(11, 190);
+            this.checkBParadas.Name = "checkBParadas";
+            this.checkBParadas.Size = new System.Drawing.Size(65, 17);
+            this.checkBParadas.TabIndex = 28;
+            this.checkBParadas.Text = "Paradas";
+            this.checkBParadas.UseVisualStyleBackColor = true;
+            this.checkBParadas.CheckedChanged += new System.EventHandler(this.CheckBParadas_CheckedChanged_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 26);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "¿Desea conocer las paradas\r\ndel mio en dicha zona?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 609);
+            this.ClientSize = new System.Drawing.Size(1067, 673);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.paneOp2);
@@ -707,6 +732,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBParadas;
+        private System.Windows.Forms.Label label7;
     }
 }
 

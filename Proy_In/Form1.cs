@@ -44,17 +44,29 @@ namespace Proy_In
         private GMapOverlay polygon;
 
 
+
         private Principal ppal;
 
         private int preEstaciones = 0;
         private int preCalle = 0;
         private int preZona = 0;
         private int preReservas = 0;
+        private int paradaEnZona = 0;
+
+        private int poly0 = 0;
+        private int poly1 = 0;
+        private int poly2 = 0;
+        private int poly3 = 0;
+        private int poly4 = 0;
+        private int poly5 = 0;
+        private int poly6 = 0;
+        private int poly7 = 0;
+        private int poly8 = 0;
 
         private double zoom = 0;
 
         private delegate void SafeCallDelegate(int h);
-        private Button btCompleteSimulation,btCustomSimulationt;
+        private Button btCompleteSimulation, btCustomSimulationt;
         private Label lbH, lbM, lbS;
         private TextBox tbTimeHours, tbHour, tbMin, tbSec;
         private Thread simulationThread;
@@ -63,7 +75,7 @@ namespace Proy_In
 
         public Form1()
         {
-            tbTimeHours=new TextBox
+            tbTimeHours = new TextBox
             {
                 Location = new Point(1088, 425),
                 Size = new Size(49, 22),
@@ -71,7 +83,7 @@ namespace Proy_In
                 Visible = false,
 
             };
-            tbTimeHours.Click+= new EventHandler(TbTimeHours_Click);
+            tbTimeHours.Click += new EventHandler(TbTimeHours_Click);
 
             tbHour = new TextBox
             {
@@ -105,7 +117,7 @@ namespace Proy_In
                 Location = new Point(1245, 350),
                 Size = new Size(154, 28),
                 Text = "Simulacion completa",
-                Visible=false,
+                Visible = false,
             };
             btCompleteSimulation.Click += new EventHandler(BtCompleteSimulation_Click);
             btCustomSimulation = new Button
@@ -115,9 +127,9 @@ namespace Proy_In
                 Text = "Iniciar",
                 Visible = false,
             };
-            btCustomSimulation.Click+= new EventHandler(BtCustomSimulation_Click);
+            btCustomSimulation.Click += new EventHandler(BtCustomSimulation_Click);
 
-            
+
             lbH = new Label
             {
                 Location = new Point(963, 37),
@@ -146,13 +158,13 @@ namespace Proy_In
             Controls.Add(lbM);
             Controls.Add(lbS);
 
-            
+
 
             InitializeComponent();
 
 
 
-            marks =new Hashtable();
+            marks = new Hashtable();
             ppal = new Principal();
             //ppal.addStopsAsync();
             ppal.addStops();
@@ -166,9 +178,9 @@ namespace Proy_In
         private void Map_Load(object sender, EventArgs e)
         {
             map.SetPositionByKeywords("Colombia,Cali");
-            actualZoom.Text=map.Zoom.ToString()+" %";
+            actualZoom.Text = map.Zoom.ToString() + " %";
 
-            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333 ,- 76.54844800), GMarkerGoogleType.red);
+            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333, -76.54844800), GMarkerGoogleType.red);
             markOv.Markers.Add(mark);
 
             /*
@@ -191,7 +203,7 @@ namespace Proy_In
             // points.Add(new PointLatLng(48.861017, 2.330030));
             GMapRoute route = new GMapRoute(points, "A walk in the park");
 
-            
+
 
             /**
              * GENERAR RUTA ABSOLUTA
@@ -204,10 +216,10 @@ namespace Proy_In
             //string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             //string exeDir = Path.GetDirectoryName(path1);
 
-            Console.WriteLine("this would be the full path {0}",Path.GetFullPath(p3));
+            Console.WriteLine("this would be the full path {0}", Path.GetFullPath(p3));
 
             StreamReader leer = new StreamReader(Path.GetFullPath(p3));
-            String line=leer.ReadLine();
+            String line = leer.ReadLine();
             Console.WriteLine(line);
 
             //**********************
@@ -250,7 +262,7 @@ namespace Proy_In
         }
 
         public void BtCustomSimulation_Click(object sender, EventArgs e)
-        {            
+        {
             ThreadStart delegated = new ThreadStart(startCustomSimulation);
             simulationThread = new Thread(delegated);
             simulationThread.Start();
@@ -332,14 +344,14 @@ namespace Proy_In
         private void ZoomIn_Click(object sender, EventArgs e)
         {
             map.Zoom += 2;
-            actualZoom.Text = map.Zoom.ToString()+" %";
+            actualZoom.Text = map.Zoom.ToString() + " %";
             zoom = map.Zoom;
 
-            if(zoom >= 17 && preEstaciones == 1)
+            if (zoom >= 17 && preEstaciones == 1)
             {
                 wagonsStations();
             }
-            else if(polygon != null && zoom <= 15)
+            else if (polygon != null && zoom <= 15)
             {
 
                 polygon.Clear();
@@ -500,9 +512,6 @@ namespace Proy_In
             ppal.test();
         }
 
-        
-
-
 
         /**
          * este metodo era utilizado por el boton ubicar que se habia creado inicialmente.
@@ -538,8 +547,8 @@ namespace Proy_In
 
             //markOv.Markers.ElementAt(0).Position= new GMap.NET.PointLatLng(3.440465, -76.54748);
 
-            
-           // label10.Text = (path.Distance * 1000).ToString();
+
+            // label10.Text = (path.Distance * 1000).ToString();
             map.Refresh();
 
         }
@@ -548,15 +557,16 @@ namespace Proy_In
 
         /////////////////////aqui van los metodos para el poligono por estaciones
         ///hacer la opcion de que a determinado zoom, mostrar el poligono, sino mostrar un marcador normal
-        
-            public int cross(Stop a, Stop b, Stop c)
-            {
+
+        public int cross(Stop a, Stop b, Stop c)
+        {
             double val = (b.Latit - a.Latit) * (c.Longit - b.Longit) - (b.Longit - a.Longit) * (c.Latit - b.Latit);
 
-            if(val == 0)
+            if (val == 0)
             {
                 return 0;
-            }else if(val > 0)
+            }
+            else if (val > 0)
             {
                 return 1;
             }
@@ -565,16 +575,16 @@ namespace Proy_In
                 return 2;
             }
         }
-        
+
 
         public List<Stop> convexHullMethod(List<Stop> list, int p)
         {
             List<Stop> hull = new List<Stop>();
             int l = 0;
 
-            for(int i = 1; i < p; i++)
+            for (int i = 1; i < p; i++)
             {
-                if(list[i].Longit < list[l].Longit)
+                if (list[i].Longit < list[l].Longit)
                 {
                     l = i;
                 }
@@ -601,7 +611,7 @@ namespace Proy_In
             return hull;
         }
 
-        
+
         public void wagonsStations()
         {
 
@@ -612,9 +622,9 @@ namespace Proy_In
             String shortName = stationsStops[0].ShortName;
 
 
-            for(int i = 0; i < stationsStops.Count; i++)
+            for (int i = 0; i < stationsStops.Count; i++)
             {
-                if(stationsStops[i].ShortName.Substring(0, stationsStops[i].ShortName.Length-2).Equals(shortName.Substring(0, shortName.Length - 2)))
+                if (stationsStops[i].ShortName.Substring(0, stationsStops[i].ShortName.Length - 2).Equals(shortName.Substring(0, shortName.Length - 2)))
                 {
                     auxList.Add(stationsStops[i]);
                 }
@@ -635,7 +645,7 @@ namespace Proy_In
             polygon = new GMapOverlay("Polygon");
             List<PointLatLng> points = new List<PointLatLng>();
 
-            for(int i = 0; i < a.Count; i++)
+            for (int i = 0; i < a.Count; i++)
             {
                 points.Add(new PointLatLng(a[i].Latit, a[i].Longit));
             }
@@ -645,9 +655,9 @@ namespace Proy_In
 
             map.Overlays.Add(polygon);
         }
-         
+
         /////////////////////////////////////7
-           
+
         private void Label5_Click(object sender, EventArgs e)
         {
 
@@ -690,7 +700,7 @@ namespace Proy_In
             {
                 preEstaciones = 0;
                 //gmapStations.Clear();
-                
+
             }
         }
 
@@ -721,13 +731,13 @@ namespace Proy_In
             }
             else
             {
-                preCalle = 0; 
+                preCalle = 0;
             }
         }
 
         private void filtroCalle()
         {
-            
+
             foreach (var aux in ppal.StreetStops)
             {
                 gmapStreet = new GMapOverlay("marker");
@@ -740,12 +750,6 @@ namespace Proy_In
                 mark.ToolTip.TextPadding = new Size(10, 10);
                 mark.ToolTip.Fill = Brushes.FloralWhite;
 
-
-
-
-                //mark.ToolTipMode = MarkerTooltipMode.Always;
-                //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
-
                 map.Overlays.Add(gmapStreet);
             }
         }
@@ -753,22 +757,14 @@ namespace Proy_In
         private void filtroTerminal()
         {
 
-            //zoom = map.Zoom;
-
-                
-           
-            
             foreach (var aux in ppal.TerminalStops)
             {
                 gmapStations = new GMapOverlay("marker");
                 GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(aux.Latit, aux.Longit), GMarkerGoogleType.blue);
                 gmapStations.Markers.Add(mark);
 
-                //mark.ToolTipMode = MarkerTooltipMode.Always;
-                //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
-
                 mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                mark.ToolTipText = String.Format(aux.LongName+ "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
+                mark.ToolTipText = String.Format(aux.LongName + "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
                 mark.ToolTip.TextPadding = new Size(10, 10);
                 mark.ToolTip.Fill = Brushes.FloralWhite;
 
@@ -789,7 +785,7 @@ namespace Proy_In
                 gmapReserves.Markers.Add(mark);
 
                 mark.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                mark.ToolTipText = String.Format(aux.LongName +  "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
+                mark.ToolTipText = String.Format(aux.LongName + "\n" + "Latitud: " + aux.Latit + "\n" + "Longitud: " + aux.Longit);
                 mark.ToolTip.TextPadding = new Size(10, 10);
                 mark.ToolTip.Fill = Brushes.FloralWhite;
 
@@ -812,7 +808,7 @@ namespace Proy_In
                 //mark.ToolTipText = string.Format("Lat: " + aux.Latit + "\n" + "Lng: " + aux.Longit);
 
                 map.Overlays.Add(markOv);
-                
+
             }
             map.Refresh();
 
@@ -915,7 +911,7 @@ namespace Proy_In
         {
             GZ0 = new GMapOverlay("Zona 0 (Centro)");
             List<PointLatLng> pZ0 = new List<PointLatLng>();
-            
+
             pZ0.Add(new PointLatLng(3.458952, -76.513447));
             pZ0.Add(new PointLatLng(3.463029, -76.521014));
             pZ0.Add(new PointLatLng(3.460478, -76.527052));
@@ -939,6 +935,11 @@ namespace Proy_In
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
 
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ0, GZ0);
+            }
+
         }
 
         private void CheckBZ0_CheckedChanged(object sender, EventArgs e)
@@ -947,10 +948,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ0();
+                poly0 = 1;
             }
             else
             {
                 GZ0.Clear();
+                poly0 = 0;
             }
         }
 
@@ -994,6 +997,11 @@ namespace Proy_In
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
 
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ1, GZ1);
+            }
+
         }
 
         private void CheckBZ1_CheckedChanged(object sender, EventArgs e)
@@ -1002,10 +1010,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ1();
+                poly1 = 1;
             }
             else
             {
                 GZ1.Clear();
+                poly1 = 0;
             }
         }
 
@@ -1049,6 +1059,11 @@ namespace Proy_In
             map.Overlays.Add(GZ2);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ2, GZ2);
+            }
         }
 
         private void CheckBZ2_CheckedChanged(object sender, EventArgs e)
@@ -1057,10 +1072,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ2();
+                poly2 = 1;
             }
             else
             {
                 GZ2.Clear();
+                poly2 = 0;
             }
         }
 
@@ -1086,6 +1103,11 @@ namespace Proy_In
             map.Overlays.Add(GZ3);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ3, GZ3);
+            }
         }
 
         private void CheckBZ3_CheckedChanged(object sender, EventArgs e)
@@ -1094,10 +1116,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ3();
+                poly3 = 1;
             }
             else
             {
                 GZ3.Clear();
+                poly3 = 0;
             }
         }
 
@@ -1128,6 +1152,11 @@ namespace Proy_In
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
 
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ4, GZ4);
+            }
+
         }
 
         private void CheckBox6_CheckedChanged(object sender, EventArgs e)
@@ -1136,10 +1165,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ4();
+                poly4 = 1;
             }
             else
             {
                 GZ4.Clear();
+                poly4 = 0;
             }
         }
 
@@ -1174,6 +1205,11 @@ namespace Proy_In
             map.Overlays.Add(GZ5);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ5, GZ5);
+            }
         }
 
         private void CheckBZ5_CheckedChanged(object sender, EventArgs e)
@@ -1182,10 +1218,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ5();
+                poly5 = 1;
             }
             else
             {
                 GZ5.Clear();
+                poly5 = 0;
             }
         }
 
@@ -1216,7 +1254,7 @@ namespace Proy_In
             pZ6.Add(new PointLatLng(3.403125, -76.522445));
             pZ6.Add(new PointLatLng(3.402954, -76.520984));
             pZ6.Add(new PointLatLng(3.404841, -76.518878));
-            pZ6.Add(new PointLatLng(3.407200, -76.521070)); 
+            pZ6.Add(new PointLatLng(3.407200, -76.521070));
 
 
             GMapPolygon poligonoZ6 = new GMapPolygon(pZ6, "ZONA 6");
@@ -1224,6 +1262,11 @@ namespace Proy_In
             map.Overlays.Add(GZ6);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(poligonoZ6, GZ6);
+            }
         }
 
         private void CheckBZ6_CheckedChanged(object sender, EventArgs e)
@@ -1232,10 +1275,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ6();
+                poly6 = 1;
             }
             else
             {
                 GZ6.Clear();
+                poly6 = 0;
             }
         }
 
@@ -1265,6 +1310,11 @@ namespace Proy_In
             map.Overlays.Add(GZ7);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(polygonZ7, GZ7);
+            }
         }
 
         private void CheckBZ7_CheckedChanged(object sender, EventArgs e)
@@ -1273,10 +1323,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ7();
+                poly7 = 1;
             }
             else
             {
                 GZ7.Clear();
+                poly7 = 0;
             }
         }
 
@@ -1297,12 +1349,18 @@ namespace Proy_In
 
             //poligonoZ8.Fill = new SolidBrush(Color.FromName("blue"));
             //poligonoZ8.Fill = Brushes.LightSeaGreen;
-               // System.Windows.Media.Brushes.LightSeaGreen;
+            // System.Windows.Media.Brushes.LightSeaGreen;
             //FromArgb(255, 220, 213)
             GZ8.Polygons.Add(poligonoZ8);
             map.Overlays.Add(GZ8);
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
+
+            if (paradaEnZona == 1)
+            {
+                stopsInsidePolygon(poligonoZ8, GZ8);
+            }
+
         }
 
         private void CheckBZ8_CheckedChanged(object sender, EventArgs e)
@@ -1311,10 +1369,12 @@ namespace Proy_In
             if (estado)
             {
                 polyZ8();
+                poly8 = 1;
             }
             else
             {
                 GZ8.Clear();
+                poly8 = 0;
             }
         }
 
@@ -1345,6 +1405,79 @@ namespace Proy_In
             timer1.Interval = 500;
         }
 
+        
+
+        private void callAgainPolyZn()
+        {
+            if (poly0 == 1)
+            {
+                GZ0.Clear();
+                polyZ0();
+            }
+
+            if (poly1 == 1)
+            {
+                GZ1.Clear();
+                polyZ1();
+            }
+
+            if (poly2 == 1)
+            {
+                GZ2.Clear();
+                polyZ2();
+            }
+
+            if (poly3 == 1)
+            {
+                GZ3.Clear();
+                polyZ3();
+            }
+
+            if (poly4 == 1)
+            {
+                GZ4.Clear();
+                polyZ4();
+            }
+
+            if (poly5 == 1)
+            {
+                GZ5.Clear();
+                polyZ5();
+            }
+
+            if (poly6 == 1)
+            {
+                GZ6.Clear();
+                polyZ6();
+            }
+
+            if (poly7 == 1)
+            {
+                GZ7.Clear();
+                polyZ7();
+            }
+
+            if (poly8 == 1)
+            {
+                GZ8.Clear();
+                polyZ8();
+            }
+        }
+
+        private void CheckBParadas_CheckedChanged_1(object sender, EventArgs e)
+        {
+            bool estado = checkBParadas.Checked;
+            if (estado)
+            {
+                paradaEnZona = 1;
+                callAgainPolyZn();
+            }
+            else
+            {
+                paradaEnZona = 0;
+            }
+        }
+
         private void CheckBReservas_CheckedChanged(object sender, EventArgs e)
         {
             bool estado = checkBReservas.Checked;
@@ -1352,14 +1485,14 @@ namespace Proy_In
             if (estado)
             {
                 preReservas = 1;
-                               
+
             }
             else
             {
                 preReservas = 0;
                 eliminar();
-               
-            } 
+
+            }
         }
 
         private void eliminar()
@@ -1387,7 +1520,7 @@ namespace Proy_In
                 tbTimeHours.Visible = true;
                 tbHour.Visible = true;
                 tbMin.Visible = true;
-                tbSec.Visible=true;
+                tbSec.Visible = true;
             }
             else
             {
@@ -1395,10 +1528,41 @@ namespace Proy_In
                 btCustomSimulation.Visible = false;
                 tbTimeHours.Visible = false;
                 tbHour.Visible = false;
-                tbMin.Visible =false;
+                tbMin.Visible = false;
                 tbSec.Visible = false;
             }
-           
+
         }
+
+        private void stopsInsidePolygon(GMapPolygon polygon, GMapOverlay gzn)
+        {
+            if (paradaEnZona == 1)
+            {
+                foreach (var actual in ppal.StreetStops)
+                {
+                    var p = new PointLatLng(actual.Latit, actual.Longit);
+                    if (polygon.IsInside(p))
+                    {
+                        GMapMarker marker = new GMarkerGoogle(p, GMarkerGoogleType.yellow_small);
+                        polygon.Overlay.Markers.Add(marker);
+                    }
+                }
+
+
+
+            }
+
+        }
+
+
+        /* private void busesInsidePolygon(GMapPolygon polygon, GMapOverlay gzn)
+         {
+             foreach (var actual in ppal.getBuses())
+             {
+
+             }
+         }*/
+
     }
 }
+
