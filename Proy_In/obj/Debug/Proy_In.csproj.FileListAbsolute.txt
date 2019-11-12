@@ -222,6 +222,7 @@ C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO V
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
+<<<<<<< HEAD
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe.config
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.pdb
@@ -250,3 +251,33 @@ D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
 D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
+=======
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe.config
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\Proy_In.pdb
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.Core.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\model.exe
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\model.pdb
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\model.exe.config
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.xml
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.xml
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.xml
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Form1.resources
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Properties.Resources.resources
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
+C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
+>>>>>>> bf3dd728c8cd7dc9c174ad7f9042caf81b008dfc
