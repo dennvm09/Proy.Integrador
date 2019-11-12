@@ -44,3 +44,10 @@ C:\Users\vardo\Documents\Proy.Integrador\model\obj\Debug\model.csprojAssemblyRef
 C:\Users\vardo\Documents\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 C:\Users\vardo\Documents\Proy.Integrador\model\obj\Debug\model.exe
 C:\Users\vardo\Documents\Proy.Integrador\model\obj\Debug\model.pdb
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\bin\Debug\model.exe.config
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\bin\Debug\model.exe
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\bin\Debug\model.pdb
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\obj\Debug\model.exe
+C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\model\obj\Debug\model.pdb

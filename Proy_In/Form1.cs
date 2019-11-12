@@ -1323,6 +1323,21 @@ namespace Proy_In
 
         }
 
+        private void BtCustomSimulationt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtSimulacionCompleta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
