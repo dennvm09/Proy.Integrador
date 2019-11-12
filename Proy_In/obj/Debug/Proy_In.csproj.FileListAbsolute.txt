@@ -222,3 +222,31 @@ C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO V
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
 C:\Users\usuario\Desktop\PROYECTO FINAL FINAL FINAL, EN ESTE ESTÁS TRABAJANDO VALENTINA\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe.config
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Proy_In.pdb
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.Core.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\model.exe
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\model.pdb
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\model.exe.config
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.xml
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.xml
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.xml
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.xml
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll.config
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csprojAssemblyReference.cache
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Form1.resources
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Properties.Resources.resources
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.GenerateResource.cache
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CoreCompileInputs.cache
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
+D:\Archivos\Visual Studio\Proy.Integrador\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
