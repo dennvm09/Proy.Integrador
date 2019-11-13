@@ -20,7 +20,9 @@ namespace model
         private List<Stop> reserveStops;
 
         private List<DataGram> datagrams;
+        private List<Line> lines;
         private Hashtable buses;
+        private Hashtable lineH;
         private String hora;
 
 
@@ -28,6 +30,7 @@ namespace model
         {
             stops = new List<Stop>();
             buses = new Hashtable();
+            lineH = new Hashtable();
 
             datagrams = new List<DataGram>();
             streetStops = new List<Stop>();
@@ -206,6 +209,62 @@ namespace model
                 Console.WriteLine(e.Message);
             }
         }
+
+
+        public void loadLines() {
+            string path = @"..\..\..\Data\lines.txt";
+            string fullPath = Path.GetFullPath(path);
+
+            StreamReader read = new StreamReader(fullPath);
+
+            try
+            {
+                read.ReadLine();
+                String line = read.ReadLine();
+                Line lineAux = null;
+
+                while (line != null)
+                {
+                    String[] lineS = line.Split(',');
+
+                    if ((lineS.Length == 4))
+                    {
+
+                        int lineId = Int32.Parse(lineS[0]);
+                        int planVersion = Int32.Parse(lineS[1]);
+                        String shortName = lineS[2];
+                        string descripcion = lineS[3];
+
+                        lineAux = new Line(lineId, planVersion, shortName, descripcion);
+                        lines.Add(lineAux);
+                    }
+                    line = read.ReadLine();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
+        public void hashLines() {
+         
+            int i = 0;
+            while (i < lines.Count ) {
+                if (!lineH.ContainsKey(lines[i].LineId)) {
+                    lineH.Add(lines[i].LineId, lines[i]);
+                }
+                i++;
+            }
+
+        }
+
+        public String descripcionLine(int idLine) {
+            Line busq = (Line)lineH[idLine];
+            return busq.ShortName ;
+        }
+    
 
 
         public String darHora()
