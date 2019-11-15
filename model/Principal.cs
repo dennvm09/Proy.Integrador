@@ -23,6 +23,9 @@ namespace model
         private List<Line> lines;
         private Hashtable buses;
         private Hashtable lineH;
+        private Hashtable arcs;
+        private Hashtable arcsProfiles;
+
         private String hora;
 
 
@@ -31,6 +34,8 @@ namespace model
             stops = new List<Stop>();
             buses = new Hashtable();
             lineH = new Hashtable();
+            arcs = new Hashtable();
+            arcsProfiles = new Hashtable();
 
             datagrams = new List<DataGram>();
             streetStops = new List<Stop>();
@@ -41,7 +46,11 @@ namespace model
             // t.Start();
 
             initilizeData();
+            Console.WriteLine(arcs.Count);
 
+            Arc a = (Arc)arcs["502050502100"];
+
+            Console.WriteLine(a.Time);
 
             //List<DataGram> aux = getListOfBussDatagrams(1051);
             /*
@@ -63,7 +72,7 @@ namespace model
         public void initilizeData()
         {
             loadData();
-            makeSetOfBusesByDate();
+            //makeSetOfBusesByDate();
         }
 
         public Hashtable getBuses()
@@ -89,7 +98,8 @@ namespace model
             }
             else if (cargar == DialogResult.No)
             {
-                loadDataGramData();
+                //loadDataGramData();
+                loadCompleteArcsData();
             }
         }
 
@@ -152,6 +162,54 @@ namespace model
 
         }
 
+        public void loadCompleteArcsData()
+        {
+            loadArcsData();
+            loadArcsProfilesData();
+        }
+
+        public void loadArcsData()
+        {
+            string path = @"..\..\..\Data\arcs.txt";
+            string fullPath = Path.GetFullPath(path);
+
+            StreamReader read = new StreamReader(fullPath);
+
+            try
+            {
+                read.ReadLine();
+                String line = read.ReadLine();
+                Arc arcAux = null;
+
+                while (line != null)
+                {
+                    String[] lineS = line.Split(',');
+
+                    if ((lineS.Length == 8))
+                    {
+                        int arcId = Int32.Parse(lineS[0]);
+                        int stopIdStart = Int32.Parse(lineS[2]);
+                        int stopIdEnd = Int32.Parse(lineS[3]);
+                        string startPoint =lineS[4];
+                        string endPoint =lineS[5];
+                        string description = lineS[6];
+
+                        String key = Convert.ToString(stopIdStart) + Convert.ToString(stopIdEnd);
+
+                        if ((arcs == null) || !arcs.ContainsKey(key)) {     
+                            arcAux = new Arc(arcId, stopIdStart, stopIdEnd, startPoint, endPoint, description);
+                            arcs.Add(key, arcAux);
+                        }
+                    }
+                    line = read.ReadLine();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
         public void loadArcsProfilesData()
         {
             string path = @"..\..\..\Data\arcsprofiles.txt";
@@ -162,39 +220,36 @@ namespace model
             try
             {
                 String line = read.ReadLine();
-                DataGram datagramAux = null;
+                Arc arcAux = null;
 
                 while (line != null)
                 {
                     String[] lineS = line.Split(',');
 
-                    if ((lineS.Length == 12) && !(lineS[4].Equals("-1") || lineS[5].Equals("-1")))
+                    if ((lineS.Length == 6))
                     {
+                        int stopIdStart = Int32.Parse(lineS[0]);
+                        int stopIdEnd = Int32.Parse(lineS[1]);
+                        int timeArc = Int32.Parse(lineS[2]);
 
-                        int eventType = Int32.Parse(lineS[0]);
-                        int stopId = Int32.Parse(lineS[2]);
-                        int odometer = Int32.Parse(lineS[3]);
-                        int taskId = Int32.Parse(lineS[6]);
-                        int lineId = Int32.Parse(lineS[7]);
-                        int tripId = Int32.Parse(lineS[8]);
-                        long dataGramId = Convert.ToInt64(lineS[9]);
-                        int busId = Int32.Parse(lineS[11]);
-                        double latitude = Double.Parse(lineS[4].Insert(1, "."));
-                        double longitude = Double.Parse(lineS[5].Insert(3, "."));
+                        String[] date1 = lineS[5].Split('-');
+                        var dateTimeArc = new DateTime(Int32.Parse(date1[2]), giveMonthByNumber((date1[1])), Int32.Parse(date1[0]));
 
-                        String[] date1 = lineS[1].Split('-');
-                        var registerDate = new DateTime(Int32.Parse(date1[2]), giveMonthByNumber((date1[1])), Int32.Parse(date1[0]));
+                        String key = date1[0] + giveMonthByNumber((date1[1]))+ date1[2];
 
-                        String[] lineS2 = lineS[10].Split(' ');
-                        String[] date2 = lineS2[0].Split('-');
-                        String[] time = lineS2[1].Split('.');
-
-                        hora = time[0] + ":" + time[1] + ":" + time[2];
-
-                        var datagramDate = new DateTime(Int32.Parse(date2[2]), giveMonthByNumber((date2[1])), Int32.Parse(date2[0]), Int32.Parse(time[0]), Int32.Parse(time[1]), Int32.Parse(time[2]));
-
-                        datagramAux = new DataGram(eventType, stopId, odometer, latitude, longitude, taskId, lineId, tripId, dataGramId, busId, registerDate, datagramDate);
-                        datagrams.Add(datagramAux);
+                        if ((arcsProfiles==null)||!arcs.ContainsKey(key))
+                        {
+                            arcAux = new Arc(stopIdStart, stopIdEnd,timeArc, dateTimeArc);
+                            List<Arc> auxL=new List<Arc>();
+                            auxL.Add(arcAux);
+                            arcsProfiles.Add(key, arcAux);
+                        }
+                        else
+                        {
+                            arcAux = new Arc(stopIdStart, stopIdEnd, timeArc, dateTimeArc);
+                            List<Arc> auxL=(List<Arc>)arcsProfiles[key];
+                            auxL.Add(arcAux);
+                        }
                     }
                     line = read.ReadLine();
                 }
