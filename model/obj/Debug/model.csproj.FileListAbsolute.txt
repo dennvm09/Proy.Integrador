@@ -64,3 +64,10 @@ D:\Usuarios\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.pdb
 D:\Usuarios\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.exe.config
 D:\Usuarios\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.exe
 D:\Usuarios\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.pdb
+C:\Users\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.exe.config
+C:\Users\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.exe
+C:\Users\1005944942\Desktop\Proy.Integrador\model\bin\Debug\model.pdb
+C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.exe
+C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.pdb

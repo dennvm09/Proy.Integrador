@@ -47,7 +47,8 @@ namespace model
             // t.Start();
 
             initilizeData();
-            Console.WriteLine(buses.Count);
+            //Console.WriteLine(buses.Count);
+            Console.WriteLine(lineH.Count + "<<<<<<<<<<");
 
            
 

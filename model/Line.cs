@@ -23,7 +23,7 @@ namespace model
 
         public int LineId { get => lineId; set => lineId = value; }
         public int PlanVersion { get => LineId; set => lineId = value; }
-        public string ShortName { get => ShortName; set => shortName = value; }
+        public string ShortName { get => shortName; set => shortName = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
         public string toString() {

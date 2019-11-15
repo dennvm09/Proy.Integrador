@@ -478,11 +478,6 @@ namespace Proy_In
                             GMarkerGoogle markAux = (GMarkerGoogle)marks[buses[j].BusId];
                             markAux.Position = new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude);
                            
-                            markAux.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                            markAux.ToolTipText = String.Format( "Ruta: " + ppal.descripcionLine(buses[j].IdLine));
-                            markAux.ToolTip.TextPadding = new Size(7, 7);
-                            markAux.ToolTip.Fill = Brushes.FloralWhite; 
-                            
                             Thread.Sleep(1000);
                         }
                         else
