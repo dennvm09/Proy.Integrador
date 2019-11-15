@@ -28,7 +28,7 @@ namespace model
         public double Longitude { get => longitude; set => longitude = value; }
         public double Latitude { get => latitude; set => latitude = value; }
         public DateTime DataGramDate { get => dataGramDate; }
-        public int IdLine { get => IdLine; set => IdLine  = value; }
+        public int IdLine { get => idLine; set => idLine  = value; }
 
     }
 }

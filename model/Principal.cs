@@ -36,6 +36,7 @@ namespace model
             lineH = new Hashtable();
             arcs = new Hashtable();
             arcsProfiles = new Hashtable();
+            lines = new List<Line>();
 
             datagrams = new List<DataGram>();
             streetStops = new List<Stop>();
@@ -72,6 +73,7 @@ namespace model
         {
             loadData();
             makeSetOfBusesByDate();
+            loadLines();
         }
 
         public Hashtable getBuses()
@@ -280,7 +282,7 @@ namespace model
                 {
                     String[] lineS = line.Split(',');
 
-                    if ((lineS.Length == 12) && !(lineS[4].Equals("-1") || lineS[5].Equals("-1")))
+                    if ((lineS.Length == 12) && !(lineS[4].Equals("-1") || lineS[5].Equals("-1")|| lineS[7].Equals("-1")))
                     {
 
                         int eventType = Int32.Parse(lineS[0]);
@@ -342,8 +344,12 @@ namespace model
                         String shortName = lineS[2];
                         string descripcion = lineS[3];
 
-                        lineAux = new Line(lineId, planVersion, shortName, descripcion);
-                        lines.Add(lineAux);
+
+                        if (lineH == null || !lineH.ContainsKey(lineId)) {
+                            lineAux = new Line(lineId, planVersion, shortName, descripcion);
+                            lineH.Add(lineId, lineAux);
+                        }
+                          
                     }
                     line = read.ReadLine();
                 }
@@ -355,7 +361,7 @@ namespace model
 
         }
 
-        public void hashLines() {
+        /**public void hashLines() {
          
             int i = 0;
             while (i < lines.Count ) {
@@ -365,7 +371,7 @@ namespace model
                 i++;
             }
 
-        }
+        }**/
 
         public String descripcionLine(int idLine) {
             Line busq = (Line)lineH[idLine];
