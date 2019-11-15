@@ -152,6 +152,59 @@ namespace model
 
         }
 
+        public void loadArcsProfilesData()
+        {
+            string path = @"..\..\..\Data\arcsprofiles.txt";
+            string fullPath = Path.GetFullPath(path);
+
+            StreamReader read = new StreamReader(fullPath);
+
+            try
+            {
+                String line = read.ReadLine();
+                DataGram datagramAux = null;
+
+                while (line != null)
+                {
+                    String[] lineS = line.Split(',');
+
+                    if ((lineS.Length == 12) && !(lineS[4].Equals("-1") || lineS[5].Equals("-1")))
+                    {
+
+                        int eventType = Int32.Parse(lineS[0]);
+                        int stopId = Int32.Parse(lineS[2]);
+                        int odometer = Int32.Parse(lineS[3]);
+                        int taskId = Int32.Parse(lineS[6]);
+                        int lineId = Int32.Parse(lineS[7]);
+                        int tripId = Int32.Parse(lineS[8]);
+                        long dataGramId = Convert.ToInt64(lineS[9]);
+                        int busId = Int32.Parse(lineS[11]);
+                        double latitude = Double.Parse(lineS[4].Insert(1, "."));
+                        double longitude = Double.Parse(lineS[5].Insert(3, "."));
+
+                        String[] date1 = lineS[1].Split('-');
+                        var registerDate = new DateTime(Int32.Parse(date1[2]), giveMonthByNumber((date1[1])), Int32.Parse(date1[0]));
+
+                        String[] lineS2 = lineS[10].Split(' ');
+                        String[] date2 = lineS2[0].Split('-');
+                        String[] time = lineS2[1].Split('.');
+
+                        hora = time[0] + ":" + time[1] + ":" + time[2];
+
+                        var datagramDate = new DateTime(Int32.Parse(date2[2]), giveMonthByNumber((date2[1])), Int32.Parse(date2[0]), Int32.Parse(time[0]), Int32.Parse(time[1]), Int32.Parse(time[2]));
+
+                        datagramAux = new DataGram(eventType, stopId, odometer, latitude, longitude, taskId, lineId, tripId, dataGramId, busId, registerDate, datagramDate);
+                        datagrams.Add(datagramAux);
+                    }
+                    line = read.ReadLine();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
 
 
 
