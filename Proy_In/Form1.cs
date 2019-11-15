@@ -180,8 +180,8 @@ namespace Proy_In
             map.SetPositionByKeywords("Colombia,Cali");
             actualZoom.Text = map.Zoom.ToString() + " %";
 
-            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333, -76.54844800), new Bitmap("images/bus.png"));
-            markOv.Markers.Add(mark);
+           // GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333, -76.54844800), new Bitmap("images/bus.png"));
+            //markOv.Markers.Add(mark);
 
             /*
             GMap.NET.WindowsForms.Markers.GMarkerGoogle curPos = new GMap.NET.WindowsForms.Markers.GMarkerGoogle(new GMap.NET.PointLatLng(3.43686833, -76.54497667), GMap.NET.WindowsForms.Markers.GMarkerGoogleType.blue_pushpin);
