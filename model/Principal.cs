@@ -375,8 +375,18 @@ namespace model
         }**/
 
         public String descripcionLine(int idLine) {
-            Line busq = (Line)lineH[idLine];
-            return busq.ShortName ;
+
+            if (lineH.ContainsKey(idLine))
+            {
+                Line busq = (Line)lineH[idLine];
+                return busq.ShortName;
+            }
+            else
+            {
+                //System.Diagnostics.Debug.WriteLine("key " + idLine + "does not exist");
+                return "nn";
+            }
+            
         }
     
 

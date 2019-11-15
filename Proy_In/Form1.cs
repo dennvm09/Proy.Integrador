@@ -180,7 +180,7 @@ namespace Proy_In
             map.SetPositionByKeywords("Colombia,Cali");
             actualZoom.Text = map.Zoom.ToString() + " %";
 
-            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333, -76.54844800), GMarkerGoogleType.red);
+            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(3.44327333, -76.54844800), new Bitmap("images/bus.png"));
             markOv.Markers.Add(mark);
 
             /*
@@ -464,6 +464,8 @@ namespace Proy_In
         {
             String id = hour + "." + min + "." + sec;
 
+            Bitmap bm = new Bitmap("images/bus.png");
+
             if (ppal.getBuses().ContainsKey(id))
             {
 
@@ -482,7 +484,7 @@ namespace Proy_In
                         }
                         else
                         {
-                            GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), GMarkerGoogleType.red);
+                            GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude),bm );
                             marks.Add(buses[j].BusId, markAux1);
 
                             markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
@@ -497,7 +499,7 @@ namespace Proy_In
                     }
                     else
                     {
-                        GMarkerGoogle mark1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), GMarkerGoogleType.red);
+                        GMarkerGoogle mark1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), bm);
 
                         marks.Add(buses[j].BusId, mark1);
 
