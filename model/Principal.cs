@@ -48,7 +48,7 @@ namespace model
 
             initilizeData();
             //Console.WriteLine(buses.Count);
-            Console.WriteLine(lineH.Count + "<<<<<<<<<<");
+            Console.WriteLine(lineH.Count);
 
            
 
@@ -74,7 +74,7 @@ namespace model
         {
             loadData();
             makeSetOfBusesByDate();
-            loadLines();
+            
         }
 
         public Hashtable getBuses()
@@ -101,7 +101,7 @@ namespace model
             else if (cargar == DialogResult.No)
             {
                 loadDataGramData();
-             
+                loadLines();
             }
         }
 
@@ -267,8 +267,8 @@ namespace model
 
         public void loadDataGramData()
         {
-            //string path = @"..\..\..\Data\DATAGRAMS.csv";
-            string path = @"..\..\..\Data\DATAGRAMS.txt";
+            string path = @"..\..\..\Data\DATAGRAMS.csv";
+          //  string path = @"..\..\..\Data\DATAGRAMS.txt";
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);
