@@ -347,7 +347,7 @@ namespace Proy_In
             actualZoom.Text = map.Zoom.ToString() + " %";
             zoom = map.Zoom;
 
-            if (zoom >= 17 && preEstaciones == 1)
+            if (zoom >= 17 && preEstaciones == 1)  
             {
                 wagonsStations();
             }
