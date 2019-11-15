@@ -46,11 +46,10 @@ namespace model
             // t.Start();
 
             initilizeData();
-            Console.WriteLine(arcs.Count);
+            Console.WriteLine(buses.Count);
 
-            Arc a = (Arc)arcs["502050502100"];
+           
 
-            Console.WriteLine(a.Time);
 
             //List<DataGram> aux = getListOfBussDatagrams(1051);
             /*
@@ -72,7 +71,7 @@ namespace model
         public void initilizeData()
         {
             loadData();
-            //makeSetOfBusesByDate();
+            makeSetOfBusesByDate();
         }
 
         public Hashtable getBuses()
@@ -98,8 +97,8 @@ namespace model
             }
             else if (cargar == DialogResult.No)
             {
-                //loadDataGramData();
-                loadCompleteArcsData();
+                loadDataGramData();
+             
             }
         }
 
@@ -265,8 +264,8 @@ namespace model
 
         public void loadDataGramData()
         {
-            string path = @"..\..\..\Data\DATAGRAMS.csv";
-            //string path = @"..\..\..\Data\DATAGRAMS.txt";
+            //string path = @"..\..\..\Data\DATAGRAMS.csv";
+            string path = @"..\..\..\Data\DATAGRAMS.txt";
             string fullPath = Path.GetFullPath(path);
 
             StreamReader read = new StreamReader(fullPath);
@@ -514,7 +513,7 @@ namespace model
                 if (j.Equals(i))
                 {
                     //  Console.WriteLine("cont= " + copy[cont].BusId);
-                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate, copy[cont].LineId);
                     setBus.Add(b);
                 }
                 else if (!buses.ContainsKey(i))
@@ -547,7 +546,7 @@ namespace model
                 if (copy[cont].BusId == i)
                 {
                     //  Console.WriteLine("cont= " + copy[cont].BusId);
-                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate,copy[cont].LineId);
                     setBus.Add(b);
                 }
                 else

@@ -469,7 +469,7 @@ namespace Proy_In
 
                 List<Bus> buses = (List<Bus>)ppal.getBuses()[id];
 
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < buses.Count; j++)
                 {
                     if (marks != null)
                     {
@@ -477,12 +477,23 @@ namespace Proy_In
                         {
                             GMarkerGoogle markAux = (GMarkerGoogle)marks[buses[j].BusId];
                             markAux.Position = new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude);
+                           
+                            markAux.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                            markAux.ToolTipText = String.Format( "Ruta: " + ppal.descripcionLine(buses[j].IdLine));
+                            markAux.ToolTip.TextPadding = new Size(7, 7);
+                            markAux.ToolTip.Fill = Brushes.FloralWhite; 
+                            
                             Thread.Sleep(1000);
                         }
                         else
                         {
                             GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), GMarkerGoogleType.red);
                             marks.Add(buses[j].BusId, markAux1);
+
+                            markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                            markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine));
+                            markAux1.ToolTip.TextPadding = new Size(7, 7);
+                            markAux1.ToolTip.Fill = Brushes.FloralWhite;
 
                             markOv.Markers.Add(markAux1);
                             Console.WriteLine("efectily");

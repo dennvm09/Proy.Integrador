@@ -281,3 +281,30 @@ C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy
 C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
 C:\Users\usuario\Desktop\hola, este es el que debo arreglar y sera el final\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
 >>>>>>> bf3dd728c8cd7dc9c174ad7f9042caf81b008dfc
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csprojAssemblyReference.cache
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Form1.resources
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.Properties.Resources.resources
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.GenerateResource.cache
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.exe
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.pdb
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe.config
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\Proy_In.exe
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\Proy_In.pdb
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.Core.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\model.exe
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\model.pdb
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\model.exe.config
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.xml
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\EntityFramework.SqlServer.xml
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\Newtonsoft.Json.xml
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.xml
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\bin\Debug\System.Data.SQLite.dll.config
+D:\Usuarios\1005944942\Desktop\Proy.Integrador\Proy_In\obj\Debug\Proy_In.csproj.CopyComplete

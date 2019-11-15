@@ -39,6 +39,7 @@ namespace model
         public double Longitude { get => longitude; set => longitude = value; }
         public DateTime DataGramDate { get => dataGramDate; set => dataGramDate = value; }
         public long DataGramId { get => dataGramId; set => dataGramId = value; }
+        public int LineId { get => lineId; set => lineId = value; }
 
         public int Compare(DataGram x, DataGram y)
         {
