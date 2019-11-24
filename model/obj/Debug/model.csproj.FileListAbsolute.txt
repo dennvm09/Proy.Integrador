@@ -71,3 +71,10 @@ C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.csprojAssembly
 C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.exe
 C:\Users\1005944942\Desktop\Proy.Integrador\model\obj\Debug\model.pdb
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\bin\Debug\model.exe.config
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\bin\Debug\model.exe
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\bin\Debug\model.pdb
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\obj\Debug\model.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\obj\Debug\model.exe
+C:\Users\usuario\Desktop\FINAL 24 NOV FINAAAAAAAAAAAAAAAAAAAAL\Proy.Integrador\model\obj\Debug\model.pdb

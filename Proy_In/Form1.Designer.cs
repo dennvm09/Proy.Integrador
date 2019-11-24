@@ -38,7 +38,9 @@
             this.testMotion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.paneZonas = new System.Windows.Forms.Panel();
+            this.checkBParadas = new System.Windows.Forms.CheckBox();
             this.checkBZ8 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.checkBZ7 = new System.Windows.Forms.CheckBox();
             this.checkBZ6 = new System.Windows.Forms.CheckBox();
             this.checkBZ5 = new System.Windows.Forms.CheckBox();
@@ -61,24 +63,21 @@
             this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.paneOp2 = new System.Windows.Forms.Panel();
-            this.cbCustom = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelCustomSimulation = new System.Windows.Forms.Panel();
             this.btCustomSimulationt = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btSimulacionCompleta = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.checkBParadas = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.rbtSimulacionCompleta = new System.Windows.Forms.RadioButton();
+            this.rbtSimulacionPersonal = new System.Windows.Forms.RadioButton();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -199,6 +198,17 @@
             this.paneZonas.Size = new System.Drawing.Size(242, 239);
             this.paneZonas.TabIndex = 13;
             // 
+            // checkBParadas
+            // 
+            this.checkBParadas.AutoSize = true;
+            this.checkBParadas.Location = new System.Drawing.Point(11, 190);
+            this.checkBParadas.Name = "checkBParadas";
+            this.checkBParadas.Size = new System.Drawing.Size(65, 17);
+            this.checkBParadas.TabIndex = 28;
+            this.checkBParadas.Text = "Paradas";
+            this.checkBParadas.UseVisualStyleBackColor = true;
+            this.checkBParadas.CheckedChanged += new System.EventHandler(this.CheckBParadas_CheckedChanged_1);
+            // 
             // checkBZ8
             // 
             this.checkBZ8.AutoSize = true;
@@ -209,6 +219,16 @@
             this.checkBZ8.Text = "Zona 8 (Calipso)";
             this.checkBZ8.UseVisualStyleBackColor = true;
             this.checkBZ8.CheckedChanged += new System.EventHandler(this.CheckBZ8_CheckedChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 26);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "¿Desea conocer las paradas\r\ndel mio en dicha zona?";
             // 
             // checkBZ7
             // 
@@ -446,27 +466,15 @@
             // 
             // paneOp2
             // 
-            this.paneOp2.Controls.Add(this.cbCustom);
+            this.paneOp2.Controls.Add(this.rbtSimulacionPersonal);
+            this.paneOp2.Controls.Add(this.rbtSimulacionCompleta);
             this.paneOp2.Controls.Add(this.label3);
             this.paneOp2.Controls.Add(this.panelCustomSimulation);
             this.paneOp2.Controls.Add(this.label5);
-            this.paneOp2.Controls.Add(this.btSimulacionCompleta);
             this.paneOp2.Location = new System.Drawing.Point(735, 224);
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(316, 277);
             this.paneOp2.TabIndex = 23;
-            // 
-            // cbCustom
-            // 
-            this.cbCustom.AutoSize = true;
-            this.cbCustom.Location = new System.Drawing.Point(9, 81);
-            this.cbCustom.Margin = new System.Windows.Forms.Padding(2);
-            this.cbCustom.Name = "cbCustom";
-            this.cbCustom.Size = new System.Drawing.Size(92, 17);
-            this.cbCustom.TabIndex = 25;
-            this.cbCustom.Text = "Personalizado";
-            this.cbCustom.UseVisualStyleBackColor = true;
-            this.cbCustom.CheckedChanged += new System.EventHandler(this.CbCustom_CheckedChanged);
             // 
             // label3
             // 
@@ -484,16 +492,15 @@
             // 
             this.panelCustomSimulation.Controls.Add(this.btCustomSimulationt);
             this.panelCustomSimulation.Controls.Add(this.label11);
-            this.panelCustomSimulation.Controls.Add(this.label10);
             this.panelCustomSimulation.Controls.Add(this.label9);
             this.panelCustomSimulation.Controls.Add(this.textBox4);
             this.panelCustomSimulation.Controls.Add(this.textBox3);
             this.panelCustomSimulation.Controls.Add(this.textBox2);
             this.panelCustomSimulation.Controls.Add(this.textBox1);
-            this.panelCustomSimulation.Location = new System.Drawing.Point(2, 147);
+            this.panelCustomSimulation.Location = new System.Drawing.Point(2, 114);
             this.panelCustomSimulation.Margin = new System.Windows.Forms.Padding(2);
             this.panelCustomSimulation.Name = "panelCustomSimulation";
-            this.panelCustomSimulation.Size = new System.Drawing.Size(283, 69);
+            this.panelCustomSimulation.Size = new System.Drawing.Size(312, 69);
             this.panelCustomSimulation.TabIndex = 21;
             this.panelCustomSimulation.Visible = false;
             // 
@@ -512,27 +519,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(143, 9);
+            this.label11.Location = new System.Drawing.Point(129, 9);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 6;
             this.label11.Text = "desde";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(125, 9);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "hrs";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(2, 9);
+            this.label9.Location = new System.Drawing.Point(1, 9);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
@@ -586,17 +583,6 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "RUTAS EN ACCIÓN";
             // 
-            // btSimulacionCompleta
-            // 
-            this.btSimulacionCompleta.Location = new System.Drawing.Point(156, 81);
-            this.btSimulacionCompleta.Name = "btSimulacionCompleta";
-            this.btSimulacionCompleta.Size = new System.Drawing.Size(116, 23);
-            this.btSimulacionCompleta.TabIndex = 20;
-            this.btSimulacionCompleta.Text = "Simulacion completa";
-            this.btSimulacionCompleta.UseVisualStyleBackColor = true;
-            this.btSimulacionCompleta.Visible = false;
-            this.btSimulacionCompleta.Click += new System.EventHandler(this.BtSimulacionCompleta_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -621,26 +607,29 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // checkBParadas
+            // rbtSimulacionCompleta
             // 
-            this.checkBParadas.AutoSize = true;
-            this.checkBParadas.Location = new System.Drawing.Point(11, 190);
-            this.checkBParadas.Name = "checkBParadas";
-            this.checkBParadas.Size = new System.Drawing.Size(65, 17);
-            this.checkBParadas.TabIndex = 28;
-            this.checkBParadas.Text = "Paradas";
-            this.checkBParadas.UseVisualStyleBackColor = true;
-            this.checkBParadas.CheckedChanged += new System.EventHandler(this.CheckBParadas_CheckedChanged_1);
+            this.rbtSimulacionCompleta.AutoSize = true;
+            this.rbtSimulacionCompleta.Location = new System.Drawing.Point(179, 80);
+            this.rbtSimulacionCompleta.Name = "rbtSimulacionCompleta";
+            this.rbtSimulacionCompleta.Size = new System.Drawing.Size(122, 17);
+            this.rbtSimulacionCompleta.TabIndex = 26;
+            this.rbtSimulacionCompleta.TabStop = true;
+            this.rbtSimulacionCompleta.Text = "Simulación completa";
+            this.rbtSimulacionCompleta.UseVisualStyleBackColor = true;
+            this.rbtSimulacionCompleta.CheckedChanged += new System.EventHandler(this.RbtSimulacionCompleta_CheckedChanged);
             // 
-            // label7
+            // rbtSimulacionPersonal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 156);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 26);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "¿Desea conocer las paradas\r\ndel mio en dicha zona?";
+            this.rbtSimulacionPersonal.AutoSize = true;
+            this.rbtSimulacionPersonal.Location = new System.Drawing.Point(15, 80);
+            this.rbtSimulacionPersonal.Name = "rbtSimulacionPersonal";
+            this.rbtSimulacionPersonal.Size = new System.Drawing.Size(144, 17);
+            this.rbtSimulacionPersonal.TabIndex = 27;
+            this.rbtSimulacionPersonal.TabStop = true;
+            this.rbtSimulacionPersonal.Text = "Simulación personalizada";
+            this.rbtSimulacionPersonal.UseVisualStyleBackColor = true;
+            this.rbtSimulacionPersonal.CheckedChanged += new System.EventHandler(this.RbtSimulacionPersonal_CheckedChanged);
             // 
             // Form1
             // 
@@ -713,7 +702,6 @@
         private System.Windows.Forms.Panel paneOp1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel paneOp2;
-        private System.Windows.Forms.Button btSimulacionCompleta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBTodas;
         private System.Windows.Forms.Button btLimpiar;
@@ -723,17 +711,17 @@
         private System.Windows.Forms.CheckBox checkBReservas;
         private System.Windows.Forms.Panel panelCustomSimulation;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox cbCustom;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btCustomSimulation;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkBParadas;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RadioButton rbtSimulacionPersonal;
+        private System.Windows.Forms.RadioButton rbtSimulacionCompleta;
     }
 }
 

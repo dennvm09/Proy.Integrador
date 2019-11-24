@@ -77,8 +77,8 @@ namespace Proy_In
         {
             tbTimeHours = new TextBox
             {
-                Location = new Point(1088, 425),
-                Size = new Size(49, 22),
+                Location = new Point(822, 350),
+                Size = new Size(40, 22),
                 Text = "HRS",
                 Visible = false,
 
@@ -87,8 +87,8 @@ namespace Proy_In
 
             tbHour = new TextBox
             {
-                Location = new Point(1258, 425),
-                Size = new Size(37, 22),
+                Location = new Point(908, 350),
+                Size = new Size(30, 22),
                 Text = "HH",
                 Visible = false,
             };
@@ -96,8 +96,8 @@ namespace Proy_In
 
             tbMin = new TextBox
             {
-                Location = new Point(1310, 425),
-                Size = new Size(37, 22),
+                Location = new Point(960, 350),
+                Size = new Size(30, 22),
                 Text = "MM",
                 Visible = false,
             };
@@ -105,8 +105,8 @@ namespace Proy_In
 
             tbSec = new TextBox
             {
-                Location = new Point(1360, 425),
-                Size = new Size(37, 22),
+                Location = new Point(1010, 350),
+                Size = new Size(30, 22),
                 Text = "SS",
                 Visible = false,
             };
@@ -114,7 +114,7 @@ namespace Proy_In
 
             btCompleteSimulation = new Button
             {
-                Location = new Point(1245, 350),
+                Location = new Point(820, 350),
                 Size = new Size(154, 28),
                 Text = "Simulacion completa",
                 Visible = false,
@@ -122,7 +122,7 @@ namespace Proy_In
             btCompleteSimulation.Click += new EventHandler(BtCompleteSimulation_Click);
             btCustomSimulation = new Button
             {
-                Location = new Point(1265, 460),
+                Location = new Point(970, 400),
                 Size = new Size(75, 23),
                 Text = "Iniciar",
                 Visible = false,
@@ -132,21 +132,24 @@ namespace Proy_In
 
             lbH = new Label
             {
-                Location = new Point(963, 37),
+                Location = new Point(733, 37),
                 Size = new Size(30, 24),
                 Text = "00",
+                Visible = false
             };
             lbM = new Label
             {
-                Location = new Point(1006, 37),
+                Location = new Point(776, 37),
                 Size = new Size(30, 24),
                 Text = "00",
+                Visible = false
             };
             lbS = new Label
             {
-                Location = new Point(1056, 37),
+                Location = new Point(826, 37),
                 Size = new Size(30, 24),
                 Text = "00",
+                Visible = false
             };
             Controls.Add(tbTimeHours);
             Controls.Add(tbHour);
@@ -312,6 +315,7 @@ namespace Proy_In
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
@@ -846,6 +850,9 @@ namespace Proy_In
             paneOp2.Visible = false;
             btCompleteSimulation.Visible = false;
             btCustomSimulation.Visible = false;
+            lbH.Visible = false;
+            lbM.Visible = false;
+            lbS.Visible = false;
         }
         /*
         private void BtAnimacion_Click(object sender, EventArgs e)
@@ -880,7 +887,10 @@ namespace Proy_In
         {
             paneOp2.Visible = true;
             paneOp1.Visible = false;
-            btCompleteSimulation.Visible = true;
+            btCompleteSimulation.Visible = false;
+            lbH.Visible = true;
+            lbM.Visible = true;
+            lbS.Visible = true;
         }
 
         private void CheckBTodas_CheckedChanged(object sender, EventArgs e)
@@ -1486,6 +1496,44 @@ namespace Proy_In
             }
         }
 
+        private void RbtSimulacionPersonal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtSimulacionPersonal.Checked)
+            {
+                panelCustomSimulation.Visible = true;
+                btCustomSimulation.Visible = true;
+                tbTimeHours.Visible = true;
+                tbHour.Visible = true;
+                tbMin.Visible = true;
+                tbSec.Visible = true;
+            }
+            else
+            {
+                panelCustomSimulation.Visible = false;
+                btCustomSimulation.Visible = false;
+                tbTimeHours.Visible = false;
+                tbHour.Visible = false;
+                tbMin.Visible = false;
+                tbSec.Visible = false;
+            }
+              
+            
+     
+        }
+
+        private void RbtSimulacionCompleta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtSimulacionCompleta.Checked)
+            {
+                btCompleteSimulation.Visible = true;
+            }
+            else
+            {
+                btCompleteSimulation.Visible = false;
+            }
+            
+        }
+
         private void CheckBReservas_CheckedChanged(object sender, EventArgs e)
         {
             bool estado = checkBReservas.Checked;
@@ -1519,7 +1567,7 @@ namespace Proy_In
 
         }
 
-        private void CbCustom_CheckedChanged(object sender, EventArgs e)
+       /** private void CbCustom_CheckedChanged(object sender, EventArgs e)
         {
             if (cbCustom.Checked)
             {
@@ -1540,7 +1588,7 @@ namespace Proy_In
                 tbSec.Visible = false;
             }
 
-        }
+        }**/
 
         private void stopsInsidePolygon(GMapPolygon polygon, GMapOverlay gzn)
         {
