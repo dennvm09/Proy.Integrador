@@ -96,6 +96,7 @@ namespace model
                 {
                     path = openFile.FileName;
                     loadOwnDataGramData(path);
+                    loadLines();
                 }
             }
             else if (cargar == DialogResult.No)
