@@ -315,6 +315,7 @@ namespace Proy_In
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
