@@ -52,7 +52,6 @@
             this.checkBEstaciones = new System.Windows.Forms.CheckBox();
             this.checkBCalle = new System.Windows.Forms.CheckBox();
             this.checkBZonas = new System.Windows.Forms.CheckBox();
-            this.btFiltrar = new System.Windows.Forms.Button();
             this.rbtOpcion1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.rbtOpcion2 = new System.Windows.Forms.RadioButton();
@@ -63,6 +62,8 @@
             this.checkBTodas = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.paneOp2 = new System.Windows.Forms.Panel();
+            this.rbtSimulacionPersonal = new System.Windows.Forms.RadioButton();
+            this.rbtSimulacionCompleta = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panelCustomSimulation = new System.Windows.Forms.Panel();
             this.btCustomSimulationt = new System.Windows.Forms.Button();
@@ -76,8 +77,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rbtSimulacionCompleta = new System.Windows.Forms.RadioButton();
-            this.rbtSimulacionPersonal = new System.Windows.Forms.RadioButton();
+            this.checkBTerminal = new System.Windows.Forms.CheckBox();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -182,6 +182,7 @@
             // 
             // paneZonas
             // 
+            this.paneZonas.Controls.Add(this.checkBTerminal);
             this.paneZonas.Controls.Add(this.checkBParadas);
             this.paneZonas.Controls.Add(this.checkBZ8);
             this.paneZonas.Controls.Add(this.label7);
@@ -226,9 +227,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 156);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 26);
+            this.label7.Size = new System.Drawing.Size(199, 26);
             this.label7.TabIndex = 27;
-            this.label7.Text = "¿Desea conocer las paradas\r\ndel mio en dicha zona?";
+            this.label7.Text = "¿Desea conocer las paradas o\r\nterminales del mio en dicha zona?";
             // 
             // checkBZ7
             // 
@@ -352,16 +353,6 @@
             this.checkBZonas.UseVisualStyleBackColor = true;
             this.checkBZonas.CheckedChanged += new System.EventHandler(this.CheckBZonas_CheckedChanged);
             // 
-            // btFiltrar
-            // 
-            this.btFiltrar.Location = new System.Drawing.Point(209, 103);
-            this.btFiltrar.Name = "btFiltrar";
-            this.btFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btFiltrar.TabIndex = 17;
-            this.btFiltrar.Text = "Ubicar";
-            this.btFiltrar.UseVisualStyleBackColor = true;
-            this.btFiltrar.Click += new System.EventHandler(this.BtFiltrar_Click);
-            // 
             // rbtOpcion1
             // 
             this.rbtOpcion1.AutoSize = true;
@@ -411,7 +402,6 @@
             this.paneOp1.Controls.Add(this.btLimpiar);
             this.paneOp1.Controls.Add(this.checkBTodas);
             this.paneOp1.Controls.Add(this.label4);
-            this.paneOp1.Controls.Add(this.btFiltrar);
             this.paneOp1.Controls.Add(this.label1);
             this.paneOp1.Controls.Add(this.paneZonas);
             this.paneOp1.Controls.Add(this.checkBEstaciones);
@@ -435,7 +425,7 @@
             // 
             // btLimpiar
             // 
-            this.btLimpiar.Location = new System.Drawing.Point(209, 133);
+            this.btLimpiar.Location = new System.Drawing.Point(182, 142);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btLimpiar.TabIndex = 20;
@@ -475,6 +465,30 @@
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(316, 277);
             this.paneOp2.TabIndex = 23;
+            // 
+            // rbtSimulacionPersonal
+            // 
+            this.rbtSimulacionPersonal.AutoSize = true;
+            this.rbtSimulacionPersonal.Location = new System.Drawing.Point(15, 80);
+            this.rbtSimulacionPersonal.Name = "rbtSimulacionPersonal";
+            this.rbtSimulacionPersonal.Size = new System.Drawing.Size(144, 17);
+            this.rbtSimulacionPersonal.TabIndex = 27;
+            this.rbtSimulacionPersonal.TabStop = true;
+            this.rbtSimulacionPersonal.Text = "Simulación personalizada";
+            this.rbtSimulacionPersonal.UseVisualStyleBackColor = true;
+            this.rbtSimulacionPersonal.CheckedChanged += new System.EventHandler(this.RbtSimulacionPersonal_CheckedChanged);
+            // 
+            // rbtSimulacionCompleta
+            // 
+            this.rbtSimulacionCompleta.AutoSize = true;
+            this.rbtSimulacionCompleta.Location = new System.Drawing.Point(179, 80);
+            this.rbtSimulacionCompleta.Name = "rbtSimulacionCompleta";
+            this.rbtSimulacionCompleta.Size = new System.Drawing.Size(122, 17);
+            this.rbtSimulacionCompleta.TabIndex = 26;
+            this.rbtSimulacionCompleta.TabStop = true;
+            this.rbtSimulacionCompleta.Text = "Simulación completa";
+            this.rbtSimulacionCompleta.UseVisualStyleBackColor = true;
+            this.rbtSimulacionCompleta.CheckedChanged += new System.EventHandler(this.RbtSimulacionCompleta_CheckedChanged);
             // 
             // label3
             // 
@@ -577,7 +591,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(58, 4);
+            this.label5.Location = new System.Drawing.Point(76, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 23);
             this.label5.TabIndex = 19;
@@ -607,29 +621,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // rbtSimulacionCompleta
+            // checkBTerminal
             // 
-            this.rbtSimulacionCompleta.AutoSize = true;
-            this.rbtSimulacionCompleta.Location = new System.Drawing.Point(179, 80);
-            this.rbtSimulacionCompleta.Name = "rbtSimulacionCompleta";
-            this.rbtSimulacionCompleta.Size = new System.Drawing.Size(122, 17);
-            this.rbtSimulacionCompleta.TabIndex = 26;
-            this.rbtSimulacionCompleta.TabStop = true;
-            this.rbtSimulacionCompleta.Text = "Simulación completa";
-            this.rbtSimulacionCompleta.UseVisualStyleBackColor = true;
-            this.rbtSimulacionCompleta.CheckedChanged += new System.EventHandler(this.RbtSimulacionCompleta_CheckedChanged);
-            // 
-            // rbtSimulacionPersonal
-            // 
-            this.rbtSimulacionPersonal.AutoSize = true;
-            this.rbtSimulacionPersonal.Location = new System.Drawing.Point(15, 80);
-            this.rbtSimulacionPersonal.Name = "rbtSimulacionPersonal";
-            this.rbtSimulacionPersonal.Size = new System.Drawing.Size(144, 17);
-            this.rbtSimulacionPersonal.TabIndex = 27;
-            this.rbtSimulacionPersonal.TabStop = true;
-            this.rbtSimulacionPersonal.Text = "Simulación personalizada";
-            this.rbtSimulacionPersonal.UseVisualStyleBackColor = true;
-            this.rbtSimulacionPersonal.CheckedChanged += new System.EventHandler(this.RbtSimulacionPersonal_CheckedChanged);
+            this.checkBTerminal.AutoSize = true;
+            this.checkBTerminal.Location = new System.Drawing.Point(92, 190);
+            this.checkBTerminal.Name = "checkBTerminal";
+            this.checkBTerminal.Size = new System.Drawing.Size(78, 17);
+            this.checkBTerminal.TabIndex = 31;
+            this.checkBTerminal.Text = "Estaciones";
+            this.checkBTerminal.UseVisualStyleBackColor = true;
+            this.checkBTerminal.CheckedChanged += new System.EventHandler(this.CheckBTerminal_CheckedChanged);
             // 
             // Form1
             // 
@@ -654,6 +655,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MIO SITM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.paneZonas.ResumeLayout(false);
@@ -694,7 +696,6 @@
         private System.Windows.Forms.CheckBox checkBZ2;
         private System.Windows.Forms.CheckBox checkBZ1;
         private System.Windows.Forms.CheckBox checkBZ0;
-        private System.Windows.Forms.Button btFiltrar;
         private System.Windows.Forms.RadioButton rbtOpcion1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rbtOpcion2;
@@ -722,6 +723,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton rbtSimulacionPersonal;
         private System.Windows.Forms.RadioButton rbtSimulacionCompleta;
+        private System.Windows.Forms.CheckBox checkBTerminal;
     }
 }
 
