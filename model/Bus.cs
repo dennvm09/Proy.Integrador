@@ -32,5 +32,7 @@ namespace model
         public DateTime DataGramDate { get => dataGramDate; }
         public int IdLine { get => idLine; set => idLine  = value; }
 
+        
+
     }
 }

@@ -676,6 +676,44 @@ namespace model
 
         }
 
+        public String desviacionBus(int tiempo)
+        {
+
+            double num = 0;
+            String estadoBus = "";
+            String tipoEstado = "";
+            String desviacion = "";
+            String tiempoEstimado = "";
+
+            if (tiempo > 0)
+            {
+                estadoBus = " adelantado";
+            }
+            else if (tiempo < 0)
+            {
+                estadoBus = " atrasado";
+                tiempo = Math.Abs(tiempo);
+            }
+            if (tiempo > 60)
+            {
+                tipoEstado = "minutos";
+                num = tiempo / 60.0;
+            }
+            else
+            {
+                tipoEstado = "segundos";
+                num = tiempo;
+            }
+
+
+            tiempoEstimado = num.ToString("0.0");
+
+            desviacion = tiempoEstimado + " " + tipoEstado + estadoBus;
+
+            return desviacion;
+
+        }
+
         public void sortDataGramsByBusId(List<DataGram> list)
         {
             List<DataGram> aux = list;
@@ -877,13 +915,16 @@ namespace model
             return search;
         }
 
-       // public static void methodTest1()
+        // public static void methodTest1()
         //{ 
-          //  Console.WriteLine("methodTest1 is running");
-       // }
+        //  Console.WriteLine("methodTest1 is running");
+        // }
 
-      
+
        
+
+
+
         static void Main()
         {
         }

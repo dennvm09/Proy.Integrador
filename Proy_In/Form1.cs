@@ -497,7 +497,7 @@ namespace Proy_In
                                 marks.Add(buses[j].BusId, markAux1);
 
                                 markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                                markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine));
+                                markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine) + "\n" + timeBus());
                                 markAux1.ToolTip.TextPadding = new Size(7, 7);
                                 markAux1.ToolTip.Fill = Brushes.FloralWhite;
 
@@ -1713,6 +1713,16 @@ namespace Proy_In
 
             }
 
+        }
+
+        private String timeBus()
+        {
+            var random = new Random();
+            int tiempo = random.Next(-20, 20);
+
+            String tiempoEstimado = ppal.desviacionBus(tiempo);
+
+            return tiempoEstimado;
         }
 
         /* private void busesInsidePolygon(GMapPolygon polygon, GMapOverlay gzn)

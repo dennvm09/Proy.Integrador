@@ -85,3 +85,9 @@ C:\Users\usuario\Desktop\SI BRAYAN HACE PUSH SIN AVISARME, LO MATO\Proy.Integrad
 C:\Users\usuario\Desktop\SI BRAYAN HACE PUSH SIN AVISARME, LO MATO\Proy.Integrador\model\obj\Debug\model.csproj.CoreCompileInputs.cache
 C:\Users\usuario\Desktop\SI BRAYAN HACE PUSH SIN AVISARME, LO MATO\Proy.Integrador\model\obj\Debug\model.exe
 C:\Users\usuario\Desktop\SI BRAYAN HACE PUSH SIN AVISARME, LO MATO\Proy.Integrador\model\obj\Debug\model.pdb
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.exe.config
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.exe
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\bin\Debug\model.pdb
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.csprojAssemblyReference.cache
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.exe
+D:\Usuarios\1006168982\Desktop\Proy.Integrador\model\obj\Debug\model.pdb
