@@ -78,7 +78,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -160,7 +159,7 @@
             // testMotion
             // 
             this.testMotion.Location = new System.Drawing.Point(1512, 1110);
-            this.testMotion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.testMotion.Margin = new System.Windows.Forms.Padding(5);
             this.testMotion.Name = "testMotion";
             this.testMotion.Size = new System.Drawing.Size(159, 28);
             this.testMotion.TabIndex = 8;
@@ -195,7 +194,7 @@
             this.paneZonas.Controls.Add(this.checkBZ1);
             this.paneZonas.Controls.Add(this.checkBZ0);
             this.paneZonas.Location = new System.Drawing.Point(29, 240);
-            this.paneZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneZonas.Margin = new System.Windows.Forms.Padding(4);
             this.paneZonas.Name = "paneZonas";
             this.paneZonas.Size = new System.Drawing.Size(323, 294);
             this.paneZonas.TabIndex = 13;
@@ -204,7 +203,7 @@
             // 
             this.checkBTerminal.AutoSize = true;
             this.checkBTerminal.Location = new System.Drawing.Point(123, 234);
-            this.checkBTerminal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBTerminal.Margin = new System.Windows.Forms.Padding(4);
             this.checkBTerminal.Name = "checkBTerminal";
             this.checkBTerminal.Size = new System.Drawing.Size(99, 21);
             this.checkBTerminal.TabIndex = 31;
@@ -216,7 +215,7 @@
             // 
             this.checkBParadas.AutoSize = true;
             this.checkBParadas.Location = new System.Drawing.Point(15, 234);
-            this.checkBParadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBParadas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBParadas.Name = "checkBParadas";
             this.checkBParadas.Size = new System.Drawing.Size(83, 21);
             this.checkBParadas.TabIndex = 28;
@@ -228,7 +227,7 @@
             // 
             this.checkBZ8.AutoSize = true;
             this.checkBZ8.Location = new System.Drawing.Point(17, 167);
-            this.checkBZ8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ8.Name = "checkBZ8";
             this.checkBZ8.Size = new System.Drawing.Size(135, 21);
             this.checkBZ8.TabIndex = 24;
@@ -251,7 +250,7 @@
             // 
             this.checkBZ7.AutoSize = true;
             this.checkBZ7.Location = new System.Drawing.Point(17, 148);
-            this.checkBZ7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ7.Name = "checkBZ7";
             this.checkBZ7.Size = new System.Drawing.Size(172, 21);
             this.checkBZ7.TabIndex = 23;
@@ -263,7 +262,7 @@
             // 
             this.checkBZ6.AutoSize = true;
             this.checkBZ6.Location = new System.Drawing.Point(17, 128);
-            this.checkBZ6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ6.Name = "checkBZ6";
             this.checkBZ6.Size = new System.Drawing.Size(159, 21);
             this.checkBZ6.TabIndex = 22;
@@ -275,7 +274,7 @@
             // 
             this.checkBZ5.AutoSize = true;
             this.checkBZ5.Location = new System.Drawing.Point(17, 108);
-            this.checkBZ5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ5.Name = "checkBZ5";
             this.checkBZ5.Size = new System.Drawing.Size(162, 21);
             this.checkBZ5.TabIndex = 21;
@@ -288,7 +287,7 @@
             // 
             this.checkBZ4.AutoSize = true;
             this.checkBZ4.Location = new System.Drawing.Point(17, 89);
-            this.checkBZ4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ4.Name = "checkBZ4";
             this.checkBZ4.Size = new System.Drawing.Size(174, 21);
             this.checkBZ4.TabIndex = 20;
@@ -300,7 +299,7 @@
             // 
             this.checkBZ3.AutoSize = true;
             this.checkBZ3.Location = new System.Drawing.Point(17, 68);
-            this.checkBZ3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ3.Name = "checkBZ3";
             this.checkBZ3.Size = new System.Drawing.Size(207, 21);
             this.checkBZ3.TabIndex = 19;
@@ -312,7 +311,7 @@
             // 
             this.checkBZ2.AutoSize = true;
             this.checkBZ2.Location = new System.Drawing.Point(17, 48);
-            this.checkBZ2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ2.Name = "checkBZ2";
             this.checkBZ2.Size = new System.Drawing.Size(132, 21);
             this.checkBZ2.TabIndex = 18;
@@ -324,7 +323,7 @@
             // 
             this.checkBZ1.AutoSize = true;
             this.checkBZ1.Location = new System.Drawing.Point(17, 28);
-            this.checkBZ1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ1.Name = "checkBZ1";
             this.checkBZ1.Size = new System.Drawing.Size(179, 21);
             this.checkBZ1.TabIndex = 17;
@@ -336,7 +335,7 @@
             // 
             this.checkBZ0.AutoSize = true;
             this.checkBZ0.Location = new System.Drawing.Point(17, 9);
-            this.checkBZ0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZ0.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZ0.Name = "checkBZ0";
             this.checkBZ0.Size = new System.Drawing.Size(131, 21);
             this.checkBZ0.TabIndex = 16;
@@ -348,7 +347,7 @@
             // 
             this.checkBEstaciones.AutoSize = true;
             this.checkBEstaciones.Location = new System.Drawing.Point(29, 127);
-            this.checkBEstaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBEstaciones.Margin = new System.Windows.Forms.Padding(4);
             this.checkBEstaciones.Name = "checkBEstaciones";
             this.checkBEstaciones.Size = new System.Drawing.Size(99, 21);
             this.checkBEstaciones.TabIndex = 14;
@@ -360,7 +359,7 @@
             // 
             this.checkBCalle.AutoSize = true;
             this.checkBCalle.Location = new System.Drawing.Point(29, 155);
-            this.checkBCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBCalle.Margin = new System.Windows.Forms.Padding(4);
             this.checkBCalle.Name = "checkBCalle";
             this.checkBCalle.Size = new System.Drawing.Size(151, 21);
             this.checkBCalle.TabIndex = 15;
@@ -372,7 +371,7 @@
             // 
             this.checkBZonas.AutoSize = true;
             this.checkBZonas.Location = new System.Drawing.Point(29, 212);
-            this.checkBZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBZonas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBZonas.Name = "checkBZonas";
             this.checkBZonas.Size = new System.Drawing.Size(70, 21);
             this.checkBZonas.TabIndex = 16;
@@ -384,7 +383,7 @@
             // 
             this.rbtOpcion1.AutoSize = true;
             this.rbtOpcion1.Location = new System.Drawing.Point(995, 204);
-            this.rbtOpcion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtOpcion1.Margin = new System.Windows.Forms.Padding(4);
             this.rbtOpcion1.Name = "rbtOpcion1";
             this.rbtOpcion1.Size = new System.Drawing.Size(160, 21);
             this.rbtOpcion1.TabIndex = 18;
@@ -408,7 +407,7 @@
             // 
             this.rbtOpcion2.AutoSize = true;
             this.rbtOpcion2.Location = new System.Drawing.Point(995, 233);
-            this.rbtOpcion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtOpcion2.Margin = new System.Windows.Forms.Padding(4);
             this.rbtOpcion2.Name = "rbtOpcion2";
             this.rbtOpcion2.Size = new System.Drawing.Size(152, 21);
             this.rbtOpcion2.TabIndex = 20;
@@ -421,7 +420,7 @@
             // 
             this.pictureBox1.Image = global::Proy_In.Properties.Resources.logo_mio1;
             this.pictureBox1.Location = new System.Drawing.Point(1159, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(284, 82);
             this.pictureBox1.TabIndex = 21;
@@ -439,7 +438,7 @@
             this.paneOp1.Controls.Add(this.checkBCalle);
             this.paneOp1.Controls.Add(this.checkBZonas);
             this.paneOp1.Location = new System.Drawing.Point(980, 276);
-            this.paneOp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneOp1.Margin = new System.Windows.Forms.Padding(4);
             this.paneOp1.Name = "paneOp1";
             this.paneOp1.Size = new System.Drawing.Size(380, 538);
             this.paneOp1.TabIndex = 22;
@@ -448,7 +447,7 @@
             // 
             this.checkBReservas.AutoSize = true;
             this.checkBReservas.Location = new System.Drawing.Point(29, 183);
-            this.checkBReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBReservas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBReservas.Name = "checkBReservas";
             this.checkBReservas.Size = new System.Drawing.Size(90, 21);
             this.checkBReservas.TabIndex = 21;
@@ -459,7 +458,7 @@
             // btLimpiar
             // 
             this.btLimpiar.Location = new System.Drawing.Point(243, 175);
-            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btLimpiar.TabIndex = 20;
@@ -471,7 +470,7 @@
             // 
             this.checkBTodas.AutoSize = true;
             this.checkBTodas.Location = new System.Drawing.Point(29, 54);
-            this.checkBTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBTodas.Margin = new System.Windows.Forms.Padding(4);
             this.checkBTodas.Name = "checkBTodas";
             this.checkBTodas.Size = new System.Drawing.Size(148, 21);
             this.checkBTodas.TabIndex = 19;
@@ -492,14 +491,13 @@
             // 
             // paneOp2
             // 
-            this.paneOp2.Controls.Add(this.button1);
             this.paneOp2.Controls.Add(this.rbtSimulacionPersonal);
             this.paneOp2.Controls.Add(this.rbtSimulacionCompleta);
             this.paneOp2.Controls.Add(this.label3);
             this.paneOp2.Controls.Add(this.panelCustomSimulation);
             this.paneOp2.Controls.Add(this.label5);
             this.paneOp2.Location = new System.Drawing.Point(980, 276);
-            this.paneOp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneOp2.Margin = new System.Windows.Forms.Padding(4);
             this.paneOp2.Name = "paneOp2";
             this.paneOp2.Size = new System.Drawing.Size(421, 341);
             this.paneOp2.TabIndex = 23;
@@ -508,7 +506,7 @@
             // 
             this.rbtSimulacionPersonal.AutoSize = true;
             this.rbtSimulacionPersonal.Location = new System.Drawing.Point(20, 98);
-            this.rbtSimulacionPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtSimulacionPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.rbtSimulacionPersonal.Name = "rbtSimulacionPersonal";
             this.rbtSimulacionPersonal.Size = new System.Drawing.Size(190, 21);
             this.rbtSimulacionPersonal.TabIndex = 27;
@@ -521,7 +519,7 @@
             // 
             this.rbtSimulacionCompleta.AutoSize = true;
             this.rbtSimulacionCompleta.Location = new System.Drawing.Point(239, 98);
-            this.rbtSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4);
             this.rbtSimulacionCompleta.Name = "rbtSimulacionCompleta";
             this.rbtSimulacionCompleta.Size = new System.Drawing.Size(158, 21);
             this.rbtSimulacionCompleta.TabIndex = 26;
@@ -661,16 +659,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(304, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 41);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -763,7 +751,6 @@
         private System.Windows.Forms.RadioButton rbtSimulacionPersonal;
         private System.Windows.Forms.RadioButton rbtSimulacionCompleta;
         private System.Windows.Forms.CheckBox checkBTerminal;
-        private System.Windows.Forms.Button button1;
     }
 }
 
