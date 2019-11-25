@@ -488,16 +488,23 @@ namespace Proy_In
                         }
                         else
                         {
-                            GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude),bm );
-                            marks.Add(buses[j].BusId, markAux1);
+                            try
+                            {
+                                GMarkerGoogle markAux1 = new GMarkerGoogle(new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude), bm);
+                                marks.Add(buses[j].BusId, markAux1);
 
-                            markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                            markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine));
-                            markAux1.ToolTip.TextPadding = new Size(7, 7);
-                            markAux1.ToolTip.Fill = Brushes.FloralWhite;
+                                markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                                markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine));
+                                markAux1.ToolTip.TextPadding = new Size(7, 7);
+                                markAux1.ToolTip.Fill = Brushes.FloralWhite;
 
-                            markOv.Markers.Add(markAux1);
-                            Console.WriteLine("efectily");
+                                markOv.Markers.Add(markAux1);
+                              
+                            }catch(Exception e)
+                            {
+                                Debug.WriteLine("(Invalid parameter) :" + e.Message);
+                            }
+                            
                             //Thread.Sleep(300);
                         }
                     }
