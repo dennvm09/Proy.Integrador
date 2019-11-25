@@ -46,7 +46,7 @@ namespace model
             //Thread t = new Thread(new ThreadStart(initilizeData));
             // t.Start();
 
-           // initilizeData();
+            initilizeData();
             //Console.WriteLine(buses.Count);
             Console.WriteLine(lineH.Count);
 
