@@ -97,6 +97,8 @@ namespace model
                     path = openFile.FileName;
                     loadOwnDataGramData(path);
                     loadLines();
+                    loadCompleteArcsData();
+                    makeSetOfBusesByDate();
                 }
             }
             else if (cargar == DialogResult.No)
@@ -168,7 +170,7 @@ namespace model
         public void loadCompleteArcsData()
         {
             loadArcsData();
-           // loadArcsProfilesData();
+            addAditionalInfoToArcsData();
         }
 
         public void loadArcsData()
@@ -542,8 +544,6 @@ namespace model
                     buses.Add(i, setBus);
                     setBus = new List<Bus>();
                     id = cont;
-                   
-
                 }
                 cont++;
             }
