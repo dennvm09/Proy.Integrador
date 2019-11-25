@@ -46,7 +46,7 @@ namespace model
             //Thread t = new Thread(new ThreadStart(initilizeData));
             // t.Start();
 
-            initilizeData();
+           // initilizeData();
             //Console.WriteLine(buses.Count);
             Console.WriteLine(lineH.Count);
 
@@ -566,7 +566,7 @@ namespace model
                 if (copy[cont].BusId == i)
                 {
                     //  Console.WriteLine("cont= " + copy[cont].BusId);
-                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate,copy[cont].LineId, copy[cont].);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate,copy[cont].LineId, copy[cont].StopId);
                     setBus.Add(b);
                 }
                 else

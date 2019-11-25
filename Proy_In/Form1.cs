@@ -1604,6 +1604,11 @@ namespace Proy_In
             
         }
 
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
         private void CheckBReservas_CheckedChanged(object sender, EventArgs e)
         {
 
