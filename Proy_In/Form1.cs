@@ -79,7 +79,7 @@ namespace Proy_In
         {
             tbTimeHours = new TextBox
             {
-                Location = new Point(822, 350),
+                Location = new Point(1102, 420),
                 Size = new Size(40, 22),
                 Text = "HRS",
                 Visible = false,
@@ -90,7 +90,7 @@ namespace Proy_In
 
             tbHour = new TextBox
             {
-                Location = new Point(908, 350),
+                Location = new Point(1198, 420),
                 Size = new Size(30, 22),
                 Text = "HH",
                 Visible = false,
@@ -99,7 +99,7 @@ namespace Proy_In
 
             tbMin = new TextBox
             {
-                Location = new Point(960, 350),
+                Location = new Point(1240, 420),
                 Size = new Size(30, 22),
                 Text = "MM",
                 Visible = false,
@@ -108,7 +108,7 @@ namespace Proy_In
 
             tbSec = new TextBox
             {
-                Location = new Point(1010, 350),
+                Location = new Point(1280, 420),
                 Size = new Size(30, 22),
                 Text = "SS",
                 Visible = false,
@@ -117,16 +117,16 @@ namespace Proy_In
 
             btCompleteSimulation = new Button
             {
-                Location = new Point(820, 350),
-                Size = new Size(154, 28),
+                Location = new Point(1100, 420),
+                Size = new Size(154, 30),
                 Text = "Simulacion completa",
                 Visible = false,
             };
             btCompleteSimulation.Click += new EventHandler(BtCompleteSimulation_Click);
             btCustomSimulation = new Button
             {
-                Location = new Point(970, 400),
-                Size = new Size(75, 23),
+                Location = new Point(1280, 450),
+                Size = new Size(75, 30),
                 Text = "Iniciar",
                 Visible = false,
             };
@@ -135,21 +135,21 @@ namespace Proy_In
 
             lbH = new Label
             {
-                Location = new Point(733, 37),
+                Location = new Point(983, 37),
                 Size = new Size(30, 24),
                 Text = "00",
                 Visible = false
             };
             lbM = new Label
             {
-                Location = new Point(776, 37),
+                Location = new Point(1026, 37),
                 Size = new Size(30, 24),
                 Text = "00",
                 Visible = false
             };
             lbS = new Label
             {
-                Location = new Point(826, 37),
+                Location = new Point(1076, 37),
                 Size = new Size(30, 24),
                 Text = "00",
                 Visible = false
@@ -497,7 +497,7 @@ namespace Proy_In
                                 marks.Add(buses[j].BusId, markAux1);
 
                                 markAux1.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                                markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine) + "\n" + timeBus());
+                                markAux1.ToolTipText = String.Format("Ruta: " + ppal.descripcionLine(buses[j].IdLine));
                                 markAux1.ToolTip.TextPadding = new Size(7, 7);
                                 markAux1.ToolTip.Fill = Brushes.FloralWhite;
 
