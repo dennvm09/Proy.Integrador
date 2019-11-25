@@ -168,7 +168,7 @@ namespace model
         public void loadCompleteArcsData()
         {
             loadArcsData();
-            loadArcsProfilesData();
+           // loadArcsProfilesData();
         }
 
         public void loadArcsData()
@@ -213,7 +213,7 @@ namespace model
             }
         }
 
-        public void loadArcsProfilesData()
+        public void addAditionalInfoToArcsData()
         {
             string path = @"..\..\..\Data\arcsprofiles.txt";
             string fullPath = Path.GetFullPath(path);
@@ -238,21 +238,24 @@ namespace model
                         String[] date1 = lineS[5].Split('-');
                         var dateTimeArc = new DateTime(Int32.Parse(date1[2]), giveMonthByNumber((date1[1])), Int32.Parse(date1[0]));
 
-                        String key = date1[0] + giveMonthByNumber((date1[1]))+ date1[2];
 
-                        if ((arcsProfiles==null)||!arcs.ContainsKey(key))
+
+                        String key = lineS[0] + lineS[1];
+
+                        if (arcs.ContainsKey(key))
                         {
-                            arcAux = new Arc(stopIdStart, stopIdEnd,timeArc, dateTimeArc);
-                            List<Arc> auxL=new List<Arc>();
-                            auxL.Add(arcAux);
-                            arcsProfiles.Add(key, arcAux);
+                            Arc aux = (Arc)arcs[key];
+                            aux.Time = timeArc;
                         }
+
+                        /*
+                        
                         else
                         {
                             arcAux = new Arc(stopIdStart, stopIdEnd, timeArc, dateTimeArc);
                             List<Arc> auxL=(List<Arc>)arcsProfiles[key];
                             auxL.Add(arcAux);
-                        }
+                        }*/
                     }
                     line = read.ReadLine();
                 }
@@ -526,11 +529,11 @@ namespace model
             {
                 i = copy[id].DataGramDate.Hour + "." + copy[id].DataGramDate.Minute + "." + copy[id].DataGramDate.Second;
 
-                //  Console.WriteLine("I= " + i);
+               
                 j = copy[cont].DataGramDate.Hour + "." + copy[cont].DataGramDate.Minute + "." + copy[cont].DataGramDate.Second;
                 if (j.Equals(i))
                 {
-                    //  Console.WriteLine("cont= " + copy[cont].BusId);
+               
                     Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate, copy[cont].LineId);
                     setBus.Add(b);
                 }
@@ -539,8 +542,7 @@ namespace model
                     buses.Add(i, setBus);
                     setBus = new List<Bus>();
                     id = cont;
-                    //Console.WriteLine(i);
-                    //Console.WriteLine("count: "+buses.Count);
+                   
 
                 }
                 cont++;
