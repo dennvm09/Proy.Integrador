@@ -38,6 +38,7 @@
             this.testMotion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.paneZonas = new System.Windows.Forms.Panel();
+            this.checkBTerminal = new System.Windows.Forms.CheckBox();
             this.checkBParadas = new System.Windows.Forms.CheckBox();
             this.checkBZ8 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.checkBTerminal = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.paneZonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneOp1.SuspendLayout();
@@ -93,8 +94,8 @@
             this.map.GrayScaleMode = false;
             this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.map.LevelsKeepInMemmory = 5;
-            this.map.Location = new System.Drawing.Point(11, 11);
-            this.map.Margin = new System.Windows.Forms.Padding(2);
+            this.map.Location = new System.Drawing.Point(15, 14);
+            this.map.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.map.MarkersEnabled = true;
             this.map.MaxZoom = 100;
             this.map.MinZoom = 1;
@@ -108,17 +109,17 @@
             this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.map.ShowTileGridLines = false;
-            this.map.Size = new System.Drawing.Size(701, 727);
+            this.map.Size = new System.Drawing.Size(935, 895);
             this.map.TabIndex = 0;
             this.map.Zoom = 1D;
             this.map.Load += new System.EventHandler(this.Map_Load);
             // 
             // zoomIn
             // 
-            this.zoomIn.Location = new System.Drawing.Point(113, 22);
-            this.zoomIn.Margin = new System.Windows.Forms.Padding(2);
+            this.zoomIn.Location = new System.Drawing.Point(151, 27);
+            this.zoomIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zoomIn.Name = "zoomIn";
-            this.zoomIn.Size = new System.Drawing.Size(37, 32);
+            this.zoomIn.Size = new System.Drawing.Size(49, 39);
             this.zoomIn.TabIndex = 1;
             this.zoomIn.Text = "+";
             this.zoomIn.UseVisualStyleBackColor = true;
@@ -127,10 +128,9 @@
             // zoomInfo
             // 
             this.zoomInfo.AutoSize = true;
-            this.zoomInfo.Location = new System.Drawing.Point(602, 41);
-            this.zoomInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.zoomInfo.Location = new System.Drawing.Point(803, 50);
             this.zoomInfo.Name = "zoomInfo";
-            this.zoomInfo.Size = new System.Drawing.Size(0, 13);
+            this.zoomInfo.Size = new System.Drawing.Size(0, 17);
             this.zoomInfo.TabIndex = 2;
             // 
             // actualZoom
@@ -138,10 +138,9 @@
             this.actualZoom.AutoSize = true;
             this.actualZoom.BackColor = System.Drawing.Color.Transparent;
             this.actualZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actualZoom.Location = new System.Drawing.Point(65, 30);
-            this.actualZoom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.actualZoom.Location = new System.Drawing.Point(87, 37);
             this.actualZoom.Name = "actualZoom";
-            this.actualZoom.Size = new System.Drawing.Size(13, 16);
+            this.actualZoom.Size = new System.Drawing.Size(16, 20);
             this.actualZoom.TabIndex = 3;
             this.actualZoom.Text = "-";
             this.actualZoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,10 +148,10 @@
             // 
             // zoomOut
             // 
-            this.zoomOut.Location = new System.Drawing.Point(23, 22);
-            this.zoomOut.Margin = new System.Windows.Forms.Padding(2);
+            this.zoomOut.Location = new System.Drawing.Point(31, 27);
+            this.zoomOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zoomOut.Name = "zoomOut";
-            this.zoomOut.Size = new System.Drawing.Size(37, 32);
+            this.zoomOut.Size = new System.Drawing.Size(49, 39);
             this.zoomOut.TabIndex = 4;
             this.zoomOut.Text = "-";
             this.zoomOut.UseVisualStyleBackColor = true;
@@ -160,10 +159,10 @@
             // 
             // testMotion
             // 
-            this.testMotion.Location = new System.Drawing.Point(1134, 902);
-            this.testMotion.Margin = new System.Windows.Forms.Padding(4);
+            this.testMotion.Location = new System.Drawing.Point(1512, 1110);
+            this.testMotion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.testMotion.Name = "testMotion";
-            this.testMotion.Size = new System.Drawing.Size(119, 23);
+            this.testMotion.Size = new System.Drawing.Size(159, 28);
             this.testMotion.TabIndex = 8;
             this.testMotion.Text = "test animation";
             this.testMotion.UseVisualStyleBackColor = true;
@@ -173,9 +172,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 73);
+            this.label1.Location = new System.Drawing.Point(7, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 19);
+            this.label1.Size = new System.Drawing.Size(115, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "Filtrar por...";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -194,17 +194,31 @@
             this.paneZonas.Controls.Add(this.checkBZ2);
             this.paneZonas.Controls.Add(this.checkBZ1);
             this.paneZonas.Controls.Add(this.checkBZ0);
-            this.paneZonas.Location = new System.Drawing.Point(22, 195);
+            this.paneZonas.Location = new System.Drawing.Point(29, 240);
+            this.paneZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneZonas.Name = "paneZonas";
-            this.paneZonas.Size = new System.Drawing.Size(242, 239);
+            this.paneZonas.Size = new System.Drawing.Size(323, 294);
             this.paneZonas.TabIndex = 13;
+            // 
+            // checkBTerminal
+            // 
+            this.checkBTerminal.AutoSize = true;
+            this.checkBTerminal.Location = new System.Drawing.Point(123, 234);
+            this.checkBTerminal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBTerminal.Name = "checkBTerminal";
+            this.checkBTerminal.Size = new System.Drawing.Size(99, 21);
+            this.checkBTerminal.TabIndex = 31;
+            this.checkBTerminal.Text = "Estaciones";
+            this.checkBTerminal.UseVisualStyleBackColor = true;
+            this.checkBTerminal.CheckedChanged += new System.EventHandler(this.CheckBTerminal_CheckedChanged);
             // 
             // checkBParadas
             // 
             this.checkBParadas.AutoSize = true;
-            this.checkBParadas.Location = new System.Drawing.Point(11, 190);
+            this.checkBParadas.Location = new System.Drawing.Point(15, 234);
+            this.checkBParadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBParadas.Name = "checkBParadas";
-            this.checkBParadas.Size = new System.Drawing.Size(65, 17);
+            this.checkBParadas.Size = new System.Drawing.Size(83, 21);
             this.checkBParadas.TabIndex = 28;
             this.checkBParadas.Text = "Paradas";
             this.checkBParadas.UseVisualStyleBackColor = true;
@@ -213,9 +227,10 @@
             // checkBZ8
             // 
             this.checkBZ8.AutoSize = true;
-            this.checkBZ8.Location = new System.Drawing.Point(13, 136);
+            this.checkBZ8.Location = new System.Drawing.Point(17, 167);
+            this.checkBZ8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ8.Name = "checkBZ8";
-            this.checkBZ8.Size = new System.Drawing.Size(103, 17);
+            this.checkBZ8.Size = new System.Drawing.Size(135, 21);
             this.checkBZ8.TabIndex = 24;
             this.checkBZ8.Text = "Zona 8 (Calipso)";
             this.checkBZ8.UseVisualStyleBackColor = true;
@@ -225,18 +240,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 156);
+            this.label7.Location = new System.Drawing.Point(11, 192);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 26);
+            this.label7.Size = new System.Drawing.Size(256, 34);
             this.label7.TabIndex = 27;
             this.label7.Text = "¿Desea conocer las paradas o\r\nterminales del mio en dicha zona?";
             // 
             // checkBZ7
             // 
             this.checkBZ7.AutoSize = true;
-            this.checkBZ7.Location = new System.Drawing.Point(13, 120);
+            this.checkBZ7.Location = new System.Drawing.Point(17, 148);
+            this.checkBZ7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ7.Name = "checkBZ7";
-            this.checkBZ7.Size = new System.Drawing.Size(131, 17);
+            this.checkBZ7.Size = new System.Drawing.Size(172, 21);
             this.checkBZ7.TabIndex = 23;
             this.checkBZ7.Text = "Zona 7 (Cañaveralejo)";
             this.checkBZ7.UseVisualStyleBackColor = true;
@@ -245,9 +262,10 @@
             // checkBZ6
             // 
             this.checkBZ6.AutoSize = true;
-            this.checkBZ6.Location = new System.Drawing.Point(13, 104);
+            this.checkBZ6.Location = new System.Drawing.Point(17, 128);
+            this.checkBZ6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ6.Name = "checkBZ6";
-            this.checkBZ6.Size = new System.Drawing.Size(121, 17);
+            this.checkBZ6.Size = new System.Drawing.Size(159, 21);
             this.checkBZ6.TabIndex = 22;
             this.checkBZ6.Text = "Zona 6 (Guadalupe)";
             this.checkBZ6.UseVisualStyleBackColor = true;
@@ -256,9 +274,10 @@
             // checkBZ5
             // 
             this.checkBZ5.AutoSize = true;
-            this.checkBZ5.Location = new System.Drawing.Point(13, 88);
+            this.checkBZ5.Location = new System.Drawing.Point(17, 108);
+            this.checkBZ5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ5.Name = "checkBZ5";
-            this.checkBZ5.Size = new System.Drawing.Size(124, 17);
+            this.checkBZ5.Size = new System.Drawing.Size(162, 21);
             this.checkBZ5.TabIndex = 21;
             this.checkBZ5.Text = "Zona 5 (Nuevo Latir)";
             this.checkBZ5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,9 +287,10 @@
             // checkBZ4
             // 
             this.checkBZ4.AutoSize = true;
-            this.checkBZ4.Location = new System.Drawing.Point(13, 72);
+            this.checkBZ4.Location = new System.Drawing.Point(17, 89);
+            this.checkBZ4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ4.Name = "checkBZ4";
-            this.checkBZ4.Size = new System.Drawing.Size(134, 17);
+            this.checkBZ4.Size = new System.Drawing.Size(174, 21);
             this.checkBZ4.TabIndex = 20;
             this.checkBZ4.Text = "Zona 4 (Andrés Sanín)";
             this.checkBZ4.UseVisualStyleBackColor = true;
@@ -279,9 +299,10 @@
             // checkBZ3
             // 
             this.checkBZ3.AutoSize = true;
-            this.checkBZ3.Location = new System.Drawing.Point(13, 55);
+            this.checkBZ3.Location = new System.Drawing.Point(17, 68);
+            this.checkBZ3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ3.Name = "checkBZ3";
-            this.checkBZ3.Size = new System.Drawing.Size(157, 17);
+            this.checkBZ3.Size = new System.Drawing.Size(207, 21);
             this.checkBZ3.TabIndex = 19;
             this.checkBZ3.Text = "Zona 3 (Paso del Comercio)";
             this.checkBZ3.UseVisualStyleBackColor = true;
@@ -290,9 +311,10 @@
             // checkBZ2
             // 
             this.checkBZ2.AutoSize = true;
-            this.checkBZ2.Location = new System.Drawing.Point(13, 39);
+            this.checkBZ2.Location = new System.Drawing.Point(17, 48);
+            this.checkBZ2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ2.Name = "checkBZ2";
-            this.checkBZ2.Size = new System.Drawing.Size(102, 17);
+            this.checkBZ2.Size = new System.Drawing.Size(132, 21);
             this.checkBZ2.TabIndex = 18;
             this.checkBZ2.Text = "Zona 2 (Menga)";
             this.checkBZ2.UseVisualStyleBackColor = true;
@@ -301,9 +323,10 @@
             // checkBZ1
             // 
             this.checkBZ1.AutoSize = true;
-            this.checkBZ1.Location = new System.Drawing.Point(13, 23);
+            this.checkBZ1.Location = new System.Drawing.Point(17, 28);
+            this.checkBZ1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ1.Name = "checkBZ1";
-            this.checkBZ1.Size = new System.Drawing.Size(136, 17);
+            this.checkBZ1.Size = new System.Drawing.Size(179, 21);
             this.checkBZ1.TabIndex = 17;
             this.checkBZ1.Text = "Zona 1 (Universidades)";
             this.checkBZ1.UseVisualStyleBackColor = true;
@@ -312,9 +335,10 @@
             // checkBZ0
             // 
             this.checkBZ0.AutoSize = true;
-            this.checkBZ0.Location = new System.Drawing.Point(13, 7);
+            this.checkBZ0.Location = new System.Drawing.Point(17, 9);
+            this.checkBZ0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZ0.Name = "checkBZ0";
-            this.checkBZ0.Size = new System.Drawing.Size(100, 17);
+            this.checkBZ0.Size = new System.Drawing.Size(131, 21);
             this.checkBZ0.TabIndex = 16;
             this.checkBZ0.Text = "Zona 0 (Centro)";
             this.checkBZ0.UseVisualStyleBackColor = true;
@@ -323,9 +347,10 @@
             // checkBEstaciones
             // 
             this.checkBEstaciones.AutoSize = true;
-            this.checkBEstaciones.Location = new System.Drawing.Point(22, 103);
+            this.checkBEstaciones.Location = new System.Drawing.Point(29, 127);
+            this.checkBEstaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBEstaciones.Name = "checkBEstaciones";
-            this.checkBEstaciones.Size = new System.Drawing.Size(78, 17);
+            this.checkBEstaciones.Size = new System.Drawing.Size(99, 21);
             this.checkBEstaciones.TabIndex = 14;
             this.checkBEstaciones.Text = "Estaciones";
             this.checkBEstaciones.UseVisualStyleBackColor = true;
@@ -334,9 +359,10 @@
             // checkBCalle
             // 
             this.checkBCalle.AutoSize = true;
-            this.checkBCalle.Location = new System.Drawing.Point(22, 126);
+            this.checkBCalle.Location = new System.Drawing.Point(29, 155);
+            this.checkBCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBCalle.Name = "checkBCalle";
-            this.checkBCalle.Size = new System.Drawing.Size(116, 17);
+            this.checkBCalle.Size = new System.Drawing.Size(151, 21);
             this.checkBCalle.TabIndex = 15;
             this.checkBCalle.Text = "Paradas en la calle";
             this.checkBCalle.UseVisualStyleBackColor = true;
@@ -345,9 +371,10 @@
             // checkBZonas
             // 
             this.checkBZonas.AutoSize = true;
-            this.checkBZonas.Location = new System.Drawing.Point(22, 172);
+            this.checkBZonas.Location = new System.Drawing.Point(29, 212);
+            this.checkBZonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBZonas.Name = "checkBZonas";
-            this.checkBZonas.Size = new System.Drawing.Size(56, 17);
+            this.checkBZonas.Size = new System.Drawing.Size(70, 21);
             this.checkBZonas.TabIndex = 16;
             this.checkBZonas.Text = "Zonas";
             this.checkBZonas.UseVisualStyleBackColor = true;
@@ -356,9 +383,10 @@
             // rbtOpcion1
             // 
             this.rbtOpcion1.AutoSize = true;
-            this.rbtOpcion1.Location = new System.Drawing.Point(746, 166);
+            this.rbtOpcion1.Location = new System.Drawing.Point(995, 204);
+            this.rbtOpcion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtOpcion1.Name = "rbtOpcion1";
-            this.rbtOpcion1.Size = new System.Drawing.Size(122, 17);
+            this.rbtOpcion1.Size = new System.Drawing.Size(160, 21);
             this.rbtOpcion1.TabIndex = 18;
             this.rbtOpcion1.TabStop = true;
             this.rbtOpcion1.Text = "Conocer las paradas";
@@ -369,18 +397,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(731, 142);
+            this.label2.Location = new System.Drawing.Point(975, 175);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 21);
+            this.label2.Size = new System.Drawing.Size(84, 26);
             this.label2.TabIndex = 19;
             this.label2.Text = "Desea...";
             // 
             // rbtOpcion2
             // 
             this.rbtOpcion2.AutoSize = true;
-            this.rbtOpcion2.Location = new System.Drawing.Point(746, 189);
+            this.rbtOpcion2.Location = new System.Drawing.Point(995, 233);
+            this.rbtOpcion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtOpcion2.Name = "rbtOpcion2";
-            this.rbtOpcion2.Size = new System.Drawing.Size(117, 17);
+            this.rbtOpcion2.Size = new System.Drawing.Size(152, 21);
             this.rbtOpcion2.TabIndex = 20;
             this.rbtOpcion2.TabStop = true;
             this.rbtOpcion2.Text = "Ver rutas en acción";
@@ -390,9 +420,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proy_In.Properties.Resources.logo_mio1;
-            this.pictureBox1.Location = new System.Drawing.Point(869, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1159, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(284, 82);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
@@ -407,17 +438,19 @@
             this.paneOp1.Controls.Add(this.checkBEstaciones);
             this.paneOp1.Controls.Add(this.checkBCalle);
             this.paneOp1.Controls.Add(this.checkBZonas);
-            this.paneOp1.Location = new System.Drawing.Point(735, 224);
+            this.paneOp1.Location = new System.Drawing.Point(980, 276);
+            this.paneOp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneOp1.Name = "paneOp1";
-            this.paneOp1.Size = new System.Drawing.Size(285, 437);
+            this.paneOp1.Size = new System.Drawing.Size(380, 538);
             this.paneOp1.TabIndex = 22;
             // 
             // checkBReservas
             // 
             this.checkBReservas.AutoSize = true;
-            this.checkBReservas.Location = new System.Drawing.Point(22, 149);
+            this.checkBReservas.Location = new System.Drawing.Point(29, 183);
+            this.checkBReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBReservas.Name = "checkBReservas";
-            this.checkBReservas.Size = new System.Drawing.Size(71, 17);
+            this.checkBReservas.Size = new System.Drawing.Size(90, 21);
             this.checkBReservas.TabIndex = 21;
             this.checkBReservas.Text = "Reservas";
             this.checkBReservas.UseVisualStyleBackColor = true;
@@ -425,9 +458,10 @@
             // 
             // btLimpiar
             // 
-            this.btLimpiar.Location = new System.Drawing.Point(182, 142);
+            this.btLimpiar.Location = new System.Drawing.Point(243, 175);
+            this.btLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btLimpiar.Name = "btLimpiar";
-            this.btLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btLimpiar.TabIndex = 20;
             this.btLimpiar.Text = "Limpiar";
             this.btLimpiar.UseVisualStyleBackColor = true;
@@ -436,9 +470,10 @@
             // checkBTodas
             // 
             this.checkBTodas.AutoSize = true;
-            this.checkBTodas.Location = new System.Drawing.Point(22, 44);
+            this.checkBTodas.Location = new System.Drawing.Point(29, 54);
+            this.checkBTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBTodas.Name = "checkBTodas";
-            this.checkBTodas.Size = new System.Drawing.Size(113, 17);
+            this.checkBTodas.Size = new System.Drawing.Size(148, 21);
             this.checkBTodas.TabIndex = 19;
             this.checkBTodas.Text = "Todas las paradas";
             this.checkBTodas.UseVisualStyleBackColor = true;
@@ -448,30 +483,34 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(101, 3);
+            this.label4.Location = new System.Drawing.Point(135, 4);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 23);
+            this.label4.Size = new System.Drawing.Size(127, 31);
             this.label4.TabIndex = 18;
             this.label4.Text = "PARADAS";
             // 
             // paneOp2
             // 
+            this.paneOp2.Controls.Add(this.button1);
             this.paneOp2.Controls.Add(this.rbtSimulacionPersonal);
             this.paneOp2.Controls.Add(this.rbtSimulacionCompleta);
             this.paneOp2.Controls.Add(this.label3);
             this.paneOp2.Controls.Add(this.panelCustomSimulation);
             this.paneOp2.Controls.Add(this.label5);
-            this.paneOp2.Location = new System.Drawing.Point(735, 224);
+            this.paneOp2.Location = new System.Drawing.Point(980, 276);
+            this.paneOp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneOp2.Name = "paneOp2";
-            this.paneOp2.Size = new System.Drawing.Size(316, 277);
+            this.paneOp2.Size = new System.Drawing.Size(421, 341);
             this.paneOp2.TabIndex = 23;
             // 
             // rbtSimulacionPersonal
             // 
             this.rbtSimulacionPersonal.AutoSize = true;
-            this.rbtSimulacionPersonal.Location = new System.Drawing.Point(15, 80);
+            this.rbtSimulacionPersonal.Location = new System.Drawing.Point(20, 98);
+            this.rbtSimulacionPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtSimulacionPersonal.Name = "rbtSimulacionPersonal";
-            this.rbtSimulacionPersonal.Size = new System.Drawing.Size(144, 17);
+            this.rbtSimulacionPersonal.Size = new System.Drawing.Size(190, 21);
             this.rbtSimulacionPersonal.TabIndex = 27;
             this.rbtSimulacionPersonal.TabStop = true;
             this.rbtSimulacionPersonal.Text = "Simulación personalizada";
@@ -481,9 +520,10 @@
             // rbtSimulacionCompleta
             // 
             this.rbtSimulacionCompleta.AutoSize = true;
-            this.rbtSimulacionCompleta.Location = new System.Drawing.Point(179, 80);
+            this.rbtSimulacionCompleta.Location = new System.Drawing.Point(239, 98);
+            this.rbtSimulacionCompleta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtSimulacionCompleta.Name = "rbtSimulacionCompleta";
-            this.rbtSimulacionCompleta.Size = new System.Drawing.Size(122, 17);
+            this.rbtSimulacionCompleta.Size = new System.Drawing.Size(158, 21);
             this.rbtSimulacionCompleta.TabIndex = 26;
             this.rbtSimulacionCompleta.TabStop = true;
             this.rbtSimulacionCompleta.Text = "Simulación completa";
@@ -493,10 +533,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 43);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(8, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(293, 26);
+            this.label3.Size = new System.Drawing.Size(392, 34);
             this.label3.TabIndex = 22;
             this.label3.Text = "Esta opción iniciará una simulación de todos los datos desde\r\nel menor tiempo enc" +
     "ontrado:";
@@ -511,19 +550,19 @@
             this.panelCustomSimulation.Controls.Add(this.textBox3);
             this.panelCustomSimulation.Controls.Add(this.textBox2);
             this.panelCustomSimulation.Controls.Add(this.textBox1);
-            this.panelCustomSimulation.Location = new System.Drawing.Point(2, 114);
-            this.panelCustomSimulation.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCustomSimulation.Location = new System.Drawing.Point(3, 140);
+            this.panelCustomSimulation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCustomSimulation.Name = "panelCustomSimulation";
-            this.panelCustomSimulation.Size = new System.Drawing.Size(312, 69);
+            this.panelCustomSimulation.Size = new System.Drawing.Size(416, 85);
             this.panelCustomSimulation.TabIndex = 21;
             this.panelCustomSimulation.Visible = false;
             // 
             // btCustomSimulationt
             // 
-            this.btCustomSimulationt.Location = new System.Drawing.Point(209, 32);
-            this.btCustomSimulationt.Margin = new System.Windows.Forms.Padding(2);
+            this.btCustomSimulationt.Location = new System.Drawing.Point(279, 39);
+            this.btCustomSimulationt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCustomSimulationt.Name = "btCustomSimulationt";
-            this.btCustomSimulationt.Size = new System.Drawing.Size(67, 32);
+            this.btCustomSimulationt.Size = new System.Drawing.Size(89, 39);
             this.btCustomSimulationt.TabIndex = 7;
             this.btCustomSimulationt.Text = "Iniciar";
             this.btCustomSimulationt.UseVisualStyleBackColor = true;
@@ -533,56 +572,54 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(129, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(172, 11);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.Size = new System.Drawing.Size(47, 17);
             this.label11.TabIndex = 6;
             this.label11.Text = "desde";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(1, 11);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.Size = new System.Drawing.Size(108, 17);
             this.label9.TabIndex = 4;
             this.label9.Text = "Simular durante";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(247, 6);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Location = new System.Drawing.Point(329, 7);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(30, 20);
+            this.textBox4.Size = new System.Drawing.Size(39, 22);
             this.textBox4.TabIndex = 3;
             this.textBox4.Visible = false;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(212, 6);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(283, 7);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(31, 20);
+            this.textBox3.Size = new System.Drawing.Size(40, 22);
             this.textBox3.TabIndex = 2;
             this.textBox3.Visible = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 6);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(240, 7);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(29, 20);
+            this.textBox2.Size = new System.Drawing.Size(37, 22);
             this.textBox2.TabIndex = 1;
             this.textBox2.Visible = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(111, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 20);
+            this.textBox1.Size = new System.Drawing.Size(49, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
@@ -591,18 +628,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(76, 4);
+            this.label5.Location = new System.Drawing.Point(101, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 23);
+            this.label5.Size = new System.Drawing.Size(229, 31);
             this.label5.TabIndex = 19;
             this.label5.Text = "RUTAS EN ACCIÓN";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(826, 100);
+            this.label6.Location = new System.Drawing.Point(1101, 123);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 24;
             this.label6.Text = "Hora actual:";
             // 
@@ -610,9 +649,10 @@
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(909, 96);
+            this.lblHora.Location = new System.Drawing.Point(1212, 118);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(90, 21);
+            this.lblHora.Size = new System.Drawing.Size(112, 26);
             this.lblHora.TabIndex = 25;
             this.lblHora.Text = "HH:MM:SS";
             this.lblHora.Click += new System.EventHandler(this.Label7_Click);
@@ -621,23 +661,22 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // checkBTerminal
+            // button1
             // 
-            this.checkBTerminal.AutoSize = true;
-            this.checkBTerminal.Location = new System.Drawing.Point(92, 190);
-            this.checkBTerminal.Name = "checkBTerminal";
-            this.checkBTerminal.Size = new System.Drawing.Size(78, 17);
-            this.checkBTerminal.TabIndex = 31;
-            this.checkBTerminal.Text = "Estaciones";
-            this.checkBTerminal.UseVisualStyleBackColor = true;
-            this.checkBTerminal.CheckedChanged += new System.EventHandler(this.CheckBTerminal_CheckedChanged);
+            this.button1.Location = new System.Drawing.Point(304, 288);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 41);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 673);
+            this.ClientSize = new System.Drawing.Size(1423, 828);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.paneOp2);
@@ -653,7 +692,7 @@
             this.Controls.Add(this.zoomIn);
             this.Controls.Add(this.map);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MIO SITM";
@@ -724,6 +763,7 @@
         private System.Windows.Forms.RadioButton rbtSimulacionPersonal;
         private System.Windows.Forms.RadioButton rbtSimulacionCompleta;
         private System.Windows.Forms.CheckBox checkBTerminal;
+        private System.Windows.Forms.Button button1;
     }
 }
 

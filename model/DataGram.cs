@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace model
 {
-    public class DataGram:IComparer<DataGram>
+    public class DataGram : IComparer<DataGram>
     {
 
 
@@ -40,6 +40,7 @@ namespace model
         public DateTime DataGramDate { get => dataGramDate; set => dataGramDate = value; }
         public long DataGramId { get => dataGramId; set => dataGramId = value; }
         public int LineId { get => lineId; set => lineId = value; }
+        public int StopId { get => stopId; set => stopId = value; }
 
         public int Compare(DataGram x, DataGram y)
         {

@@ -83,6 +83,7 @@ namespace Proy_In
                 Size = new Size(40, 22),
                 Text = "HRS",
                 Visible = false,
+               
 
             };
             tbTimeHours.Click += new EventHandler(TbTimeHours_Click);
@@ -486,7 +487,7 @@ namespace Proy_In
                             GMarkerGoogle markAux = (GMarkerGoogle)marks[buses[j].BusId];
                             markAux.Position = new GMap.NET.PointLatLng(buses[j].Latitude, buses[j].Longitude);
                            
-                            Thread.Sleep(1000);
+                            Thread.Sleep(200);
                         }
                         else
                         {
@@ -862,6 +863,10 @@ namespace Proy_In
             lbH.Visible = false;
             lbM.Visible = false;
             lbS.Visible = false;
+            tbTimeHours.Visible = false;
+            tbHour.Visible = false;
+            tbMin.Visible = false;
+            tbSec.Visible=false;
         }
         /*
         private void BtAnimacion_Click(object sender, EventArgs e)

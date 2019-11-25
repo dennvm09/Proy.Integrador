@@ -536,7 +536,7 @@ namespace model
                 if (j.Equals(i))
                 {
                
-                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate, copy[cont].LineId);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate, copy[cont].LineId,copy[cont].StopId);
                     setBus.Add(b);
                 }
                 else if (!buses.ContainsKey(i))
@@ -566,7 +566,7 @@ namespace model
                 if (copy[cont].BusId == i)
                 {
                     //  Console.WriteLine("cont= " + copy[cont].BusId);
-                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate,copy[cont].LineId);
+                    Bus b = new Bus(copy[cont].BusId, copy[cont].Longitude, copy[cont].Latitude, copy[cont].DataGramDate,copy[cont].LineId, copy[cont].);
                     setBus.Add(b);
                 }
                 else

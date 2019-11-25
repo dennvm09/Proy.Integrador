@@ -14,14 +14,16 @@ namespace model
         private double latitude;
         private DateTime dataGramDate;
         private int idLine;
+        private int stopId;
 
-        public Bus(int busId, double longitude, double latitude, DateTime dataGramDate, int idLine)
+        public Bus(int busId, double longitude, double latitude, DateTime dataGramDate, int idLine, int stopId)
         {
             this.busId = busId;
             this.longitude = longitude;
             this.latitude = latitude;
             this.dataGramDate = dataGramDate;
             this.idLine = idLine;
+            this.stopId = stopId;
         }
 
         public int BusId { get => busId; set => busId = value; }
